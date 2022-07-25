@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding :0;
+    
+  }
+  body{
+    
+  width: 1024px;
+  margin: auto;
+  margin-top: 50px;
+  
+  }
+  section {
+    width: 100%;
+    min-width: 100vh;
+    display:flex;
+  }
+  .container{
+    width: 100%;
+    max-width: 900px;
+    margin:auto;
+    margin-top: 40px;
+    }
+    .hero {
+      background: rgb(221, 220, 220);
+    }
+    .hero .container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (max-width: 490px) {
+      .card  {
+          
+          float:none;
+          width: 200px;
+          height: 160px;
+          padding: 20px;
+          margin:16px 16px;
+          box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
+      }
+    }
+    .card {
+     float:left; 
+    width: 300px;
+    height: 260px;
+    padding: 40px;
+    margin:16px 16px;
+    box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
+
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.0rem;
+    min-width: 100;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  .card a {
+    text-decoration: none;
+    display: inline-block;
+    background: #c2c5c6;
+    color:#b3b5b6;
+    padding:10px;
+    margin:14px 0 0 0;
+    transition: all 3000ms ease-in-out ;
+  
+  }
+  .card h1 {
+    font-size: 30px;
+  }
+  .card a:hover{
+    background: #66CCFF;
+  
+  }
+  .card:hover {
+    box-shadow: 0.3em 0.3em 0.6em #7b7d7e, 0 0 0 0.1em #969394;
+  }
+  
+  .card-img-top {
+    padding: 1em;
+  }
+  
+  
+  .full .container {
+    max-width: 640px;
+  }
+  
+  .fullcard{
+  width:100%;
+  height: 500px;
+  background: #1d333e;
+  color: #aeb0b1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+   .fullcard h1 {
+    font-size :70px;
+    
+   }
+   img{
+    width: 100px;
+    height: 100px;
+    border: solid 2px #121517;
+    float:right;
+    opacity: 0.6;
+    
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

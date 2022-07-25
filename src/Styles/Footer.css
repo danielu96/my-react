@@ -1,0 +1,28 @@
+.footer {  
+    bottom: 0;
+    width: 100%;
+    /* position: relative; */
+    /* display: flex; */
+    float:none;
+    background: #c2c5c6;
+    /* color: gray; */
+    padding: 10px; 
+     text-align: center; 
+     margin-bottom: 0px; 
+      }
+ @media only screen and (max-width: 575px){
+  .footer{
+    position:relative;
+    width:100%;
+    /* bottom: 0; */
+    height: 10vh;
+   
+  }
+}
+.footer span {
+  color: red;
+}
+
+.footer p {
+  font-size: 14px;
+}

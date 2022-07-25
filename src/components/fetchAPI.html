@@ -1,0 +1,109 @@
+
+   import React, { useEffect , useState } from 'react';
+   import '../Styles/Product.css';
+   import axios from "axios";
+   import { useParams  } from 'react-router-dom';
+   
+   // import img1 from '../Images/header1.jpg';
+   // import img2 from '../Images/header2.jpg';
+   // import img3 from '../Images/header3.jpg';
+   
+   const Product = () => { 
+     const {name} = useParams();
+     const [state, setState] = useState([]);
+     const fetchState = async () => {
+     const response = await fetch( "../Data/data.json");
+      const data = await response.json();
+       setState(data);
+     };
+   
+     useEffect(() => {
+       fetchState();
+     }, []);
+     return (
+       <div className="App">
+       <p> {state.value} </p>
+         <button onClick={fetchState}> get new joke </button>
+       </div>
+     );
+   }
+
+
+
+
+
+     // const products = [
+     //   { id :1 ,
+     //     name : "car" ,
+     //     opis:"osobowy ten samochód jest dobrej marki tak myślę ",
+     //     img :  <img src ={img2} alt = "das"></img>
+     //   },
+     //   {  id :2 ,
+     //      name : "bike" ,
+     //      opis: "rower ten osobisty jest jak mój będzie",
+     //      img :  <img src ={img3} alt = "das"></img>
+     //      },
+     //     { id :3 ,
+     //      name : "motorcycle" ,
+     //      opis: "notor ten mój jest jak go sobie kupię",
+     //      img :  <img src ={img1} alt = "das"></img>
+     //     },
+     // ];
+  //    const [state, setState] = useState([])
+  //    useEffect(() => {
+  //      fetch( "../Data/data.json").then(
+  //        response => setState(response.data))    
+  //  },[])
+   // function App() {
+   //   const [state, setState] = useState([])
+   //   useEffect(() => {
+   //       fetch("/api/data").then(
+   //           res => setState(res.data)
+   //       )}, [])
+   //   return (
+   //       <>
+   //           {state.map( d => <div>{d}</div>)}      
+   //       </>
+   //   )}
+  //  const products = state.products.map(product => <div key = {product.id}>{product.name}</div>)
+   
+      //  return (
+      //  <>
+      //  <div>{products}</div>
+       
+         
+       {/* {state.users.map(user => (
+   <div key ={user.id}>{user.name}</div>))
+   // }
+       
+   
+          {/* {products
+        .filter((product) => product.name === name)
+       .map(product => (
+        <div key={product.name} > 
+        <p> {product.opis}</p>
+        <p>{product.img}</p>
+        </div>
+        ))} */}
+        // </>  
+    //  );
+  //  };
+   export default Product;
+   
+  //   const [state, setState] = useState([]);
+  //   const fetchState = async () => {
+  //   const response = await fetch( "../Data/data.json");
+  //    const data = await response.json();
+  //     setState(data);
+  //   };
+  
+  //   useEffect(() => {
+  //     fetchState();
+  //   }, []);
+  //   return (
+  //     <div className="App">
+  //     <p> {state} </p>
+  //       <button onClick={fetchState}> get new joke </button>
+  //     </div>
+  //   );
+  // }
