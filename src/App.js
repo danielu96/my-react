@@ -41,7 +41,7 @@ class App extends React.Component {
           <>
              {/* {karty} */}
            <div className='app'>      
-      <Router>  
+      <Router basename={process.env.PUBLIC_URL}>  
   <Nav/>  
         <Routes>     
           
