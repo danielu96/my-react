@@ -6,19 +6,23 @@
 .box{
   display: flex;
   flex-flow: row wrap;
-  min-height: 100vh;
+  min-height:80vh;
   max-width: 990px;
   margin: auto;
   align-items: center;
   object-position: center; 
-  /* display: block;
-  max-block-size: 990px;
-  margin: auto;
-  float: none; 
-  align-items: center;
-  object-position: center;  */
+    }
+   @media only screen and (max-width: 575px){
+   .box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    margin: auto;    
+     }}
+   .app{
+    min-height: 100vh;
    }
-
 section {
   width: 100%;
   min-width: 100vh;
@@ -45,17 +49,12 @@ section {
       min-width: 100vh;
       margin:auto;
         }}
-  /* .hero {
-    background: rgb(221, 220, 220);
-  } */
-  .hero .container{
-    
+   .hero .container{   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 .card {
-  display: flex;
   text-align:center;
   z-index: 0;
   float:left;
@@ -70,10 +69,7 @@ section {
   .card  {
     z-index: 0;
     float: none;
-    /* width:100%; */
-    max-width: 90%;
-    position: relative;
-    display: flex;
+    max-width: 90%;    
     padding: 20px;
     margin-top: 15px;
     margin-left: 20px;
@@ -107,7 +103,6 @@ section {
   
    }
 .fullcard{
-  /* float: none; */
   z-index: 0;
   margin-top: 40px;
 width: 100%;
@@ -120,17 +115,14 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 padding: 20px;
-
-
 box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
 }
 @media (max-width: 575px) {
   .fullcard{
-    /* z-index: 0; */
-   margin-top: 20px;
+    margin-top: 20px;
     color: #26769e;
     width: 95%;
-    height: 100%;
+    height: 80vh;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -148,8 +140,7 @@ box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
  @media (max-width: 576px) {
   .img{
     align-self: center;
-    /* margin-left: 1em; */
-    max-width:250px;
+     max-width:250px;
      opacity: 0.8;
   }
   .Image{
@@ -174,19 +165,17 @@ h1 {
   box-shadow: 0.3em 0.3em 0.6em #7b7d7e, 0 0 0 0.1em #969394;
 }
 .opis{
-  /* width: 80%; */
-    margin:1em 1em 1em 1em;
+  margin:1em 1em 1em 1em;
 }
 .btn_my{
   display: flex;
-  /* font-weight: 600; */
-  /* color: #a3282a; */
   text-align: left;
-  margin-top: 60px;
+  color:  #26769e;
+  margin-top: 2rem;
   margin-right: 0.5rem;
-background: #ede8e8;
+/* background:#c2c5c6; */
   padding: 7px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border: none;
   border-radius: 0.25rem; 
   /* line-height: 1.6; 
@@ -196,11 +185,9 @@ background: #ede8e8;
 }
 .Contact {
   z-index: 0;
- 
-  padding:50px;
-width: 100%;
-height: 85vh;
-
+  margin: auto;
+width: 60%;
+min-height: 80vh;
 background: #ffffff;
 color: #26769e;
 display: flex;
@@ -208,8 +195,24 @@ position: relative;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 40px;
-
+}
+@media only screen and (max-width: 575px) {
+.Contact {
+  z-index: 0;
+   padding: 20px;
+   margin: auto;
+width: 95%;
+min-height: 80vh;
+background: #ffffff;
+color: #26769e;
+display: flex;
+position: relative;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}}
+.content-wrap{
+  flex:1;
 }
 
 

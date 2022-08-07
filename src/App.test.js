@@ -1,9 +1,10 @@
  import React from 'react'
 import { render, screen } from '@testing-library/react';
-   import Test from './test';
+   import Card from './Card';
+// import { Card } from 'react-bootstrap';
 test('renders learn react text', () => {
-   render(<Test/>);  
-   const Element = screen.getByText(/HALKO/);
+   render(<Card/>);  
+   const Element = screen.getByText(/Zobacz/);
    expect(Element).toBeInTheDocument();
 });
   

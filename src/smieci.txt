@@ -1,0 +1,3 @@
+ <Routes basename={process.env.PUBLIC_URL}>  
+ // "homepage": "https://danielu96.github.io/my-react/",
+ basename={process.env.PUBLIC_URL}

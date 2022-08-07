@@ -42,7 +42,7 @@ export default function Nav() {
                     </li>
                     <li>
           <a href="/Contact">Contact</a>
-        </li>
+        </li>               
       </ul>
                   </div>
   </nav>

@@ -1,0 +1,30 @@
+ { 
+     "karty" : [
+    {
+      "id":1,
+      "title": "Kubek imienny",
+      "description": "z dowolnym imieniem...",
+      "img" :  "../Images/latte.png",
+      "Image":"../Images/latte.png",
+      "cena": "20zl",
+      "opis":"Kubki z nadrukowanym dowolnym imieniem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... "
+    },
+    {  "id":2,
+      "title": "Kubek magiczny",
+      "description": "zmieniający kolor... ",
+      "img" : "../Images/Kubek-Magiczny.png",
+      "cena":"30zl",
+     "opis":"Kubki zmieniające kolor pod wpływem ciepła. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+      "Image":"../Images/Kubek-Magiczny.png"
+
+    },
+    { "id":3,
+      "title": "Kubek ze zdjęciem",
+      "description": "nadruk foto",
+      "img" :  "../Images/Kubek-kwiaty.png",
+      "cena":"25zl",
+      "opis":"Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+      "Image":"../Images/Kubek-kwiaty.png"
+    }     
+    ]
+}

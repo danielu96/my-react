@@ -6,15 +6,17 @@ const Footer = () => {
        <>
         <div className='footer'>
                <div >
-  <img src="images/LOGO.png" width= "100px" alt="LOGO"></img>
+  <img src="images/LOGO.png" width= "70px" alt="LOGO"></img>
       </div>
         <Routes>
         <Route path ="/" element = { 
-<p>Jesteś na stronie główniej</p>  } />
+<p>Strona główna</p>  } />
 <Route path ="/cards/:title" element = { 
-<p>Jesteś na stronie produktów</p>  } /> 
+<p>Strona produktów</p>  } /> 
 <Route path ="/contact" element = { 
-<p>Jesteś na stronie Kontaktu</p>  } /> 
+<p>Strona Kontaktu</p>  } /> 
+<Route path ="/Sublimation" element = { 
+<p>Strona o Sublimacji</p>  } /> 
         </Routes>
         </div>
         </>

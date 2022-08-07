@@ -5,10 +5,15 @@ import "../Styles/navigation.css";
 
 const list = [
 
-  {name: "start", path: "/" },
-  { name: "produkty", path: "/products" },
-  { name: "kontakt", path: "/contact" },
-  { name: "panel admin", path: "/admin" },
+  // {name: "start", path: "/" },
+  // { name: "produkty", path: "/products" },
+  // { name: "kontakt", path: "/contact" },
+  // { name: "panel admin", path: "/admin" },
+
+    {name: "home", path: "/" },
+  { name: "Sublimation", path: "/Sublimation" },
+  { name: "Contact", path: "/Contact" },
+  { name: "Test", path: "/Test" },
 ]
 
 const Navigation = () => {

@@ -20,7 +20,7 @@ import './Styles/Contact.css';
 
             //    </div>                  
            
-            <div className='Contact'>
+            <div >
            {data.filter((card) => card.title === title)
            .map((card,index) => (
                <div className='Contact' key={index}>
