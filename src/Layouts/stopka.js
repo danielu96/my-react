@@ -17,6 +17,7 @@ const Footer = () => {
 <p>Strona Kontaktu</p>  } /> 
 <Route path ="/Sublimation" element = { 
 <p>Strona o Sublimacji</p>  } /> 
+
         </Routes>
         </div>
         </>

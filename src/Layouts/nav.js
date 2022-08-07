@@ -1,9 +1,14 @@
 import React from 'react';
 import {FaBars , FaTimes} from "react-icons/fa";
+import { useRef } from 'react';
 import "../Styles/navigation.css";
 import { useState } from "react"
 export default function Nav() {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
+    // const navRef = useRef();
+    // const showNavBar = () => {
+    //   navRef.current.classList.toggle("navigation-menu expanded");
+    // }
       return (
     <nav className="navigation">
     <div className="brand-name">
@@ -42,8 +47,16 @@ export default function Nav() {
                     </li>
                     <li>
           <a href="/Contact">Contact</a>
-        </li>               
+        </li>   
+        <li>
+        <button className ="nav-btn nav-close-btn" onClick={() => {
+           setIsNavExpanded(!isNavExpanded)
+         }}>
+                <FaTimes/>
+            </button>   
+            </li>              
       </ul>
+     
                   </div>
   </nav>
 )
