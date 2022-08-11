@@ -1,26 +1,21 @@
-import React from 'react';
-import {FaBars , FaTimes} from "react-icons/fa";
-import { useRef } from 'react';
+import React from "react";
+import { FaTimes } from "react-icons/fa";
 import "../Styles/navigation.css";
-import { useState } from "react"
+import { useState } from "react";
 export default function Nav() {
-    const [isNavExpanded, setIsNavExpanded] = useState(false);
-    // const navRef = useRef();
-    // const showNavBar = () => {
-    //   navRef.current.classList.toggle("navigation-menu expanded");
-    // }
-      return (
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  return (
     <nav className="navigation">
-    <div className="brand-name">
-<img src="images/LOGO.png" width= "100px" alt="LOGO"></img>
-    </div>
-          <button
+      <div className="brand-name">
+        <img src="images/LOGO.png" width="100px" alt="LOGO"></img>
+      </div>
+      <button
         className="hamburger"
-         onClick={() => {
-           setIsNavExpanded(!isNavExpanded)
-         }}
-           > 
-          <svg
+        onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }}
+      >
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
           viewBox="0 0 20 20"
@@ -32,32 +27,34 @@ export default function Nav() {
             clipRule="evenodd"
           />
         </svg>
-        </button>   
-        <div
+      </button>
+      <div
         className={
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }
       >
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/Sublimation">Sublimation</a>
-                    </li>
-                    <li>
-          <a href="/Contact">Contact</a>
-        </li>   
-        <li>
-        <button className ="nav-btn nav-close-btn" onClick={() => {
-           setIsNavExpanded(!isNavExpanded)
-         }}>
-                <FaTimes/>
-            </button>   
-            </li>              
-      </ul>
-     
-                  </div>
-  </nav>
-)
-}  
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/Sublimation">Sublimation</a>
+          </li>
+          <li>
+            <a href="/Contact">Contact</a>
+          </li>
+          <li>
+            <button
+              className="nav-btn nav-close-btn"
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              <FaTimes />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
