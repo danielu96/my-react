@@ -3,6 +3,9 @@
   margin:0;
   padding :0;
  }
+ body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
 .box{
   display: flex;
   flex-flow: row wrap;
@@ -135,7 +138,7 @@ box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
     }
        }
     .Image{
-      width: 300px;
+      max-width: 270px;
     }
  @media (max-width: 576px) {
   .img{
@@ -171,17 +174,21 @@ h1 {
   display: flex;
   text-align: left;
   color:  #26769e;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-right: 0.5rem;
 /* background:#c2c5c6; */
   padding: 7px;
   font-size: 0.8rem;
   border: none;
   border-radius: 0.25rem; 
+  box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
   /* line-height: 1.6; 
   
    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
+}
+.btn_my:hover {
+  box-shadow: 0.3em 0.3em 0.6em #7b7d7e, 0 0 0 0.1em #969394;
 }
 .Contact {
   z-index: 0;

@@ -23,6 +23,7 @@
     display: block;
     width: 100%;
     margin-top: 1rem;
+    color: white;
    
   }
 .navigation {
@@ -97,7 +98,11 @@
   }
   .navigation-menu li:hover {
     background-color: #eee;
+    
   }   
+.navigation-menu li a:hover{
+  color:black;
+}
   
   /* .hamburger:hover {
     background-color:rgb(196, 196, 196);

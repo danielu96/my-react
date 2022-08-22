@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FullCard from "./FullCard";
 import Hero from "./Hero";
 import Card from "./Card";
-import Footer from "./Layouts/stopka";
+import Footer from "./Layouts/stopek";
 import Nav from "./Layouts/nav";
 import Contact from "./Pages/Contact";
 import Sublimation from "./Pages/sublimation";

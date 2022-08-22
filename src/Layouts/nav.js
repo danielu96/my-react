@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <nav className="navigation">
       <div className="brand-name">
-        <img src="images/LOGO.png" width="100px" alt="LOGO"></img>
+        <img src="images/LOGO.png" width="100px" alt="logo"></img>
       </div>
       <button
         className="hamburger"
@@ -50,7 +50,15 @@ export default function Nav() {
                 setIsNavExpanded(!isNavExpanded);
               }}
             >
-              <FaTimes />
+              <FaTimes
+                style={{
+                  color: "white",
+                  height: "100%",
+                  width: "25px",
+                  padding: "2px",
+                  background: "rgb(48, 43, 43)",
+                }}
+              />
             </button>
           </li>
         </ul>
