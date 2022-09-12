@@ -1,13 +1,17 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import "../Styles/navigation.css";
+// import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState } from "react";
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="navigation">
       <div className="brand-name">
-        <img src="images/LOGO.png" width="100px" alt="logo"></img>
+        <img src="images/LOGO2.png" width="40px" alt="logo"></img>
       </div>
       <button
         className="hamburger"
@@ -19,7 +23,7 @@ export default function Nav() {
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
           viewBox="0 0 20 20"
-          fill="white"
+          fill="gray"
         >
           <path
             fillRule="evenodd"
@@ -34,6 +38,16 @@ export default function Nav() {
         }
       >
         <ul>
+          <hr className="kreska" />
+          <img
+            className="img-navi"
+            src="images/LOGO2.png"
+            style={{
+              width: "70px",
+            }}
+            alt="LOGO"
+          ></img>
+
           <li>
             <a href="/">Home</a>
           </li>
@@ -44,23 +58,43 @@ export default function Nav() {
             <a href="/Contact">Contact</a>
           </li>
           <li>
+            <a href="Formularz">Formularz</a>
+          </li>
+          <li>
+            <a href="Forma">Szablon</a>
+          </li>
+          <li>
+            <nav>
+              <NavDropdown
+                style={{ margin: "0px 0px" }}
+                title="Z nadrukiem"
+                // id={`offcanvasNavbarDropdown-expand-${expand}`}
+              >
+                <NavDropdown.Item href="#action3">
+                  Kubki imienne
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action3">Kubki Latte</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">
+                  Kubki magiczne
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Nie tylko kubki
+                </NavDropdown.Item>
+              </NavDropdown>
+            </nav>
+          </li>
+          <li>
             <button
               className="nav-btn nav-close-btn"
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
               }}
             >
-              <FaTimes
-                style={{
-                  color: "white",
-                  height: "100%",
-                  width: "25px",
-                  padding: "2px",
-                  background: "rgb(48, 43, 43)",
-                }}
-              />
+              <FaTimes />
             </button>
           </li>
+          <hr className="kreska" />
         </ul>
       </div>
     </nav>

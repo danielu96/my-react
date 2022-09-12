@@ -1,0 +1,106 @@
+
+form {
+  min-height:80vh;
+    margin: 30px auto;
+    display: grid;
+    max-width: 900px;
+      
+  }
+
+  @media only screen and (max-width: 768px) {
+  form {
+    min-height:80vh;
+      margin: 30px 20px;
+      display: grid;
+    }}
+  
+  label {
+  display:block;
+ 
+ 
+ 
+  }
+
+@media only screen and (min-width: 768px) {
+  label{
+display: inline-block;
+margin :15px;
+padding:10px;
+/* float :none; */
+}}
+
+
+  input{
+   
+       display: block;
+    padding: 1px;
+    /* min-width: 60%; */
+  }
+  @media only screen and (max-width: 768px) {
+    input{
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: block;
+      padding: 1px;
+      /* width:90%; */
+      
+    }
+  }
+  
+  .input[type="checkbox"] {
+    margin-left: 0;
+   
+    
+     }
+     @media only screen and (min-width: 768px) {
+     .input[type="checkbox"] {
+      margin-left: 0;
+      margin-right: 170px;  
+      /* min-width:none; */
+      
+     
+       }}
+  .btn_main{
+    display: block;
+    max-width: 200px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    text-align: center;
+    border:none;
+    height: min-content;
+  }
+  @media only screen and (max-width: 768px){
+  .btn_main {
+    display: block;
+    /* max-width: 40%; */
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 0px;
+    height: min-content;
+       
+  }}
+  .btn_main:hover {
+    background:#c2c5c6;
+    box-shadow: 0.1em 0.1em 0.1em #7b7d7e, 0 0 0 0.1em #969394;
+  }
+
+  span {
+    color: red;
+    font-size: 0.9rem;
+    display:block;
+  }
+  h2{
+    margin-left: 25px;
+  }
+  @media only screen and (max-width: 768px){
+  h2{
+    margin-left: 0px;
+  }}
+
+  
+  
+  
+    

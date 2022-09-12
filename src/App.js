@@ -8,6 +8,10 @@ import Footer from "./Layouts/stopek";
 import Nav from "./Layouts/nav";
 import Contact from "./Pages/Contact";
 import Sublimation from "./Pages/sublimation";
+import Formularz from "./Pages/Form";
+import Forma from "./Pages/Formularz";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Karuzela from "./Layouts/Carousel";
 class App extends React.Component {
   state = {
     karty: [],
@@ -28,12 +32,15 @@ class App extends React.Component {
         <div className="app">
           <Router>
             <Nav />
+            <Karuzela />
             <Routes>
               <Route path="/" element={<Card data={karty} />} />
               <Route path="/" element={<Hero data={karty} />} />
               <Route path="/cards/:title" element={<FullCard data={karty} />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
+              <Route path="/Formularz" element={<Formularz />} />
+              <Route path="/Forma" element={<Forma />} />
             </Routes>
             <Footer />
           </Router>

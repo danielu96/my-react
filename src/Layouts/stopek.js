@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="footer">
         <div>
           <img
-            src="images/LOGO.png"
+            src="images/LOGO2.png"
             style={{
-              width: "80px",
+              width: "40px",
             }}
             alt="LOGO"
           ></img>
@@ -20,6 +20,7 @@ const Footer = () => {
             <Route path="/cards/:title" element={<p>Strona produktów</p>} />
             <Route path="/contact" element={<p>Strona Kontaktu</p>} />
             <Route path="/Sublimation" element={<p>Strona o Sublimacji</p>} />
+            <Route path="/Formularz" element={<p>Darmowy kubek</p>} />
           </Routes>
         </span>
         {/* <div>

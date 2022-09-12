@@ -8,7 +8,7 @@
 }
 .box{
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   min-height:80vh;
   max-width: 990px;
   margin: auto;
@@ -86,13 +86,14 @@ section {
   color:#03263a;
   padding:10px;
   margin-top: 5px;
-  transition: all 2000ms ease-in-out ;
+  transition: all 1000ms ease-in-out ;
 }
 .card h1 {
   font-size: 30px;
 }
 .card a:hover{
-  background: #8a8386;
+  background:blue;
+  color:white;
 
 }
 .card:hover {
@@ -118,6 +119,8 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 padding: 20px;
+border:solid 1px;
+border-radius: 1px;
 box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
 }
 @media (max-width: 575px) {
@@ -138,7 +141,7 @@ box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
     }
        }
     .Image{
-      max-width: 270px;
+      max-width: 330px;
     }
  @media (max-width: 576px) {
   .img{
@@ -151,8 +154,8 @@ box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
   }
  }
  .img{
-  width:250px;
-  height:250px;
+  max-width:250px;
+  max-height:250px;
     opacity: 0.8;
    }
  /* footer {
@@ -181,14 +184,15 @@ h1 {
   font-size: 0.8rem;
   border: none;
   border-radius: 0.25rem; 
-  box-shadow: 0.2em 0.2em 0.3em #aeb0b1, 0 0 0 0.1em #bdbebe;
+  box-shadow: 0.1em 0.1em 0.2em #aeb0b1, 0 0 0 0.1em #bdbebe;
   /* line-height: 1.6; 
   
    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
 }
 .btn_my:hover {
-  box-shadow: 0.3em 0.3em 0.6em #7b7d7e, 0 0 0 0.1em #969394;
+  background:#c2c5c6;
+  /* box-shadow: 0.3em 0.3em 0.6em #7b7d7e, 0 0 0 0.1em #969394; */
 }
 .Contact {
   z-index: 0;
@@ -202,6 +206,8 @@ position: relative;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
+
 }
 @media only screen and (max-width: 575px) {
 .Contact {
@@ -217,9 +223,13 @@ position: relative;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
 }}
 .content-wrap{
   flex:1;
+}
+.nav-link {
+  padding:0px;
 }
 
 

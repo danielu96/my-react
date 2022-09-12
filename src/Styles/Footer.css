@@ -10,8 +10,8 @@
     padding-left:2rem;
     padding-right:2rem;
      text-align: center; 
-     color:white;
-     background: #c2c5c6;
+     color:gray;
+     background-color: rgb(243, 243, 243);
 
 margin-bottom:0px;
      bottom: 0; 
@@ -27,12 +27,12 @@ margin-bottom:0px;
     bottom: 0;
     /* margin-top:1rem; */
     /* padding-top:0rem; */
-    background: #c2c5c6;
+    background-color: rgb(243, 243, 243);
     /* height: 10vh;      */
   }
 }
 .footer span {
-  color: rgb(250, 249, 249);
+  color:gray;
 }
 
 .footer p {
