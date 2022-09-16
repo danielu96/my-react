@@ -47,7 +47,7 @@ export default function Nav() {
             }}
             alt="LOGO"
           ></img>
-
+ 
           <li>
             <a href="/">Home</a>
           </li>
@@ -63,10 +63,10 @@ export default function Nav() {
           <li>
             <a href="Forma">Szablon</a>
           </li>
-          <li>
-            <nav>
+          {/* <li>
+           
               <NavDropdown
-                style={{ margin: "0px 0px" }}
+               
                 title="Z nadrukiem"
                 // id={`offcanvasNavbarDropdown-expand-${expand}`}
               >
@@ -82,8 +82,8 @@ export default function Nav() {
                   Nie tylko kubki
                 </NavDropdown.Item>
               </NavDropdown>
-            </nav>
-          </li>
+           
+          </li> */}
           <li>
             <button
               className="nav-btn nav-close-btn"

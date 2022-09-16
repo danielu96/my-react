@@ -24,7 +24,7 @@ const Sublimation = () => {
         {data.map((product) => (
           <p key={product.id}>{product.description}</p>
         ))}
-        <button className="btn_my" onClick={handleOnClick}>
+        <button className="btn" style={{background:"#26769e", color:"white"}} onClick={handleOnClick}>
           Wróć do poprzedniej strony{" "}
         </button>
       </div>

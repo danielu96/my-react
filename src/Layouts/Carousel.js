@@ -10,16 +10,12 @@ function Karuzela() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Kubek</h3>
+          <p>Z nadrkiem</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="./Images/z2.jpg"
-          alt="Second slide"
-        />
+     
 
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -27,11 +23,11 @@ function Karuzela() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        {/* <img
           className="d-block w-100"
           src="./Images/z1.jpg"
           alt="Third slide"
-        />
+        /> */}
 
         <Carousel.Caption>
           <h3>Third slide label</h3>

@@ -12,6 +12,10 @@ import Formularz from "./Pages/Form";
 import Forma from "./Pages/Formularz";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Karuzela from "./Layouts/Carousel";
+import ImagCard from "./Layouts/ImgCard";
+import Figa from "./Layouts/Banerek";
+import Banerek from "./Layouts/Banerek";
+import Pagin from "./Layouts/Pagination";
 class App extends React.Component {
   state = {
     karty: [],
@@ -24,7 +28,7 @@ class App extends React.Component {
           karty: data.karty,
         });
       });
-  }
+  } 
   render() {
     const karty = this.state.karty;
     return (
@@ -32,16 +36,19 @@ class App extends React.Component {
         <div className="app">
           <Router>
             <Nav />
-            <Karuzela />
+            {/* <Karuzela /> */}
+            {/* <ImagCard/> */}
+            <Banerek/>
             <Routes>
               <Route path="/" element={<Card data={karty} />} />
-              <Route path="/" element={<Hero data={karty} />} />
-              <Route path="/cards/:title" element={<FullCard data={karty} />} />
+              <Route path="/" element={<Hero data={karty} />} />             
+              <Route path="/cards/:title" element={< Card data={karty} />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
               <Route path="/Forma" element={<Forma />} />
             </Routes>
+            <Pagin/>
             <Footer />
           </Router>
         </div>

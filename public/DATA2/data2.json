@@ -12,7 +12,7 @@
     {  "id":2,
       "title": "Kubek magiczny",
       "description": "zmieniający kolor... ",
-      "img" : "../Images/Kubek-Magiczny.png",
+      "img" : "../Images/z3.jpg",
       "cena":"30zl",
      "opis":"Kubki zmieniające kolor pod wpływem ciepła. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
       "Image":"../Images/Kubek-Magiczny.png"
@@ -20,11 +20,35 @@
     },
     { "id":3,
       "title": "Kubek ze zdjęciem",
-      "description": "nadruk foto",
-      "img" :  "../Images/Kubek-kwiaty.png",
+      "description": "nadruk foto...",
+      "img" :  "../Images/z2.jpg",
       "cena":"25zl",
       "opis":"Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
       "Image":"../Images/Kubek-kwiaty.png"
-    }     
+    }  ,   
+    { "id":4,
+    "title": "Kubek z łyżeczką",
+    "description": "nadruk foto...",
+    "img" :  "../Images/z1.jpg",
+    "cena":"25zl",
+    "opis":"Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+    "Image":"../Images/z3.jpg"
+  }  ,
+  { "id":5,
+  "title": "Kubek plastikowy",
+  "description": "nadruk foto...",
+  "img" :  "../Images/z1.jpg",
+  "cena":"25zl",
+  "opis":"Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
+  "Image":"../Images/z2.jpg"
+}  ,
+{ "id":5,
+  "title": "Kubek z termiczny",
+  "description": "nadruk foto...",
+  "img" :  "../Images/z1.jpg",
+  "cena":"25zl",
+  "opis":"Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+  "Image":"../Images/z1.jpg"
+}  
     ]
 }
