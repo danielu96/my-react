@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "./Pages/Card";
 const Hero = ({ karty }) => {
   return (
     <section className="hero">

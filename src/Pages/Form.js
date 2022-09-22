@@ -191,127 +191,135 @@ class Formularz extends Component {
 
   render() {
     return (
-      <div className="form">
-        <form onSubmit={this.handleSubmit} noValidate>
-          {this.state.message && (
-            <div>
-              <Alert
-                severity="success"
-                style={{ vertical: "top", horizontal: "center" }}
-              >
-                <AlertTitle>Success</AlertTitle>
-                <strong> {this.state.message}</strong>
-              </Alert>
-            </div>
-          )}
+      <>
+        <div className="box">
+          <div className="form">
+            <form onSubmit={this.handleSubmit} noValidate>
+              {this.state.message && (
+                <div>
+                  <Alert
+                    severity="success"
+                    style={{ vertical: "top", horizontal: "center" }}
+                  >
+                    <AlertTitle>Success</AlertTitle>
+                    <strong> {this.state.message}</strong>
+                  </Alert>
+                </div>
+              )}
 
-          <h2>Chcesz darmowy kubek</h2>
-          <label htmlFor="user">
-            Twoje imie:
-            <input
-              required
-              pattern="[a-zA-Z]"
-              style={{ width: "90%" }}
-              type="text"
-              id="user"
-              name="username"
-              placeholder="8 znaków bez spacji "
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-            {this.state.errors.username && (
-              <span>{this.messages.username_incorrect}</span>
-            )}
-          </label>
-          <label htmlFor="tel">
-            Twój telefon:
-            <input
-              style={{ width: "90%" }}
-              // inputMode="tel"
-              type="tel"
-              id="tel"
-              name="tel"
-              placeholder="np.790336233 "
-              required
-              pattern="[7-9]{1}[0-9]{9}"
-              value={this.state.tel}
-              onChange={this.handleChange}
-            />
-            {this.state.errors.tel && (
-              <span>{this.messages.tel_incorrect}</span>
-            )}
-          </label>
+              <h2>Chcesz darmowy kubek</h2>
+              <label htmlFor="user">
+                Twoje imie:
+                <input
+                  required
+                  pattern="[a-zA-Z]"
+                  style={{ width: "100%" }}
+                  type="text"
+                  id="user"
+                  name="username"
+                  // placeholder="8 znaków bez spacji "
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                />
+                {this.state.errors.username && (
+                  <span>{this.messages.username_incorrect}</span>
+                )}
+              </label>
+              <label htmlFor="tel">
+                Twój telefon:
+                <input
+                  style={{ width: "100%" }}
+                  // inputMode="tel"
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  // placeholder="np.790336233 "
+                  required
+                  pattern="[7-9]{1}[0-9]{9}"
+                  value={this.state.tel}
+                  onChange={this.handleChange}
+                />
+                {this.state.errors.tel && (
+                  <span>{this.messages.tel_incorrect}</span>
+                )}
+              </label>
 
-          <label htmlFor="email">
-            Twój email:
-            <input
-              style={{ width: "90%" }}
-              type="email"
-              id="email"
-              name="email"
-              placeholder="nie zapomnij o @ "
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-            {this.state.errors.email && (
-              <span>{this.messages.email_incorrect}</span>
-            )}
-          </label>
+              <label htmlFor="email">
+                Twój email:
+                <input
+                  style={{ width: "100%" }}
+                  type="email"
+                  id="email"
+                  name="email"
+                  // placeholder="nie zapomnij o @ "
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                />
+                {this.state.errors.email && (
+                  <span>{this.messages.email_incorrect}</span>
+                )}
+              </label>
 
-          <label htmlFor="password">
-            Przepisz ten text: "darmowy"
-            <input
-              style={{ width: "90%" }}
-              type="password"
-              id="password"
-              name="pass"
-              placeholder="darmowy   "
-              value={this.state.pass}
-              onChange={this.handleChange}
-            />
-            {this.state.errors.pass && (
-              <span>{this.messages.password_incorrect}</span>
-            )}
-          </label>
-          <label>
-            {" "}
-            Wybierz model kubka:
-            <select
-              style={{
-                display: "block",
-                margin: "10px 0px",
-                width: "70%",
-                padding: "3px",
-              }}
-              name="number"
-              value={this.state.number}
-              onChange={this.handleChange}
-            >
-              <option value="1">Zwykły biały</option>
-              <option value="2">Magiczny czarny</option>
-              <option value="3">Latte duży</option>
-              <option value="4">Z łyżeczką niebieski</option>
-            </select>
-          </label>
+              <label htmlFor="password">
+                Przepisz ten text: "darmowy"
+                <input
+                  style={{ width: "100%" }}
+                  type="password"
+                  id="password"
+                  name="pass"
+                  // placeholder="darmowy   "
+                  value={this.state.pass}
+                  onChange={this.handleChange}
+                />
+                {this.state.errors.pass && (
+                  <span>{this.messages.password_incorrect}</span>
+                )}
+              </label>
+              <label>
+                {" "}
+                Wybierz model kubka:
+                <select
+                  style={{
+                    display: "block",
+                    margin: "10px 0px",
+                    width: "70%",
+                    padding: "3px",
+                  }}
+                  name="number"
+                  value={this.state.number}
+                  onChange={this.handleChange}
+                >
+                  <option value="1">Zwykły biały</option>
+                  <option value="2">Magiczny czarny</option>
+                  <option value="3">Latte duży</option>
+                  <option value="4">Z łyżeczką niebieski</option>
+                </select>
+              </label>
 
-          <label htmlFor="accept">
-            <input
-              type="checkbox"
-              id="accept"
-              name="accept"
-              checked={this.state.accept}
-              onChange={this.handleChange}
-            />
-            Wyrażam zgodę
-            {this.state.errors.accept && (
-              <span>{this.messages.accept_incorrect}</span>
-            )}
-          </label>
+              {/* <label style={{ display: "flex" }} htmlFor="accept">
 
-          <button className="btn_main">Zapisz się</button>
-        </form>
-      </div>
+                <input
+
+                  type="checkbox"
+                  id="accept"
+                  name="accept"
+                  checked={this.state.accept}
+                  onChange={this.handleChange}
+                />
+                Wyrażam zgodę
+                {this.state.errors.accept && (
+                  <span>{this.messages.accept_incorrect}</span>
+                )}
+              </label> */}
+
+              <button className="btn" style={{ marginLeft: "10px", width: "150px", padding: "5px", marginTop: "1rem", border: "none" }}>Zapisz się</button>
+            </form>
+          </div>
+          <div className="imager">Kubek</div>
+        </div>
+      </>
     );
+
   }
 }
 

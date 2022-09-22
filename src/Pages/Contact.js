@@ -10,9 +10,9 @@ const Contact = () => {
       <h1>Kontakt</h1>
       <p>Nawiązując do nauki Reacta.</p>
       <p>Strona wykonana w celach naukowych.</p>
-      <button className="btn" style={{background:"#26769e", color:"white"}} onClick={handleOnClick}>
+      {/* <button className="btn" style={{background:"#26769e", color:"white"}} onClick={handleOnClick}>
         Wróć do poprzedniej strony{" "}
-      </button>
+      </button> */}
     </div>
   );
 };

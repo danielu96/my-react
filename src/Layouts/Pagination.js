@@ -1,4 +1,4 @@
-import react from "react"
+
 
 
 
@@ -7,8 +7,8 @@ const Pagin = () => {
 
 
 
-<nav aria-label="..."  >
-  <ul class="pagination pagination-lg justify-content-center">
+<nav aria-label="..."  style={{float:"none"}}>
+  <ul class="pagination pagination-lg justify-content-center ">
     <li class="page-item ">
       <a class="page-link" href="/">1</a>
     </li>

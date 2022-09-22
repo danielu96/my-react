@@ -1,180 +1,223 @@
 .brand-name {
-    text-decoration: none;
-    color: rgb(200, 73, 73);
-    font-size: 1.3rem;
-    margin-left: 1rem;
+  text-decoration: none;
+  color: rgb(200, 73, 73);
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+  /* font-size: large; */
+  margin-top: 1.5rem;
+
+}
+
+.navigation-menu li {
+
+  list-style-type: none;
+  margin: auto 1rem;
+}
+
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  /* margin-top: 0.5rem; */
+  color: gray;
+
+}
+
+.navigation-menu li a:hover {
+  color: #26769e;
+  /* text-decoration: underline; */
+  border-top: inset 1px #26769e;
+  border-bottom: inset 1px #26769e;
+  /* box-shadow: inset 0 0 0 2em var(--hover) */
+  transition: all 1000ms;
+
+}
+
+.navigation {
+  z-index: 2;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: rgb(243, 243, 243);
+  color: white;
+  /* box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23); */
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-menu.expanded ul {
+    display: block;
+    transform: none;
+
   }
-  .navigation-menu {
-    margin-left: auto;
-  }
+}
+
+.hamburger {
+  z-index: 0;
+  color: none;
+  border: 0;
+  border: none;
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  /* border-radius: 50%; */
+  background-color: transparent;
+  cursor: pointer;
+  /* transition: background-color 2s ease-in-out;  */
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  /* visibility: hidden;
+    opacity: 0;  */
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
   .navigation-menu ul {
+
+    position: fixed;
+    padding: 4rem 0 1rem 0;
+    margin-top: 0rem;
+    z-index: 1;
+    top: 0vh;
+    left: 0;
+    width: 70%;
+    height: auto;
     display: flex;
-    padding: 0;
-    /* font-size: large; */
-    
+    flex-direction: column;
+    /* align-items: center;
+     justify-content: center; */
+    /* gap: 1.5rem; */
+    background-color: rgb(233, 233, 233);
+    transition: 1s;
+    transform: translateX(-100%);
+
+
+
+
+
   }
 
   .navigation-menu li {
-    
-    list-style-type: none;
-    margin: 0 1rem;
+    /* text-align: center; */
+    margin-left: 2rem;
+    margin-top: 0.5rem;
   }
+
   .navigation-menu li a {
-    text-decoration: none;
-    display: block;
+    color: gray;
     width: 100%;
-    margin-top: 1.5rem;
-    color:gray;
-   
+    padding: 0.5rem 0 0.5rem 1rem;
+
+
+
   }
-  
-.navigation-menu li a:hover{
-  color:brown;
-  text-decoration: underline;
-  transition: all 1000ms ease-in-out ;
-}
-.navigation {
-  z-index: 2;
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0.5rem 0rem;
-    background-color: rgb(243, 243, 243);
-    color: white;   
-    /* box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23); */
+
+  .navigation-menu li :hover {
+    background-color: gray;
   }
-    @media screen and (max-width: 768px) {
-    .navigation-menu.expanded ul {
-      display: block;
-      transform: none;    
-      
-    }
+
+  .navigation-menu li a:hover {
+    color: white;
+    font-weight: 600;
+    border-top: none;
+    border-bottom: none;
+
   }
-  .hamburger {
-    z-index: 0;
-    color: none;
-     border: 0;
-     border: none;
-    height: 50px;
-    width: 50px;
-    padding: 0.5rem;
-    /* border-radius: 50%; */
-    background-color:transparent;
-    cursor: pointer;
-    /* transition: background-color 2s ease-in-out;  */
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    /* visibility: hidden;
-    opacity: 0;  */
-    display: none;   
-  }
-  @media screen and (max-width: 768px) {
-  .navigation-menu ul {
-     
-     position: fixed;
-     padding-top: 8rem;
-     z-index: 1;
-     top: 0vh;
-     left: 0;
-     width: 70%;
-     height: 100vh;
-     display: flex;
-     flex-direction: column;
-     /* align-items: center;
-     justify-content: center; */
-     /* gap: 1.5rem; */
-     background-color: rgb(250, 250, 250);
-     transition: 1s;
-     transform: translateX(-100%);
-     
-     
-     
-     
-         
-  } 
-    .navigation-menu li {
-    text-align: center;
-         /* margin-top: 5rem; */
-        
-  }
-  .navigation-menu li a {
-    color:gray;
-    width: 100%;
-    padding: 1rem ;
-   
-   
-  }
-  .navigation-menu li:hover {
-    background-color: rgb(97, 85, 85);
-    
-  }   
-.navigation-menu li a:hover{
-  color:rgb(255, 255, 255);
-}
-  
+
+
   /* .hamburger:hover {
     background-color:rgb(196, 196, 196);
   } */
   @media only screen and (max-width: 768px) {
     .hamburger {
       z-index: 1;
-      opacity:1;
+      opacity: 1;
       display: block;
       visibility: visible;
       color: rgb(187, 187, 117);
-     
+
     }
   }
-} 
-@media only screen and (min-width: 768px){
-.nav-link {
-  padding:none;
-   
-} }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link {
+    padding: none;
+
+  }
+}
+
 nav .nav-close-btn {
   visibility: hidden;
   position: absolute;
   top: 2rem;
   right: 2rem;
-  
+
 }
+
 @media only screen and (max-width: 768px) {
-nav .nav-close-btn {
-  visibility: visible;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background-color: rgb(252, 252, 252);
-  border: none;
-}
-}
-.kreska{
-  color:black;
-  visibility:hidden ;
- 
-}
-@media only screen and (max-width: 768px) {
-  .kreska{
-    color:black;
+  nav .nav-close-btn {
     visibility: visible;
-    margin: 3rem 0rem;
-  }}
-  
-
-  .img-navi{
-    visibility:hidden ;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: transparent;
+    color: gray;
+    /* color:gray; */
+    border: none;
   }
-  @media only screen and (max-width: 768px) {
-  .img-navi{
-    visibility:visible;
-   margin-left: 6rem;
-  }}
+}
 
-  
+@media only screen and (max-width: 768px) {
+  nav .nav-close-btn :hover {
+
+    background-color: transparent;
+    color: aliceblue;
+
+  }
+}
+
+.kreska {
+  color: black;
+  visibility: hidden;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .kreska {
+    color: black;
+    visibility: visible;
+    margin: 0rem 0rem;
+  }
+}
+
+
+.img-navi {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-navi {
+    visibility: visible;
+    margin-left: 3rem;
+
+  }
+}
+
+
 
 
 

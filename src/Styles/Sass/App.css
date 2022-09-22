@@ -23,7 +23,7 @@ body {
   margin: auto;
   align-items: center;
   object-position: center;
-  padding: 2rem 0 0 0;
+  padding: 3rem 0;
   /* background-color: #e0e3e4; */
   /* flex-direction: row; */
 }
@@ -125,8 +125,6 @@ section {
   /* margin-top: 2rem; */
   border-radius: 9px;
   /* transition: all 1000ms ease-in-out ; */
-  border-top: inset 0.7px #26769e;
-  border-bottom: inset 0.7px #26769e;
 }
 
 .card h1 {
@@ -135,14 +133,9 @@ section {
 }
 
 .card a:hover {
-  background-color: #ffffff;
-  color: #26769e;
+  background: #a2a2f1;
+  color: #201738;
   /* text-decoration: underline; */
-  box-shadow: none;
-  box-sizing: content-box;
-  transition: all .35s ease;
-  border-top: inset 0.7px #26769e;
-  border-bottom: inset 0.7px #26769e;
 }
 
 .card:hover {
@@ -282,7 +275,7 @@ h1 {
     padding: 20px;
     margin: auto;
     width: 95%;
-    min-height: 60vh;
+    min-height: 40vh;
     background: #ffffff;
     color: gray;
     display: flex;
@@ -359,14 +352,11 @@ h1 {
   color: #ffffff;
   border-radius: 6px;
   padding: 3px;
-  border-bottom: solid #feffff;
 }
 
 .btn_banerek:hover {
   background: #a2a2f1;
   color: whitesmoke;
-  text-decoration: underline;
-  transition: 10ms;
 }
 
 .MDBCard {
@@ -382,31 +372,4 @@ h1 {
 
 .cos {
   background-color: #26769e;
-}
-
-.pagination {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  gap: 5px;
-}
-
-.pagination .page-num {
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: 400;
-}
-
-.pagination .page-num:hover {
-  background-color: #26769e;
-  color: #feffff;
-}
-
-.pagination .active {
-  background-color: lightgray;
-  border-radius: 8px;
 }
