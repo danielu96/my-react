@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Kubek imienny",
-      "description": "z dowolnym imieniem...",
+      "description": "z dowolnym imieniem",
       "img": "../Images/kubek_czarny.png",
       "Image": "../Images/kubek_czarny.png",
       "cena": "20zl",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "title": "Kubek magiczny",
-      "description": "zmieniający kolor... ",
+      "description": "zmieniający kolor ",
       "img": "../Images/kubek_czarny.png",
       "cena": "30zl",
       "opis": "Kubki zmieniające kolor pod wpływem ciepła. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "title": "Kubek ze zdjęciem",
-      "description": "nadruk foto...",
+      "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "title": "Kubek z łyżeczką",
-      "description": "nadruk foto...",
+      "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "title": "Kubek plastikowy",
-      "description": "nadruk foto...",
+      "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "title": "Kubek z termiczny",
-      "description": "nadruk foto...",
+      "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "title": "Kubek szklany",
-      "description": "z dowolnym napisem...",
+      "description": "z dowolnym napisem",
       "img": "../Images/kubek_czarny.png",
       "Image": "../Images/kubek_czarny.png",
       "cena": "20zl",
@@ -66,7 +66,7 @@
     {
       "id": 8,
       "title": "Kubek metalowy",
-      "description": "nadruk na kubku metalowym ... ",
+      "description": "nadruk na kubku metalowym",
       "img": "../Images/kubek_czarny.png",
       "cena": "30zl",
       "opis": "Kubki metalowe z nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
@@ -74,8 +74,8 @@
     },
     {
       "id": 9,
-      "title": "Filiżanaka ",
-      "description": "nadruk foto...",
+      "title": "Filiżanka ",
+      "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Filiżanki z nadrukowaną dowolną grafiką. Nadruk wykonany jest metodą sublimacji w szkliwie filiżanki... ",
@@ -84,7 +84,7 @@
     {
       "id": 10,
       "title": "Foto Kryształ",
-      "description": "nadruk foto...",
+      "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Kryształ z nadrukowanym dowolnym zdjęciem. Nadruk kolorowy wykonany jest metodą sublimacji w szkle  ... ",
@@ -93,7 +93,7 @@
     {
       "id": 11,
       "title": "Kufel szklany",
-      "description": "nadruk czarny...",
+      "description": "nadruk czarny",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Kubfle z nadrukowaną dowolną grafiką . Nadruk wykonany jest metodą sublimacji na powierzchni kufla... ",
@@ -102,7 +102,7 @@
     {
       "id": 12,
       "title": "Wizytówki metal",
-      "description": "nadruk kolorowy...",
+      "description": "nadruk kolorowy",
       "img": "../Images/kubek_czarny.png",
       "cena": "25zl",
       "opis": "Metalowe wizytówki z dowolnym nadrukiem. Nadruk wykonany jest metodą sublimacji w strukturze materiału... ",

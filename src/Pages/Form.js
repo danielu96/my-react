@@ -213,7 +213,7 @@ class Formularz extends Component {
                 <input
                   required
                   pattern="[a-zA-Z]"
-                  style={{ width: "100%" }}
+                  // style={{ width: "100%" }}
                   type="text"
                   id="user"
                   name="username"
@@ -228,7 +228,7 @@ class Formularz extends Component {
               <label htmlFor="tel">
                 Twój telefon:
                 <input
-                  style={{ width: "100%" }}
+                  // style={{ width: "100%" }}
                   // inputMode="tel"
                   type="tel"
                   id="tel"
@@ -247,7 +247,7 @@ class Formularz extends Component {
               <label htmlFor="email">
                 Twój email:
                 <input
-                  style={{ width: "100%" }}
+                  // style={{ width: "100%" }}
                   type="email"
                   id="email"
                   name="email"
@@ -263,7 +263,7 @@ class Formularz extends Component {
               <label htmlFor="password">
                 Przepisz ten text: "darmowy"
                 <input
-                  style={{ width: "100%" }}
+                  // style={{ width: "100%" }}
                   type="password"
                   id="password"
                   name="pass"

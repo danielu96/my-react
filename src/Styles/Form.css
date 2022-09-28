@@ -1,6 +1,6 @@
 form {
   min-height: 50vh;
-  margin: 1rem 3rem 1rem 1rem;
+  margin: 1rem 0 1rem 0;
   display: grid;
   width: 550px;
   float: left;
@@ -10,8 +10,8 @@ form {
   form {
     float: none;
     /* min-height:60vh; */
-    width: 100%;
-    margin: 30px 10px 20px 10px;
+    max-width: 65%;
+    margin-left: 0;
     display: grid;
     /* background-image: url(banerek2.jpg) ; */
   }
@@ -27,15 +27,14 @@ label {
     /* margin :15px; */
     padding: 10px;
     /* float :none; */
-    /* width: 100%; */
+    width: 100%;
   }
 }
 
 input {
-  border-radius: 5px;
   display: block;
   padding: 2px 7px;
-  /* min-width: 100%; */
+  min-width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,9 +44,7 @@ input {
     margin-bottom: 20px;
     display: block;
     padding: 1px 5px;
-    border-radius: 5px;
-    border-color: gray;
-    /* width:90%; */
+    width: 100%;
   }
 }
 
@@ -136,5 +133,18 @@ h2 {
     height: 20vh;
     margin-left: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+}
+
+iframe {
+  margin-left: 3rem;
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  iframe {
+    margin-left: auto;
+    width: 100%;
+    margin: 1rem 0 1em 0;
   }
 }

@@ -9,20 +9,25 @@ const Footer = () => {
           <img
             src="images/LOGO2.png"
             style={{
-              width: "40px",
+              width: "50px",
             }}
             alt="LOGO"
           ></img>
         </div>
-        <span>
-          <Routes>
+        <span style={{ fontFamily: "-moz-initial" }}>Copyright 2022 - D
+
+
+
+
+          {/* <Routes>
             <Route path="/" element={<p>Strona główna</p>} />
             <Route path="/cards/:title" element={<p>Strona produktów</p>} />
             <Route path="/contact" element={<p>Strona Kontaktu</p>} />
             <Route path="/Sublimation" element={<p>Strona o Sublimacji</p>} />
             <Route path="/Formularz" element={<p>Darmowy kubek</p>} />
-          </Routes>
+          </Routes> */}
         </span>
+
         {/* <div>
       <input
         type="text"
@@ -33,7 +38,7 @@ const Footer = () => {
         NAPISZ
       </button>
     </div> */}
-      </div>
+      </div >
     </>
   );
 };
