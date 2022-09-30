@@ -25,7 +25,7 @@ class App extends React.Component {
           karty: data.karty,
         });
       });
-  } 
+  }
   render() {
     const karty = this.state.karty;
     return (
@@ -35,18 +35,18 @@ class App extends React.Component {
             <Nav />
             {/* <Karuzela /> */}
             {/* <ImagCard/> */}
-          
-            <Banerek/>
+
+
             <Routes>
 
               <Route path="/" element={<Card data={karty} />} />
-              <Route path="/" element={<Hero data={karty} />} />             
+              <Route path="/" element={<Hero data={karty} />} />
               <Route path="/cards/:title" element={< Card data={karty} />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
               {/* <Route path="/Items" element={<PaginatedItems />} /> */}
-            
+
             </Routes>
             {/* <PaginatedItems/> */}
             {/* <Pagin/> */}

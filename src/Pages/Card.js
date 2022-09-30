@@ -6,6 +6,7 @@ import { Pagination } from "mdb-react-ui-kit"
 import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/App.css";
 import ReactPaginate from "react-paginate"
+import Banerek from "../Layouts/Banerek";
 
 import {
   MDBCard,
@@ -48,6 +49,7 @@ const Card = ({ data }) => {
   };
   return (
     <>
+      <Banerek />
       <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
         <i class="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
       <div className="box">

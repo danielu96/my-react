@@ -62,6 +62,8 @@ const Sublimation = () => {
   };
   return (
     <>
+      <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
+        <i class="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>SUBLIMACJA</h1></div>
       {/* <div class="container p-5 my-5 bg-white text-gray"><h1>CO TO JEST SUBLIMACJA</h1><p>I TO JUŻ SUBLIMACJA</p>
         <div className="row"><div className="col-9"><h1>NO WIĘC</h1></div></div></div> */}
       {/* <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
