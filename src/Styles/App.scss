@@ -325,90 +325,76 @@ h1 {
 
 
 .Banerek {
-  display: block;
+  display: grid;
   text-align: left;
-  align-items: flex-start;
-  align-content: left;
-  text-align: left;
-  /* background-color: #4d4f70; */
+  align-content: center;
   width: 100%;
   height: 90vh;
-  background-image: url("/public/Images/banerek0.jpg");
-  // background-color: gray;
-  padding: 2rem 2rem;
-  font-family: nunito;
-  color: white;
+  background-color: #748181;
+  background-image: url("/public/Images/banerekDesktop.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: center;
+  font-family: Nunito;
+  color: whitesmoke;
 
-  /* opacity: 0.9; */
+
   h1 {
-    margin-top: 0;
-    // float: none;
-    font-size: 7rem;
-    // margin-top: 4rem;
+    margin: 2rem 0 0 4rem;
+    font-size: 5rem;
+    font-weight: bolder;
+
   }
 
   p {
-    font-size: 3rem;
-    margin: 3rem 2rem 2rem auto;
+
+    font-size: 2rem;
+    margin: 1rem 1rem 2rem 4rem;
     font-family: nunito;
     padding-left: 5px;
-    /* opacity: 0.9; */
+
   }
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .Banerek {
     display: grid;
     background-image: url("/public/Images/banerekmobile.jpg");
+    background-size: 100% 100%;
+    text-align: left;
+    align-content: flex-end;
+    color: white;
+    padding: 1rem 1rem 2rem 1rem;
+    background-attachment: scroll;
 
-    // padding: auto;
-    text-align: left;
-    align-items: flex-start;
-    align-content: left;
-    text-align: left;
-    height: 90vh;
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 1rem 3rem;
+    }
 
     p {
       font-size: 2rem;
-      margin: 1rem 2rem 0 0;
-      font-family: cursive;
-      /* opacity: 0.9; */
+      margin: 0 2rem 3rem 3rem;
+
+
     }
   }
-
 }
 
-@media only screen and (max-width: 768px) {
-  .Banerek h1 {
-    /* padding-top:auto; */
-    text-align: left;
-    align-content: center;
-    /* opacity: 0.9; */
-    // font-size: 5rem;
-    // margin: auto;
-    margin: 0 0 2rem 0;
-  }
-}
+// @media only screen and (max-width: 889px) {
+//   .Banerek h1 {
+//     font-size: 3rem;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-@media only screen and (max-width: 889px) {
-  .Banerek h1 {
-    font-size: 4rem;
-    font-family: nunito;
-    margin-top: auto;
-  }
-}
-
-
+//   }
+// }
 
 .btn_banerek {
   width: 150px;
   border: none;
   background-color: #26769e;
   color: #ffffff;
-
-
   border-radius: 6px;
   padding: 3px;
   border-bottom: solid #feffff;
@@ -416,18 +402,12 @@ h1 {
 }
 
 .btn_banerek:hover {
-
-
   background: rgb(162, 162, 241);
   color: whitesmoke;
   text-decoration: underline;
   transition: 10ms;
   // border-radius: 15px;
-
-
 }
-
-;
 
 .MDBCard {
   background-color: #000008;

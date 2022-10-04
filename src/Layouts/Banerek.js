@@ -8,10 +8,13 @@ function Banerek() {
   const navigate = useNavigate();
   const handleOnClick = () => navigate("/");
   return (
+
     <div className='Banerek'>
-      <p> Imienne, magiczne, latte, z łyżeczką, metalowe... </p>
       <h1>Kubki z nadrukiem
       </h1>
+      <p> Imienne, magiczne, latte, z łyżeczką, metalowe... </p>
+
+
       {/* <button className='btn_banerek'onClick={handleOnClick}> Zobacz</button> */}
     </div>
   );
