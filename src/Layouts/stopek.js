@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "../Styles/Footer.css";
+import "../Styles/Css/Footer.css";
 const Footer = () => {
   return (
     <>
@@ -15,10 +15,6 @@ const Footer = () => {
           ></img>
         </div>
         <span style={{ fontFamily: "-moz-initial" }}>Copyright 2022 - D
-
-
-
-
           {/* <Routes>
             <Route path="/" element={<p>Strona główna</p>} />
             <Route path="/cards/:title" element={<p>Strona produktów</p>} />
@@ -27,17 +23,6 @@ const Footer = () => {
             <Route path="/Formularz" element={<p>Darmowy kubek</p>} />
           </Routes> */}
         </span>
-
-        {/* <div>
-      <input
-        type="text"
-        placeholder="dupa"
-        className="sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2"
-      />
-      <button className="bg-blue-400 hover:bg-blue-500 duration-300 px-5 py-2.5 rounded-md text-white md:w-auto w-full">
-        NAPISZ
-      </button>
-    </div> */}
       </div >
     </>
   );

@@ -13,7 +13,6 @@ form {
     max-width: 65%;
     margin-left: 0;
     display: grid;
-    /* background-image: url(banerek2.jpg) ; */
   }
 }
 
@@ -23,10 +22,7 @@ label {
 
 @media only screen and (min-width: 768px) {
   label {
-    /* display: inline-block; */
-    /* margin :15px; */
     padding: 10px;
-    /* float :none; */
     width: 100%;
   }
 }
@@ -75,7 +71,6 @@ input {
 @media only screen and (max-width: 768px) {
   .btn_main {
     display: block;
-    /* max-width: 40%; */
     padding: 5px;
     margin-top: 10px;
     margin-left: 0px;
@@ -110,10 +105,8 @@ h2 {
   margin: 1rem 0;
   width: 500px;
   height: 60vh;
-  background-image: url(banerek2.jpg);
   background-size: contain;
   background-color: #7b7d7e;
-  /* opacity: 0.5; */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: aliceblue;
   font-size: 60px;
@@ -122,13 +115,10 @@ h2 {
   display: grid;
   padding-right: 1rem;
   border-radius: 15px;
-  /* box-shadow: #7b7d7e; */
-  /* box-shadow: 0.1em 0.1em 0.1em #7b7d7e, 0 0 0 0.1em #969394; */
 }
 
 @media only screen and (max-width: 768px) {
   .imager {
-    /* background-size: contain; */
     width: 80%;
     height: 20vh;
     margin-left: 0;

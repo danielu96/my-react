@@ -1,18 +1,13 @@
 import React from "react";
-import "./Styles/App.css";
+import "./Styles/Css/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import FullCard from "./FullCard";
-import Hero from "./Hero";
 import Card from "./Pages/Card";
 import Footer from "./Layouts/stopek";
 import Nav from "./Layouts/nav";
 import Contact from "./Pages/Contact";
 import Sublimation from "./Pages/sublimation";
 import Formularz from "./Pages/Form";
-import Banerek from "./Layouts/Banerek";
-import Pagin from "./Layouts/Pagination";
-import PaginatedItems from "./Layouts/paginate"
-// import Karuzela from"./Layouts/Carousel";
+import Testy from "./Tests/test.js";
 class App extends React.Component {
   state = {
     karty: [],
@@ -33,23 +28,14 @@ class App extends React.Component {
         <div className="app">
           <Router>
             <Nav />
-            {/* <Karuzela /> */}
-            {/* <ImagCard/> */}
-
-
             <Routes>
-
               <Route path="/" element={<Card data={karty} />} />
-              <Route path="/" element={<Hero data={karty} />} />
               <Route path="/cards/:title" element={< Card data={karty} />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
-              {/* <Route path="/Items" element={<PaginatedItems />} /> */}
-
+              <Route path="/testy" element={<Testy />} />
             </Routes>
-            {/* <PaginatedItems/> */}
-            {/* <Pagin/> */}
             <Footer />
           </Router>
         </div>

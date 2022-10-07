@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaMugHot, FaTimes } from "react-icons/fa";
 import { Pagination } from "mdb-react-ui-kit"
 import { useParams, useNavigate } from "react-router-dom";
-import "../Styles/App.css";
+import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
 

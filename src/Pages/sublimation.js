@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaMugHot, FaTimes } from "react-icons/fa";
 import { Pagination } from "mdb-react-ui-kit"
 import { useParams, useNavigate } from "react-router-dom";
-import "../Styles/App.css";
+import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 
 import {
@@ -24,7 +24,7 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
-// import Mod from "../Layouts/Components/Modal";
+
 
 const Sublimation = () => {
   const { title } = useParams();
@@ -39,7 +39,6 @@ const Sublimation = () => {
     fetch("../DATA3/data3.json")
       .then((response) => response.json())
       .then((json) => {
-        // console.log(json);
         setData(json);
       });
   };
@@ -55,19 +54,12 @@ const Sublimation = () => {
   }, [itemOffset, itemsPerPage, data]);
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
-    // console.log(
-    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
-    // );
     setItemOffset(newOffset);
   };
   return (
     <>
       <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
         <i class="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>SUBLIMACJA</h1></div>
-      {/* <div class="container p-5 my-5 bg-white text-gray"><h1>CO TO JEST SUBLIMACJA</h1><p>I TO JUŻ SUBLIMACJA</p>
-        <div className="row"><div className="col-9"><h1>NO WIĘC</h1></div></div></div> */}
-      {/* <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
-        <i class="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div> */}
       <div className="container p-5 my-0 bg-white text-gray">
         {currentItems.map((product, index) => (
           <div className='row ' style={{ padding: "1rem 0 1rem 0", color: "gray" }} key={index}>
@@ -77,8 +69,6 @@ const Sublimation = () => {
             <div className="col-12" style={{ fontFamily: "cursive", paddingTop: "1rem", color: "gray" }}>
               {product.zrodlo}
             </div>
-
-            {/* <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/cards/${product.title}`}> Zobacz</Link> */}
           </div>
         ))}
         <div>
@@ -112,7 +102,7 @@ const Sublimation = () => {
               </div>))}
         </div>
       </div>
-      {/* <Mod /> */}
+
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"

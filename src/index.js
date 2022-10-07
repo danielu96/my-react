@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import "./sass/main.scss";
 import App from "./App";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import reportWebVitals from "./reportWebVitals";

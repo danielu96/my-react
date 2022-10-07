@@ -1,11 +1,7 @@
 import React from "react";
 import { FaTimes, FaMugHot } from "react-icons/fa";
-import "../Styles/navigation2.css";
-// import Nav from "react-bootstrap/Nav";
+import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
-
 import { useState } from "react";
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -66,32 +62,6 @@ export default function Nav() {
             <a href="/Contact">Contact</a>
           </li>
 
-          {/* <li>
-            <a href="Items">paginate</a>
-          </li> */}
-
-
-          {/* <li>
-           
-              <NavDropdown
-               
-                title="Z nadrukiem"
-                // id={`offcanvasNavbarDropdown-expand-${expand}`}
-              >
-                <NavDropdown.Item href="#action3">
-                  Kubki imienne
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Kubki Latte</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Kubki magiczne
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Nie tylko kubki
-                </NavDropdown.Item>
-              </NavDropdown>
-           
-          </li> */}
           <li>
             <button
               className="nav-btn nav-close-btn"
