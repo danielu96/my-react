@@ -8,6 +8,15 @@ import Contact from "./Pages/Contact";
 import Sublimation from "./Pages/sublimation";
 import Formularz from "./Pages/Form";
 import Testy from "./Tests/test.js";
+import FullCard from './Pages/FullCard.js';
+import Zakupy from "./Pages/Zakupy";
+
+import { Provider } from "react-redux";
+import store from "./store/store"
+import NowaLista from "./NowaLista/NowaLista";
+import Cart from './Cart/Cart';
+// import List from "./Pages/tasksList";
+
 class App extends React.Component {
   state = {
     karty: [],
@@ -25,20 +34,25 @@ class App extends React.Component {
     const karty = this.state.karty;
     return (
       <>
+
         <div className="app">
           <Router>
             <Nav />
             <Routes>
               <Route path="/" element={<Card data={karty} />} />
               <Route path="/cards/:title" element={< Card data={karty} />} />
+              {/* <Route path="/cards/:title" element={< FullCard data={karty} />} /> */}
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
-              <Route path="/testy" element={<Testy />} />
+              <Route path="/zakupy/:title" element={<Zakupy data={karty} />} />
+              <Route path="/NowaLista" element={<NowaLista />} />
+              <Route path="/Cart" element={<Cart />} />
             </Routes>
             <Footer />
           </Router>
         </div>
+
       </>
     );
   }

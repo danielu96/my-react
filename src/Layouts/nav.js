@@ -1,9 +1,12 @@
 import React from "react";
 import { FaTimes, FaMugHot } from "react-icons/fa";
+
 import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
+import { useSelector } from 'react-redux'
 export default function Nav() {
+  const { amount } = useSelector((state) => state.cart);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="navigation">
@@ -61,6 +64,16 @@ export default function Nav() {
           <li>
             <a href="/Contact">Contact</a>
           </li>
+          <li>
+            <a href="/NowaLista">NowaLista </a>
+          </li>
+          <li>
+            <a href="/Cart">CART </a>
+          </li>
+          <li>
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i> {amount}
+          </li>
+
 
           <li>
             <button

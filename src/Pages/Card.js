@@ -51,10 +51,10 @@ const Card = ({ data }) => {
     <>
       <Banerek />
       <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
-        <i class="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
+        <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
       <div className="box">
         {currentItems.map((card, index) => (
-          <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={index}>< FaMugHot size="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
+          <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={index}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
             <MDBCardHeader > <h1 >{card.title}</h1></MDBCardHeader>
             <MDBCardBody>
               <MDBCardTitle> {card.description}</MDBCardTitle>
@@ -86,9 +86,12 @@ const Card = ({ data }) => {
               </button> */}
                       </MDBModalBody>
                       <MDBModalFooter>
+                        <Link className=" btn" onClick={toggleShow} to={`/zakupy/${card.title}`}> Kup</Link>
+
                         <MDBBtn color='primary' onClick={toggleShow}>
                           Close
                         </MDBBtn>
+
                       </MDBModalFooter>
                     </MDBModalContent>
                   </MDBModalDialog>
