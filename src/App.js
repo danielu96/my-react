@@ -45,7 +45,7 @@ class App extends React.Component {
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
-              <Route path="/zakupy/:title" element={<Zakupy data={karty} />} />
+              {/* <Route path="/zakupy/:title" element={<Zakupy data={karty} />} /> */}
               <Route path="/NowaLista" element={<NowaLista />} />
               <Route path="/Cart" element={<Cart />} />
             </Routes>

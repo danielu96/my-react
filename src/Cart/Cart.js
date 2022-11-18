@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { calculateTotals } from "./cartSlice";
 import { useEffect } from "react";
 import Modal from "./Modal";
+import "../Styles/Css/Cart.css";
 
 
 const Cart = () => {
