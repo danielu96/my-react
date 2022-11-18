@@ -59,7 +59,7 @@ const Sublimation = () => {
   return (
     <>
       <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
-        <i class="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>SUBLIMACJA</h1></div>
+        <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>SUBLIMACJA</h1></div>
       <div className="container p-5 my-0 bg-white text-gray">
         {currentItems.map((product, index) => (
           <div className='row ' style={{ padding: "1rem 0 1rem 0", color: "gray" }} key={index}>

@@ -2,6 +2,7 @@ import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { openModal } from './modalSlice';
+import { fontSize } from '@mui/system';
 
 const CartContainer = () => {
     const dispatch = useDispatch();
@@ -13,7 +14,9 @@ const CartContainer = () => {
     }
     return (
         <>
-            <div>KOSZYK TWOJ
+            <div>
+                <div style={{ fontSize: '3rem', textAlign: 'center', fontFamily: 'impact' }}>KOSZYK</div>
+
                 <div className='container'>
                     {cartItems.map((item) => {
                         return <CartItem key={item.id}{...item} />;
