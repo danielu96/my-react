@@ -17,13 +17,13 @@ const NowaLista = ({ id }) => {
     const [input, setInput] = useState("");
     const [availableProducts, setAvailableProducts] = useState();
     const [calculation, setCalculation] = useState(0);
-    const { title, setTitle } = useParams();
+    const { title } = useParams();
     // const [amount, setAmount] = useState(0);
     const [price, setPrice] = useState(0);
     // const [id, setId] = useState(1);
     const dispatch = useDispatch();
     const [data, setData] = useState([]);
-
+    const navigate = useNavigate();
     const apiGet = () => {
         fetch("../DATA/data.json")
             .then((response) => response.json())
@@ -101,15 +101,16 @@ const NowaLista = ({ id }) => {
         setCalculation(() => count * price)
 
     }, [count]);
-    const cards = useSelector((state) => state.cards.cards);
-
+    // const cards = useSelector((state) => state.cards.cards);
+    const { cartItems, total, amount } = useSelector((state) => state.cart);
     return (
         <>
             <div className='container'>
                 {
 
                     data.
-                        slice(0, 4).map((card) => (
+                        filter((card) => card.title === title)
+                        .map((card) => (
                             <div className='task' key={card.id} >
                                 <p>{card.title}</p>
                                 <span>{card.cena}</span>

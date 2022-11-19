@@ -86,7 +86,7 @@ const Card = ({ data }) => {
               </button> */}
                       </MDBModalBody>
                       <MDBModalFooter>
-                        <Link className=" btn" onClick={toggleShow} to={`/zakupy/${card.title}`}> Kup</Link>
+                        <Link className=" btn" onClick={toggleShow} to={`/NowaLista/${card.title}`}> Kup</Link>
 
                         <MDBBtn color='primary' onClick={toggleShow}>
                           Close
