@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import { useDispatch, useSelector } from "react-redux";
 import List from '../Pages/tasksList';
 import axios from 'axios';
+import { removeItem, increase, decrease, AddCart } from "../Cart/cartSlice";
 
 
 // import reducer from './reducer'
@@ -39,25 +40,25 @@ const NowaLista = ({ id }) => {
     //     dispatch(deleteCard({ id: id }));
 
     // }
-    // const addBuyhandler = (id) => {
-    //     dispatch(
-    //         addBuy({
-    //             title: (`${title}`),
-    //             tekst: (`${input}`),
-    //             cena: (`${calculation}`),
-    //             ilosc: (`${count}`),
-    //             date: (`${selectedDate}`),
-    //             availableProducts: (`${availableProducts}`),
+    const addBuyhandler = (id) => {
+        dispatch(
+            AddCart({
+                title: (`${title}`),
+                tekst: (`${input}`),
+                cena: (`${calculation}`),
+                ilosc: (`${count}`),
+                date: (`${selectedDate}`),
+                availableProducts: (`${availableProducts}`),
 
-    //             id: (`${id}`),
-    //         },
-    //             setInput(""),
-    //             setCount(0),
-    //             setSelectedDate(new Date())
-    //         )
+                id: (`${id}`),
+            },
+                setInput(""),
+                setCount(0),
+                setSelectedDate(new Date())
+            )
 
-    //     )
-    // }
+        )
+    }
     //     const increaseBuyhandler = (id) => {
     //         dispatch(increase({
     //             id: id,
@@ -118,10 +119,12 @@ const NowaLista = ({ id }) => {
                                 <span>wartość zamówienia {calculation} zł </span>
                                 <label style={{ width: '500px' }}>Treść nadruku <input type="text" value={input} onChange={(e) => setInput(e.target.value)} /></label>
                                 {/* <button className="btn_my" onClick={() => { increaseBuyhandler(card.id) }}>dodaj</button> */}
-                                <p className='amount'>{card.amount}</p>
+                                <p className='amount'>{count}</p>
+                                <button disabled={count === availableProducts ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
+                                <button disabled={count === 0 ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
 
 
-                                {/* {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>} */}
+                                {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>}
                                 {/* <button className='btn_my' style={{ width: "100px" }} onClick={() => { addBuyhandler(id) }}>DODAJ</button> */}
                                 {/* <button className='btn_my' onClick={() => { deleteCardhandler(card.id) }} >kasuj</button> */}
                             </div>

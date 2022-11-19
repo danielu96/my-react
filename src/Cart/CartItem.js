@@ -1,4 +1,4 @@
-import { removeItem, increase, decrease } from "./cartSlice";
+import { removeItem, increase, decrease, AddCart } from "./cartSlice";
 import { useDispatch } from "react-redux";
 const CartItem = ({ id, title, amount, cena, quantity }) => {
     const dispatch = useDispatch()
@@ -29,7 +29,12 @@ const CartItem = ({ id, title, amount, cena, quantity }) => {
                 }}
                 > remove </button>
             </div>
-
+            <div className="item7">
+                <button className='btn_remove' onClick={() => {
+                    dispatch(AddCart(id));
+                }}
+                > Add </button>
+            </div>
 
         </div>
     );
