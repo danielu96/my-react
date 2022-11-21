@@ -8,7 +8,7 @@ const CartItem = ({ id, title, amount, cena, quantity }) => {
             <div className="item_cena"> <p >{cena} zł szt.</p></div>
             <div className="item_quantity"> <p>dostępne {quantity} szt.</p></div>
             <div className="item3">
-                <button className="btn_cart" onClick={() => {
+                <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
                     dispatch(increase({ id }));
                 }}>+</button>
             </div>

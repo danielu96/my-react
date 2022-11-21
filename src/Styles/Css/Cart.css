@@ -198,6 +198,10 @@ hr {
   background: #c2c5c6;
 }
 
+.btn_cart:disabled {
+  opacity: 0.3;
+}
+
 .btn_remove {
   display: flex;
   text-align: left;
