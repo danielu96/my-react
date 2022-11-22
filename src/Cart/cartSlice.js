@@ -4,8 +4,8 @@ import CartContainer from './CartContainer';
 
 const initialState = {
     cartItems: cartItems,
-    amount: 1,
-    total: 2,
+    amount: 0,
+    total: 0,
     isLoading: true,
 }
 const cartSlice = createSlice({
@@ -13,8 +13,11 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         AddCart: (state, action) => {
-            state.cartItems = [];
-            state.cartItems.push(action.payload);
+            // state.cartItems = [];
+            const itemId = action.payload;
+            state.cartItems = state.cartItems.filter((item) =>
+                item.id === itemId);
+            // state.cartItems.push(action.payload);
         },
         clearCart: (state) => {
             state.cartItems = [];
