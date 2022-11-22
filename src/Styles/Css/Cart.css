@@ -146,7 +146,7 @@ hr {
   border-width: 0.25px;
 }
 
-.modal-container {
+.modal-container-cart {
   position: fixed;
   top: 0;
   left: 0;
@@ -159,7 +159,7 @@ hr {
   justify-content: center;
 }
 
-.modal {
+.modal-cart {
   background: var(--clr-white);
   width: 80vw;
   max-width: 400px;
@@ -168,13 +168,13 @@ hr {
   text-align: center;
 }
 
-.modal h4 {
+.modal-cart h4 {
   margin-bottom: 0;
   line-height: 1.5;
 }
 
-.modal .clear-btn,
-.modal .confirm-btn {
+.modal-cart .clear-btn,
+.modal-cart .confirm-btn {
   margin-top: 1rem;
 }
 

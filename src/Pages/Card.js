@@ -1,3 +1,5 @@
+import { removeItem, increase, decrease, AddCart } from "../Cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +9,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
+import { calculateTotals } from "../Cart/cartSlice";
 
 import {
   MDBCard,
@@ -27,7 +30,8 @@ import {
 } from 'mdb-react-ui-kit';
 // import Mod from "../Layouts/Components/Modal";
 
-const Card = ({ data }) => {
+const Card = ({ data, id, amount, cena, quantity }) => {
+  const { cartItems } = useSelector((store) => store.cart);
   const { title } = useParams();
   const toggleShow = () => setCentredModal(!centredModal);
   const [centredModal, setCentredModal] = useState(false);
@@ -35,6 +39,7 @@ const Card = ({ data }) => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 6;
+  const dispatch = useDispatch()
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
@@ -47,14 +52,19 @@ const Card = ({ data }) => {
     );
     setItemOffset(newOffset);
   };
+  useEffect(() => {
+    dispatch(calculateTotals());
+
+  }, [cartItems]);
+
   return (
     <>
       <Banerek />
       <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
         <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
       <div className="box">
-        {currentItems.map((card, index) => (
-          <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={index}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
+        {currentItems.map((card, id) => (
+          <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
             <MDBCardHeader > <h1 >{card.title}</h1></MDBCardHeader>
             <MDBCardBody>
               <MDBCardTitle> {card.description}</MDBCardTitle>
@@ -68,8 +78,8 @@ const Card = ({ data }) => {
         <div>
           {data
             .filter((card) => card.title === title)
-            .map((card, index) => (
-              <div key={index}>
+            .map((card, id) => (
+              <div key={id}>
                 {/* <MDBBtn onClick={toggleShow}>Zobacz</MDBBtn> */}
                 <MDBModal tabIndex='-1' show={centredModal} setShow={setCentredModal}>
                   <MDBModalDialog centered>
@@ -86,6 +96,17 @@ const Card = ({ data }) => {
               </button> */}
                       </MDBModalBody>
                       <MDBModalFooter>
+                        <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
+                          dispatch(increase({ id }));
+                        }}>+</button>
+                        <p>{amount}</p>
+                        <button className="btn_cart" onClick={() => {
+                          if (amount === 1) {
+                            dispatch(removeItem(id));
+                            return;
+                          }
+                          dispatch(decrease({ id }));
+                        }}>-</button>
                         <Link className=" btn" onClick={toggleShow} to={`/NowaLista/${card.title}`}> Kup</Link>
 
                         <MDBBtn color='primary' onClick={toggleShow}>

@@ -6,8 +6,8 @@ import { closeModal } from "./modalSlice";
 const Modal = () => {
     const dispatch = useDispatch();
     return (
-        <aside className="modal-container" >
-            <div className='modal'>
+        <aside className="modal-container-cart" >
+            <div className='modal-cart'>
                 remove all
             </div>
             <button onClick={() => {
