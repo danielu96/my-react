@@ -10,7 +10,7 @@ import Formularz from "./Pages/Form";
 import Testy from "./Tests/test.js";
 import FullCard from './Pages/FullCard.js';
 import Zakupy from "./Pages/Zakupy";
-
+import CardModal from "./Pages/CardModal";
 import { Provider } from "react-redux";
 import store from "./store/store"
 import NowaLista from "./NowaLista/NowaLista";
@@ -46,8 +46,9 @@ class App extends React.Component {
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
               {/* <Route path="/zakupy/:title" element={<Zakupy data={karty} />} /> */}
-              <Route path="/NowaLista/:title" element={<NowaLista data={karty} />} />
+              {/* <Route path="/NowaLista/:title" element={<NowaLista data={karty} />} /> */}
               <Route path="/Cart" element={<Cart />} />
+              <Route path="/Modal/:title" element={<CardModal data={karty} />} />
             </Routes>
             <Footer />
           </Router>

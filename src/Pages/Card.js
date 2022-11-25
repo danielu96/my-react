@@ -11,6 +11,8 @@ import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
 import { calculateTotals } from "../Cart/cartSlice";
 
+
+
 import {
   MDBCard,
   MDBCardTitle,
@@ -18,16 +20,9 @@ import {
   MDBCardBody,
   MDBCardHeader
 } from 'mdb-react-ui-kit';
-import {
-  MDBBtn,
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
-} from 'mdb-react-ui-kit';
+import Modal from "./CardModal";
+import NowaLista from "../NowaLista/NowaLista";
+
 // import Mod from "../Layouts/Components/Modal";
 
 const Card = ({ data, id, amount, cena, quantity }) => {
@@ -72,15 +67,15 @@ const Card = ({ data, id, amount, cena, quantity }) => {
                 {card.opis}
               </MDBCardText>
             </MDBCardBody>
-            <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/cards/${card.title}`}> Zobacz</Link>
+            <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`}> Zobacz</Link>
           </MDBCard>
         ))}
-        <div>
+        {/* <div>
           {data
             .filter((card) => card.title === title)
             .map((card, id) => (
               <div key={id}>
-                {/* <MDBBtn onClick={toggleShow}>Zobacz</MDBBtn> */}
+
                 <MDBModal tabIndex='-1' show={centredModal} setShow={setCentredModal}>
                   <MDBModalDialog centered>
                     <MDBModalContent>
@@ -91,9 +86,7 @@ const Card = ({ data, id, amount, cena, quantity }) => {
                       <MDBModalBody>
                         <div className="opis">{card.opis}</div>
                         <img className="Image" src={`${card.Image}`} alt="kubek czarny"></img>
-                        {/* <button className="btn_my" onClick={handleOnClick}>
-                Wróć do poprzedniej strony{" "}
-              </button> */}
+
                       </MDBModalBody>
                       <MDBModalFooter>
                         <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
@@ -118,8 +111,13 @@ const Card = ({ data, id, amount, cena, quantity }) => {
                   </MDBModalDialog>
                 </MDBModal>
               </div>))}
-        </div>
+        </div> */}
+        <Modal
+        />
+
+        {/* <NowaLista /> */}
       </div>
+
       {/* <Mod /> */}
       <ReactPaginate
         breakLabel="..."
