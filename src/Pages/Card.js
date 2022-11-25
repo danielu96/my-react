@@ -1,4 +1,3 @@
-import { removeItem, increase, decrease, AddCart } from "../Cart/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,9 +9,6 @@ import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
 import { calculateTotals } from "../Cart/cartSlice";
-
-
-
 import {
   MDBCard,
   MDBCardTitle,
@@ -22,9 +18,6 @@ import {
 } from 'mdb-react-ui-kit';
 import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
-
-// import Mod from "../Layouts/Components/Modal";
-
 const Card = ({ data, id, amount, cena, quantity }) => {
   const { cartItems } = useSelector((store) => store.cart);
   const { title } = useParams();
@@ -67,58 +60,11 @@ const Card = ({ data, id, amount, cena, quantity }) => {
                 {card.opis}
               </MDBCardText>
             </MDBCardBody>
-            <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`}> Zobacz</Link>
+            {/* <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`}> Zobacz</Link> */}
+            <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`} > Zobacz</Link>
           </MDBCard>
         ))}
-        {/* <div>
-          {data
-            .filter((card) => card.title === title)
-            .map((card, id) => (
-              <div key={id}>
-
-                <MDBModal tabIndex='-1' show={centredModal} setShow={setCentredModal}>
-                  <MDBModalDialog centered>
-                    <MDBModalContent>
-                      <MDBModalHeader>
-                        <MDBModalTitle > <h1 style={{ paddingLeft: "2.1rem" }}>{card.title}</h1></MDBModalTitle>
-                        <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
-                      </MDBModalHeader>
-                      <MDBModalBody>
-                        <div className="opis">{card.opis}</div>
-                        <img className="Image" src={`${card.Image}`} alt="kubek czarny"></img>
-
-                      </MDBModalBody>
-                      <MDBModalFooter>
-                        <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
-                          dispatch(increase({ id }));
-                        }}>+</button>
-                        <p>{amount}</p>
-                        <button className="btn_cart" onClick={() => {
-                          if (amount === 1) {
-                            dispatch(removeItem(id));
-                            return;
-                          }
-                          dispatch(decrease({ id }));
-                        }}>-</button>
-                        <Link className=" btn" onClick={toggleShow} to={`/NowaLista/${card.title}`}> Kup</Link>
-
-                        <MDBBtn color='primary' onClick={toggleShow}>
-                          Close
-                        </MDBBtn>
-
-                      </MDBModalFooter>
-                    </MDBModalContent>
-                  </MDBModalDialog>
-                </MDBModal>
-              </div>))}
-        </div> */}
-        <Modal
-        />
-
-        {/* <NowaLista /> */}
       </div>
-
-      {/* <Mod /> */}
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"
