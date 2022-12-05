@@ -1,4 +1,4 @@
-import { removeItem, increase, decrease, AddCart } from "../Cart/cartSlice";
+import { removeItem, increase, decrease, AddCart } from "./CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -22,7 +22,7 @@ import {
 
 
 
-const Modal = ({ data, id, amount, quantity }) => {
+const CartItem = ({ data, id, amount, quantity, total }) => {
 
     const [basicModal, setBasicModal] = useState(false);
     const dispatch = useDispatch();
@@ -57,10 +57,11 @@ const Modal = ({ data, id, amount, quantity }) => {
 
                                     </MDBModalBody>
                                     <MDBModalFooter>
-                                        <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
+                                        <button className="btn_cart" onClick={() => {
                                             dispatch(increase({ id }));
                                         }}>+</button>
                                         <p>{card.amount}</p>
+
                                         <button className="btn_cart" onClick={() => {
                                             if (amount === 1) {
                                                 dispatch(removeItem(id));
@@ -68,7 +69,8 @@ const Modal = ({ data, id, amount, quantity }) => {
                                             }
                                             dispatch(decrease({ id }));
                                         }}>-</button>
-                                        <Link className=" btn" onClick={toggleShow} to={`/NowaLista/${card.title}`}> Kup</Link>
+                                        <Link className=" btn" onClick={() =>
+                                            dispatch(AddCart(id, card.title, amount, total, quantity))} to={`/Products/${card.title}`}> Kup</Link>
                                         <MDBBtn color='primary' onClick={handleOnClick}>
                                             Close
                                         </MDBBtn>
@@ -81,7 +83,7 @@ const Modal = ({ data, id, amount, quantity }) => {
     );
 }
 
-export default Modal;
+export default CartItem;
 
 
 
