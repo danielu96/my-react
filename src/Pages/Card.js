@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
+import { removeItem, increase, decrease, AddCart } from "../KARTY/kartySlice";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaMugHot, FaTimes } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
-import { calculateTotals } from "../Cart/cartSlice";
+// import { calculateTotals } from "../Cart/cartSlice";
 import {
   MDBCard,
   MDBCardTitle,
@@ -19,7 +20,7 @@ import {
 import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
 const Card = ({ data, id, amount, cena, quantity }) => {
-  const { cartItems } = useSelector((store) => store.cart);
+  const { cartItems } = useSelector((store) => store.CardModal);
   const { title } = useParams();
   const toggleShow = () => setCentredModal(!centredModal);
   const [centredModal, setCentredModal] = useState(false);
@@ -40,10 +41,10 @@ const Card = ({ data, id, amount, cena, quantity }) => {
     );
     setItemOffset(newOffset);
   };
-  useEffect(() => {
-    dispatch(calculateTotals());
+  // useEffect(() => {
+  //   dispatch(calculateTotals());
 
-  }, [cartItems]);
+  // }, [cartItems]);
 
   return (
     <>
@@ -61,7 +62,9 @@ const Card = ({ data, id, amount, cena, quantity }) => {
               </MDBCardText>
             </MDBCardBody>
             {/* <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`}> Zobacz</Link> */}
-            <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`} > Zobacz</Link>
+            <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Modal/${card.title}`}  > Zobacz</Link>
+
+
           </MDBCard>
         ))}
       </div>
