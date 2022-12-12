@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import { useSelector } from 'react-redux'
 export default function Nav() {
-  const { amount } = useSelector((state) => state.karty);
+  const { amount } = useSelector((state) => state.cart);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="navigation">
@@ -77,7 +77,7 @@ export default function Nav() {
             <a href="/Products">Products </a>
           </li>
           <li>
-            <a href="/Karty"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount} </a>
+            <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount} </a>
           </li>
 
 
