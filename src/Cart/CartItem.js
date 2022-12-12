@@ -1,4 +1,4 @@
-import { removeItem, increase, decrease, AddCart } from "./cartSlice";
+import { removeItem, increase, decrease } from "./cartSlice";
 import { useDispatch } from "react-redux";
 const CartItem = ({ id, title, amount, cena, quantity }) => {
     const dispatch = useDispatch()
@@ -6,7 +6,7 @@ const CartItem = ({ id, title, amount, cena, quantity }) => {
         <div className="cart-item">
             <div className="item_title">  <h4>{title}</h4></div>
             <div className="item_cena"> <p >{cena} zł szt.</p></div>
-            <div className="item_quantity"> <p>dostępne {quantity} szt.</p></div>
+            <div className="item_quantity"> <p>zamówione {quantity} szt.</p></div>
             <div className="item3">
                 <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
                     dispatch(increase({ id }));
@@ -22,7 +22,6 @@ const CartItem = ({ id, title, amount, cena, quantity }) => {
                     dispatch(decrease({ id }));
                 }}>-</button>
             </div>
-
             <div className="item6">
                 <button className='btn_remove' onClick={() => {
                     dispatch(removeItem(id));
@@ -30,14 +29,14 @@ const CartItem = ({ id, title, amount, cena, quantity }) => {
                 > remove </button>
             </div>
             <div className="item7">
-                <button className='btn_remove' onClick={() => {
-                    dispatch(AddCart(id));
-                }}
-                > Add </button>
             </div>
-
         </div>
     );
 }
 
 export default CartItem;
+
+ // const [state] = useReducer(reducer, initialState)
+    // useEffect(() => {
+    //     localStorage.setItem('cart', JSON.stringify(state.cart))
+    // }, [state.cart]);
