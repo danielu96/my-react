@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItem, increase, decrease, AddCart, addItem } from "../Cart/cartSlice";
+import { removeItem, increase, decrease, AddCart, } from "../Cart/cartSlice";
 import { Link } from "react-router-dom";
 
 
@@ -17,17 +17,7 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
   // const handleAddToCard = (card) => {
   //   dispatch(addItem(card));
   // }    ;
-  const handleAddToCard = (id) => {
-    dispatch(
-      addItem({
-        id: id,
-        title: title,
-        cena: cena,
-        quantity: quantity,
-        amount: amount,
-      }
-      ))
-  };
+
   const handleAdd = (id) => {
     dispatch(
       AddCart({
@@ -73,8 +63,6 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
             dispatch(addItem(item));
           }}
           > Add </button> */}
-          <Link className=" btn" onClick={() =>
-            handleAddToCard(id, title, cena, quantity)} to={`/Cart`}> Kup</Link>
         </div>
         <Link className='btn_remove' onClick={() => handleAdd(id)} to={`/Cart`}>
 
