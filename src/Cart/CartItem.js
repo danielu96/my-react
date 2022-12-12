@@ -1,6 +1,6 @@
 import { removeItem, increase, decrease } from "./cartSlice";
 import { useDispatch } from "react-redux";
-const CartItem = ({ id, title, amount, cena, quantity }) => {
+const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
     const dispatch = useDispatch()
     return (
         <div className="cart-item">
@@ -29,6 +29,7 @@ const CartItem = ({ id, title, amount, cena, quantity }) => {
                 > remove </button>
             </div>
             <div className="item7">
+                <p>dostępne {availableProducts}</p>
             </div>
         </div>
     );
