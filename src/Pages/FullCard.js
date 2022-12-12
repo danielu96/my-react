@@ -20,6 +20,7 @@ const CartItem = ({ id, title, cena, amount, quantity, availableProducts }) => {
         cena: cena,
         quantity: quantity,
         amount: amount,
+        availableProducts: availableProducts,
       }
       ))
   };
