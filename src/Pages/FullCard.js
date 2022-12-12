@@ -5,7 +5,7 @@ import { removeItem, increase, decrease, AddCart, } from "../Cart/cartSlice";
 import { Link } from "react-router-dom";
 
 
-const CartItem = ({ id, title, cena, amount, quantity }) => {
+const CartItem = ({ id, title, cena, amount, quantity, availableProducts }) => {
 
   const navigate = useNavigate();
   const handleOnClick = () => navigate(-1);
@@ -28,9 +28,9 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
       <div className="cart-item">
         <div className="item_title">  <h4>{title}</h4></div>
         <div className="item_cena"> <p >{cena}</p></div>
-        <div className="item_quantity"> <p>dostępne {quantity} szt</p></div>
+        <div className="item_quantity"> <p>dostępne {availableProducts} szt</p></div>
         <div className="item3">
-          <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
+          <button disabled={amount === availableProducts ? true : false} className="btn_cart" onClick={() => {
             dispatch(increase({ id }));
           }}>+</button>
         </div>
@@ -46,6 +46,7 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
         </div>
 
         <div className="item6">
+
         </div>
         <div className="item7">
 
