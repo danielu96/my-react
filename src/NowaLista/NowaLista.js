@@ -3,15 +3,11 @@ import { useParams, useNavigate, useCallback } from "react-router-dom";
 import DatePicker from "react-datepicker";
 // import { addBuy, editBuy, deleteBuy, increase, kasuj, deleteCard } from '../actions/taskAction';
 import { useDispatch, useSelector } from "react-redux";
-import List from '../Pages/tasksList';
 import axios from 'axios';
 import { removeItem, increase, decrease, AddCart } from "../Cart/cartSlice";
 
 
-// import reducer from './reducer'
-
-
-const NowaLista = ({ id }) => {
+const NowaLista = ({ data, id }) => {
     // const { state, dispatch } = useReducer();
     const [count, setCount] = useState(0);
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -23,18 +19,18 @@ const NowaLista = ({ id }) => {
     const [price, setPrice] = useState(0);
     // const [id, setId] = useState(1);
     const dispatch = useDispatch();
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
     const navigate = useNavigate();
-    const apiGet = () => {
-        fetch("../DATA/data.json")
-            .then((response) => response.json())
-            .then((data) => {
-                setData(data);
-            });
-    };
-    useEffect(() => {
-        apiGet();
-    }, []);
+    // const apiGet = () => {
+    //     fetch("../DATA/data.json")
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             setData(data);
+    //         });
+    // };
+    // useEffect(() => {
+    //     apiGet();
+    // }, []);
 
     // const deleteCardhandler = (id) => {
     //     dispatch(deleteCard({ id: id }));
@@ -119,12 +115,12 @@ const NowaLista = ({ id }) => {
                                 <span>wartość zamówienia {calculation} zł </span>
                                 <label style={{ width: '500px' }}>Treść nadruku <input type="text" value={input} onChange={(e) => setInput(e.target.value)} /></label>
                                 {/* <button className="btn_my" onClick={() => { increaseBuyhandler(card.id) }}>dodaj</button> */}
-                                <p className='amount'>{count}</p>
-                                <button disabled={count === availableProducts ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
-                                <button disabled={count === 0 ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
+                                <p className='amount'>{amount}</p>
+                                {/* <button disabled={count === availableProducts ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
+                                <button disabled={count === 0 ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button> */}
 
 
-                                {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>}
+                                {/* {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>} */}
                                 {/* <button className='btn_my' style={{ width: "100px" }} onClick={() => { addBuyhandler(id) }}>DODAJ</button> */}
                                 {/* <button className='btn_my' onClick={() => { deleteCardhandler(card.id) }} >kasuj</button> */}
                             </div>
