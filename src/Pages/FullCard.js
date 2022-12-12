@@ -14,9 +14,6 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
   const handleOnClick = () => navigate(-1);
   const dispatch = useDispatch()
   console.log(navigate);
-  // const handleAddToCard = (card) => {
-  //   dispatch(addItem(card));
-  // }    ;
 
   const handleAdd = (id) => {
     dispatch(
@@ -33,9 +30,8 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
     <>
       <div className="cart-item">
         <div className="item_title">  <h4>{title}</h4></div>
-        {/* <div className="item_cena"> <p >{cena} zł szt.</p></div> */}
         <div className="item_cena"> <p >{cena}</p></div>
-        <div className="item_quantity"> <p>dostępne {quantity} szt.ty</p></div>
+        <div className="item_quantity"> <p>dostępne {quantity} szt</p></div>
         <div className="item3">
           <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
             dispatch(increase({ id }));
@@ -59,10 +55,7 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
           > remove </button>
         </div>
         <div className="item7">
-          {/* <button className='btn_remove' onClick={() => {
-            dispatch(addItem(item));
-          }}
-          > Add </button> */}
+
         </div>
         <Link className='btn_remove' onClick={() => handleAdd(id)} to={`/Cart`}>
 
