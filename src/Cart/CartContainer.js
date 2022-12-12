@@ -8,7 +8,7 @@ const CartContainer = () => {
     const { cartItems, amount, total } = useSelector((state) => state.cart);
     if (amount < 1) {
         return (
-            <h2>nie ma nic </h2>
+            <h1 style={{ textAlign: "center" }}>Koszyk jest pusty</h1>
         );
     }
     return (
