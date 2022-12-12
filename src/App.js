@@ -7,15 +7,12 @@ import Nav from "./Layouts/nav";
 import Contact from "./Pages/Contact";
 import Sublimation from "./Pages/sublimation";
 import Formularz from "./Pages/Form";
-import Testy from "./Tests/test.js";
-import FullCard from './Pages/FullCard.js';
-import Zakupy from "./Pages/Zakupy";
 import CardModal from "./Pages/CardModal";
-import { Provider } from "react-redux";
-import store from "./store/store"
-import NowaLista from "./NowaLista/NowaLista";
 import Cart from './Cart/Cart';
-// import List from "./Pages/tasksList";
+import Karty from "./KARTY/karty";
+import Products from "./Pages/Products";
+
+
 
 class App extends React.Component {
   state = {
@@ -41,14 +38,13 @@ class App extends React.Component {
             <Routes>
               <Route path="/" element={<Card data={karty} />} />
               <Route path="/cards/:title" element={< Card data={karty} />} />
-              {/* <Route path="/cards/:title" element={< FullCard data={karty} />} /> */}
               <Route path="/Contact" element={<Contact />} />
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
-              {/* <Route path="/zakupy/:title" element={<Zakupy data={karty} />} /> */}
-              {/* <Route path="/NowaLista/:title" element={<NowaLista data={karty} />} /> */}
               <Route path="/Cart" element={<Cart />} />
               <Route path="/Modal/:title" element={<CardModal data={karty} />} />
+              <Route path="/Products" element={<Products data={karty} />} />
+              <Route path="/Karty" element={<Karty />} />
             </Routes>
             <Footer />
           </Router>
