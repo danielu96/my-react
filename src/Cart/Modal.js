@@ -6,19 +6,21 @@ import { closeModal } from "./modalSlice";
 const Modal = () => {
     const dispatch = useDispatch();
     return (
-        <aside className="modal-container-cart" >
-            <div className='modal-cart'>
+        <div
+            className="d-container-cart"  >
+            <div className="d-cart">
                 remove all
-            </div>
-            <button onClick={() => {
-                dispatch(clearCart());
-                dispatch(closeModal());
-            }}>confirm</button>
-            <button onClick={() => {
 
-                dispatch(closeModal());
-            }}>cancel</button>
-        </aside>);
+                <button onClick={() => {
+                    dispatch(clearCart());
+                    dispatch(closeModal());
+                }}>confirm</button>
+                <button onClick={() => {
+
+                    dispatch(closeModal());
+                }}>cancel</button>
+            </div>
+        </div >);
 }
 
 export default Modal;
