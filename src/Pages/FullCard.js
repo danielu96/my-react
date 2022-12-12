@@ -1,86 +1,113 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-// import "./Styles/Styles/Contact.css";
-import {
-  MDBBtn,
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
-} from 'mdb-react-ui-kit';
-const FullCard = ({ data }) => {
-  const { title } = useParams();
+import { useDispatch, useSelector } from "react-redux";
+import { removeItem, increase, decrease, AddCart, addItem } from "../Cart/cartSlice";
+import { Link } from "react-router-dom";
+
+
+const CartItem = ({ id, title, cena, amount, quantity }) => {
+
+  // const { id, title, amount, cena, quantity } = props.item
+  // const { cardItems, subTotal } = useSelector((state) => state.cart);
+
   const navigate = useNavigate();
   const handleOnClick = () => navigate(-1);
+  const dispatch = useDispatch()
   console.log(navigate);
-
-  const [centredModal, setCentredModal] = useState(false);
-
-  const toggleShow = () => setCentredModal(!centredModal);
+  // const handleAddToCard = (card) => {
+  //   dispatch(addItem(card));
+  // }    ;
+  const handleAddToCard = (id) => {
+    dispatch(
+      addItem({
+        id: id,
+        title: title,
+        cena: cena,
+        quantity: quantity,
+        amount: amount,
+      }
+      ))
+  };
+  const handleAdd = (id) => {
+    dispatch(
+      AddCart({
+        id: id,
+        title: title,
+        cena: cena,
+        quantity: quantity,
+        amount: amount,
+      }
+      ))
+  };
   return (
     <>
-      {/* <div>
-      {data
-        .filter((card) => card.title === title)
-        .map((card, index) => (
-          <div className="MDBModal" key={index}>
-         <MDBModalTitle> <h1>{card.title}</h1></MDBModalTitle>   
-            <div className="opis">{card.opis}</div>
-            <img className="Image" src={`${card.Image}`} alt="..."></img>
-            <button className="btn_my" onClick={handleOnClick}>
-              Wróć do poprzedniej strony{" "}
-            </button>
-          </div>
-        ))}
-    </div> */}
+      <div className="cart-item">
+        <div className="item_title">  <h4>{title}</h4></div>
+        {/* <div className="item_cena"> <p >{cena} zł szt.</p></div> */}
+        <div className="item_cena"> <p >{cena}</p></div>
+        <div className="item_quantity"> <p>dostępne {quantity} szt.ty</p></div>
+        <div className="item3">
+          <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
+            dispatch(increase({ id }));
+          }}>+</button>
+        </div>
+        <div className="item_amount"> <p>{amount}</p></div>
+        <div className="item5">
+          <button className="btn_cart" onClick={() => {
+            if (amount === 1) {
+              dispatch(removeItem(id));
+              return;
+            }
+            dispatch(decrease({ id }));
+          }}>-</button>
+        </div>
 
-      <div>
-        {data
-          .filter((card) => card.title === title)
-          .map((card, index) => (
-            <div key={index}><h1>{card.title}</h1>{card.opis} <img className="Image" src={`${card.Image}`} alt="..."></img>
+        <div className="item6">
+          <button className='btn_remove' onClick={() => {
+            dispatch(removeItem(id));
+          }}
+          > remove </button>
+        </div>
+        <div className="item7">
+          {/* <button className='btn_remove' onClick={() => {
+            dispatch(addItem(item));
+          }}
+          > Add </button> */}
+          <Link className=" btn" onClick={() =>
+            handleAddToCard(id, title, cena, quantity)} to={`/Cart`}> Kup</Link>
+        </div>
+        <Link className='btn_remove' onClick={() => handleAdd(id)} to={`/Cart`}>
 
-              <MDBBtn onClick={toggleShow}>Zobacz</MDBBtn>
-
-              <MDBModal tabIndex='-1' show={centredModal} setShow={setCentredModal}>
-                <MDBModalDialog centered>
-                  <MDBModalContent>
-                    <MDBModalHeader>
-                      <MDBModalTitle> <h1>{card.title}</h1></MDBModalTitle>
-                      <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
-                    </MDBModalHeader>
-                    <MDBModalBody>
-                      <div className="opis">{card.opis}</div>
-                      <img className="Image" src={`${card.Image}`} alt="..."></img>
-                      {/* <button className="btn_my" onClick={handleOnClick}>
-              Wróć do poprzedniej strony{" "}
-            </button> */}
-                    </MDBModalBody>
-                    <MDBModalFooter>
-                      <MDBBtn color='secondary' onClick={toggleShow}>
-                        Close
-                      </MDBBtn>
-                    </MDBModalFooter>
-                  </MDBModalContent>
-                </MDBModalDialog>
-              </MDBModal>
-            </div>
-          ))}
+          dodaj
+        </Link>
       </div>
+      {/* <div className="container">
+        <p>{title}</p>
+        <p>{amount} szt.</p>
 
+        <p>dostępne {availableProducts} szt.</p>
 
-
-
-
-
-
-
-
-
+        <span>cena = {amount * cena}</span>
+        <button disabled={amount === quantity ? true : false} className="btn_cart" onClick={() => {
+          dispatch(increase({ id }));
+        }}>+</button>
+        <button className="btn_cart" onClick={() => {
+          if (amount === 1) {
+            dispatch(removeItem(id));
+            return;
+          }
+          dispatch(decrease({ id }));
+        }}>-</button>
+        <button className='btn_remove' onClick={() => {
+          dispatch(AddCart(id));
+        }}
+        > Add </button>
+        <span>cena = {amount * cena}</span>
+      </div>
+      <button className="btn_my" onClick={handleOnClick}>
+        Wróć do poprzedniej strony{" "}
+      </button> */}
     </>
   );
 };
-export default FullCard;
+export default CartItem;
