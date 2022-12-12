@@ -1,4 +1,4 @@
-import { removeItem, increase, decrease, AddCart } from "./CardSlice";
+import { removeItem, increase, decrease, AddCart, addItem } from "../KARTY/kartySlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -22,7 +22,7 @@ import {
 
 
 
-const CartItem = ({ data, id, amount, quantity, total }) => {
+const CartItem = ({ data, id }) => {
 
     const [basicModal, setBasicModal] = useState(false);
     const dispatch = useDispatch();
@@ -36,7 +36,9 @@ const CartItem = ({ data, id, amount, quantity, total }) => {
     const [input, setInput] = useState("");
     const navigate = useNavigate();
     const handleOnClick = () => navigate(-1);
-
+    const handleAddToCard = (card) => {
+        dispatch(addItem(card));
+    }
     return (
         <>
             <div className="d-container-cart">
@@ -57,20 +59,27 @@ const CartItem = ({ data, id, amount, quantity, total }) => {
 
                                     </MDBModalBody>
                                     <MDBModalFooter>
-                                        <button className="btn_cart" onClick={() => {
+                                        {/* <button className="btn_cart" onClick={() => {
                                             dispatch(increase({ id }));
                                         }}>+</button>
-                                        <p>{card.amount}</p>
+                                        <p>{card.amount}</p> */}
 
-                                        <button className="btn_cart" onClick={() => {
+                                        {/* <button className="btn_cart" onClick={() => {
                                             if (amount === 1) {
                                                 dispatch(removeItem(id));
                                                 return;
                                             }
                                             dispatch(decrease({ id }));
-                                        }}>-</button>
+                                        }}>-</button> */}
+                                        <button className='btn_remove' onClick={() => handleAddToCard(card)}>
+
+                                            dodaj do  </button>
+                                        <button className='btn_remove' onClick={AddCart}
+
+                                        > koszyk </button>
                                         <Link className=" btn" onClick={() =>
-                                            dispatch(AddCart(id, card.title, amount, total, quantity))} to={`/Products/${card.title}`}> Kup</Link>
+                                            dispatch(AddCart(id, title))} to={`/Karty`}> Kup</Link>
+
                                         <MDBBtn color='primary' onClick={handleOnClick}>
                                             Close
                                         </MDBBtn>
