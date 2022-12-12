@@ -7,9 +7,6 @@ import { Link } from "react-router-dom";
 
 const CartItem = ({ id, title, cena, amount, quantity }) => {
 
-  // const { id, title, amount, cena, quantity } = props.item
-  // const { cardItems, subTotal } = useSelector((state) => state.cart);
-
   const navigate = useNavigate();
   const handleOnClick = () => navigate(-1);
   const dispatch = useDispatch()
@@ -49,10 +46,6 @@ const CartItem = ({ id, title, cena, amount, quantity }) => {
         </div>
 
         <div className="item6">
-          <button className='btn_remove' onClick={() => {
-            dispatch(removeItem(id));
-          }}
-          > remove </button>
         </div>
         <div className="item7">
 
