@@ -28,7 +28,7 @@ const CartItem = ({ id, title, cena, amount, quantity, availableProducts }) => {
     <>
       <div className="cart-item">
         <div className="item_title">  <h4>{title}</h4></div>
-        <div className="item_cena"> <p >{cena}</p></div>
+        <div className="item_cena"> <p >{cena} zł</p></div>
         <div className="item_quantity"> <p>dostępne {availableProducts} szt</p></div>
         <div className="item3">
           <button disabled={amount === availableProducts ? true : false} className="btn_cart" onClick={() => {
@@ -47,13 +47,10 @@ const CartItem = ({ id, title, cena, amount, quantity, availableProducts }) => {
         </div>
 
         <div className="item6">
-
         </div>
         <div className="item7">
-
         </div>
         <Link className='btn_remove' onClick={() => handleAdd(id)} to={`/Cart`}>
-
           dodaj
         </Link>
       </div>
