@@ -6,7 +6,7 @@ const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
         <div className="cart-item">
             <div className="item_title">  <h4>{title}</h4></div>
             <div className="item_cena"> <p >{cena} zł szt.</p></div>
-            <div className="item_quantity"> <p>zamówione {quantity} szt.</p></div>
+            <div className="item_quantity"> <span>zamówione {amount} szt.</span></div>
             <div className="item3">
                 <button disabled={amount === availableProducts ? true : false} className="btn_cart" onClick={() => {
                     dispatch(increase({ id }));
@@ -29,7 +29,11 @@ const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
                 > remove </button>
             </div>
             <div className="item7">
-                <p>dostępne {availableProducts}</p>
+
+                <span>cena = {amount * cena} zł</span>
+            </div>
+            <div>
+                <p>dostępne {availableProducts} szt</p>
             </div>
         </div>
     );
