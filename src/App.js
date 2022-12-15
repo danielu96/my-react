@@ -11,6 +11,8 @@ import CardModal from "./Pages/CardModal";
 import Cart from './Cart/Cart';
 import Karty from "./KARTY/karty";
 import Products from "./Pages/Products";
+import Zakupy from "./Pages/Zakupy";
+import NowaLista from "./NowaLista/NowaLista";
 
 
 
@@ -45,6 +47,8 @@ class App extends React.Component {
               <Route path="/Modal/:title" element={<CardModal data={karty} />} />
               <Route path="/Products" element={<Products data={karty} />} />
               <Route path="/Karty" element={<Karty />} />
+              <Route path="/Zakupy" element={<Zakupy data={karty} />} />
+              <Route path="/NowaLista" element={<NowaLista data={karty} />} />
             </Routes>
             <Footer />
           </Router>
