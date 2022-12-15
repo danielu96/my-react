@@ -21,7 +21,7 @@ import {
 
 
 
-const CartItem = ({ data, cena, quantity, amount }) => {
+const CartItem = ({ data, cena, amount, availableProducts }) => {
 
     const [basicModal, setBasicModal] = useState(false);
     const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const CartItem = ({ data, cena, quantity, amount }) => {
     const toggleShow = () => setCentredModal(!centredModal);
     const [centredModal, setCentredModal] = useState(false);
     const [currentItems, setCurrentItems] = useState([]);
-    const [availableProducts, setAvailableProducts] = useState();
+    // const [availableProducts, setAvailableProducts] = useState();
     const [calculation, setCalculation] = useState(0);
     const [count, setCount] = useState(0);
     const [input, setInput] = useState("");
@@ -44,7 +44,6 @@ const CartItem = ({ data, cena, quantity, amount }) => {
                 id: id,
                 title: title,
                 cena: cena,
-                quantity: quantity,
                 amount: amount,
                 availableProducts: availableProducts,
             }
