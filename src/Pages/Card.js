@@ -20,7 +20,7 @@ import {
 import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
 const Card = ({ data, id, amount, cena, quantity }) => {
-  const { cartItems } = useSelector((store) => store.CardModal);
+  // const { cartItems } = useSelector((store) => store.CardModal);
   const { title } = useParams();
   const toggleShow = () => setCentredModal(!centredModal);
   const [centredModal, setCentredModal] = useState(false);
