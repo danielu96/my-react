@@ -106,8 +106,8 @@ const NowaLista = ({ data, id }) => {
                 {
 
                     data.
-                        filter((card) => card.title === title)
-                        .map((card) => (
+                        // filter((card) => card.title === title)
+                        map((card) => (
                             <div className='task' key={card.id} >
                                 <p>{card.title}</p>
                                 <span>{card.cena}</span>
