@@ -1,14 +1,23 @@
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from './modalSlice';
+import { Link } from 'react-router-dom';
 
 
 const CartContainer = () => {
     const dispatch = useDispatch();
-    const { cartItems, amount, total } = useSelector((state) => state.cart);
+    const { cartItems, amount, total } = useSelector((store) => store.cart);
     if (amount < 1) {
         return (
-            <h1 style={{ textAlign: "center" }}>Koszyk jest pusty</h1>
+            <>
+                <div>
+                    <h1 style={{ textAlign: "center" }}>Koszyk jest pusty</h1>
+
+                </div>
+                <div style={{ margin: "2rem auto", alignContent: "center" }}>
+                    <Link className="btn" to="/Products" >Kup coś</Link>
+                </div>
+            </>
         );
     }
     return (
