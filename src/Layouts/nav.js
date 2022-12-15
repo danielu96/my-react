@@ -6,7 +6,8 @@ import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import { useSelector } from 'react-redux'
 export default function Nav() {
-  const { amount } = useSelector((state) => state.cart);
+  // const { amount } = useSelector((state) => state.cart);
+  const { amount } = useSelector((store) => store.cart);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <nav className="navigation">
