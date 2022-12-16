@@ -19,7 +19,8 @@ import {
 } from 'mdb-react-ui-kit';
 import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
-const Card = ({ data, id, amount, cena, quantity }) => {
+import SingleProduct from "./SingleProduct";
+const Card = ({ data }) => {
   // const { cartItems } = useSelector((store) => store.CardModal);
   const { title } = useParams();
   const toggleShow = () => setCentredModal(!centredModal);
@@ -62,8 +63,8 @@ const Card = ({ data, id, amount, cena, quantity }) => {
               </MDBCardText>
             </MDBCardBody>
             {/* <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`}> Zobacz</Link> */}
-            <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Modal/${card.title}`}  > Zobacz</Link>
-
+            {/* <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Modal/${card.title}`}  > Zobacz</Link> */}
+            <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/CardModal/${card.title}`}  > Zobacz</Link>
 
           </MDBCard>
         ))}
@@ -83,6 +84,13 @@ const Card = ({ data, id, amount, cena, quantity }) => {
         disabledClassName={"disabled"}
         activeClassName={"active"}
       />
+
+      {data.map((item) => (
+        <div key={item.id}>
+          <SingleProduct item={item} />
+        </div>
+      ))}
+
     </>
   );
 };
