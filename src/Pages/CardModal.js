@@ -21,7 +21,7 @@ import {
 
 
 
-const CartItem = ({ data, cena, amount, availableProducts }) => {
+const CardModal = ({ id, data, amount, availableProducts, cena }) => {
 
     const [basicModal, setBasicModal] = useState(false);
     const dispatch = useDispatch();
@@ -38,15 +38,17 @@ const CartItem = ({ data, cena, amount, availableProducts }) => {
     // const handleAddToCard = (card) => {
     //     dispatch(addItem(card));
     // };
-    const handleAdd = (id) => {
+    const handleAdd = (card) => {
         dispatch(
-            AddCart({
-                id: id,
-                title: title,
-                cena: cena,
-                amount: amount,
-                availableProducts: availableProducts,
-            }
+            AddCart(
+
+                {
+                    id: Math.random(),
+                    title: title,
+                    cena: (`${card.cena}`),
+                    amount: count,
+                    availableProducts: card.availableProducts,
+                }
             ))
     };
 
@@ -70,10 +72,18 @@ const CartItem = ({ data, cena, amount, availableProducts }) => {
 
                                     </MDBModalBody>
                                     <MDBModalFooter>
+                                        <span>{card.cena} zł</span>
+                                        <span>{card.availableProducts} szt</span>
+                                        <button disabled={count === availableProducts ? true : false}
+                                            className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
                                         {/* <button className="btn_cart" onClick={() => {
                                             dispatch(increase({ id }));
-                                        }}>+</button>
-                                        <p>{card.amount}</p> */}
+                                        }}>+</button> */}
+
+                                        <p>{count}</p>
+
+                                        <button disabled={count === 0 ? true : false} className='btn_my'
+                                            style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
 
                                         {/* <button className="btn_cart" onClick={() => {
                                             if (amount === 1) {
@@ -100,7 +110,7 @@ const CartItem = ({ data, cena, amount, availableProducts }) => {
     );
 }
 
-export default CartItem;
+export default CardModal;
 
 
 
