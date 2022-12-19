@@ -1,4 +1,4 @@
-const cartItems = [
+const products = [
     {
         "id": 1,
         "title": "Kubek imienny",
@@ -98,16 +98,17 @@ const cartItems = [
     },
     {
         "id": 9,
-        "title": "Filiżanka ",
+        "title": "Filiżanka",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 25,
+        "cena": 30,
         "quantity": 10,
-        "availableProducts": 85,
         "amount": 1,
-        "opis": "Filiżanki z nadrukowaną dowolną grafiką. Nadruk wykonany jest metodą sublimacji w szkliwie filiżanki... ",
+        "availableProducts": 15,
+        "opis": "Filiżanka z kolrowym nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni filiżanki ",
         "Image": "../Images/kubek_czarny.png"
     },
+
     {
         "id": 10,
         "title": "Foto Kryształ",
@@ -145,4 +146,4 @@ const cartItems = [
         "Image": "../Images/kubek_czarny.png"
     }
 ]
-export default cartItems;
+export default products;
