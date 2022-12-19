@@ -13,6 +13,10 @@ import Karty from "./KARTY/karty";
 import Products from "./Pages/Products";
 import Zakupy from "./Pages/Zakupy";
 import NowaLista from "./NowaLista/NowaLista";
+import SingleProduct from "./Pages/SingleProduct";
+import CartItem from "./Cart/CartItem";
+import Produkty from "./Pages/Produkty";
+import products from "./Pages/cardItems";
 
 
 
@@ -44,11 +48,15 @@ class App extends React.Component {
               <Route path="/sublimation" element={<Sublimation />} />
               <Route path="/Formularz" element={<Formularz />} />
               <Route path="/Cart" element={<Cart />} />
-              <Route path="/Modal/:title" element={<CardModal data={karty} />} />
+              <Route path="/CardModal/:title" element={<CardModal data={karty} />} />
               <Route path="/Products" element={<Products data={karty} />} />
+              {/* <Route path="/SingleProduct" element={<SingleProduct />} /> */}
               <Route path="/Karty" element={<Karty />} />
               <Route path="/Zakupy" element={<Zakupy data={karty} />} />
               <Route path="/NowaLista" element={<NowaLista data={karty} />} />
+              <Route path="/Produkty" element={<Produkty />} />
+              <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
+
             </Routes>
             <Footer />
           </Router>
