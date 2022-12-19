@@ -62,8 +62,7 @@ const Products = ({ data }) => {
                                 {card.opis}
                             </MDBCardText>
                         </MDBCardBody>
-                        {/* <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/CardModal/${card.title}`}  > Zobacz</Link> */}
-                        <Link to={`/Produkty/${card.title}`}>Zobacz</Link>
+                        <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Produkty/${card.title}`}  > Zobacz</Link>
                     </MDBCard>
                 ))}
             </div>
