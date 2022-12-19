@@ -85,11 +85,7 @@ const Card = ({ data }) => {
         activeClassName={"active"}
       />
 
-      {data.map((item) => (
-        <div key={item.id}>
-          <SingleProduct item={item} />
-        </div>
-      ))}
+
 
     </>
   );
