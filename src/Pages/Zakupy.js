@@ -10,6 +10,7 @@ import { Prev } from 'react-bootstrap/esm/PageItem';
 import List from './tasksList';
 import { useDispatch } from "react-redux";
 import NowaLista from '../NowaLista/NowaLista';
+import { increase, decrease, AddCart, } from "../Cart/cartSlice";
 // import { ADD, addTask, DELETE, editTask } from '../actions/appActions';
 // import { addBuy, editBuy, increase, amount } from '../actions/taskAction'
 // import { faStepBackward } from '@fortawesome/free-solid-svg-icons';
@@ -99,24 +100,24 @@ function Zakupy({ data
 
     }
 
-    // const addBuyhandler = () => {
-    //     dispatch(
-    //         addBuy({
-    //             title: (`${title}`),
-    //             tekst: (`${input}`),
-    //             cena: (`${calculation}`),
-    //             ilosc: (`${count}`),
-    //             date: (`${selectedDate}`),
-    //             availableProducts: (`${availableProducts}`),
-    //             id: Math.random(),
-    //         },
-    //             setInput(""),
-    //             setCount(0),
-    //             setSelectedDate(new Date())
-    //         )
+    const addBuyhandler = () => {
+        dispatch(
+            AddCart({
+                title: (`${title}`),
+                tekst: (`${input}`),
+                cena: (`${calculation}`),
+                ilosc: (`${count}`),
+                date: (`${selectedDate}`),
+                availableProducts: (`${availableProducts}`),
+                id: Math.random(),
+            },
+                setInput(""),
+                setCount(0),
+                setSelectedDate(new Date())
+            )
 
-    //     )
-    // }
+        )
+    }
     // const editBuyhandler = (id) => {
     //     dispatch(
     //         editBuy({
@@ -187,7 +188,7 @@ function Zakupy({ data
                             <div className='task'>
                                 <button disabled={count === availableProducts ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
                                 <button disabled={count === 0 ? true : false} className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
-                                {/* {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>} */}
+                                {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>}
                                 <div>{amount}</div>
                                 <button className='btn_my' onClick={() => increase(card.id)}>dodawaj</button>
                                 {/* <button className='btn_my' onClick={() => editBuyhandler(card.id)}>edytuj</button> */}
