@@ -1,24 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import products from './cardItems';
 import { useDispatch, useSelector } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../Styles/Css/App.css";
+import React, { useEffect, useState } from "react";
 import { increase, decrease, AddCart, } from "../Cart/cartSlice";
+import products from './cardItems';
+
+
+
+
+import {
+    MDBBtn,
+    MDBModal,
+    MDBModalDialog,
+    MDBModalContent,
+    MDBModalHeader,
+    MDBModalTitle,
+    MDBModalBody,
+    MDBModalFooter,
+} from 'mdb-react-ui-kit';
 
 
 
 const SingleProduct = ({ id }) => {
+
+    const [basicModal, setBasicModal] = useState(false);
     const dispatch = useDispatch();
     const { productTitle } = useParams();
+    const toggleShow = () => setCentredModal(!centredModal);
+    const [centredModal, setCentredModal] = useState(false);
+    const [currentItems, setCurrentItems] = useState([]);
+    const [calculation, setCalculation] = useState(0);
     const [count, setCount] = useState(0);
+    const [input, setInput] = useState("");
+    const navigate = useNavigate();
     const product = products.find((product) => product.title ===
         productTitle);
-    const { title, cena, Image, availableProducts } = product;
+    const { title, cena, Image, availableProducts, opis } = product;
+    const handleOnClick = () => navigate(-1);
+
     const handleAdd = () => {
         dispatch(
             AddCart(
 
                 {
-
                     id: Math.random(),
                     title: title,
                     cena: cena,
@@ -29,24 +54,43 @@ const SingleProduct = ({ id }) => {
     };
 
     return (
-        <section className="container">
+        <>
+            <div className="d-container-cart">
+                <div className="container">
 
-            <h1>Halo</h1>
-            {/* <img src={Image} /> */}
-            <img className="Image" src={`${Image}`} alt="kubek czarny"></img>
-            <p>{title}</p>
-            <span>{cena}</span>
-            <p>{availableProducts} dostępne</p>
-            <button disabled={count === availableProducts ? true : false}
-                className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
-            <p>{count}</p>
-            <button disabled={count === 0 ? true : false} className='btn_my'
-                style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
-            <Link className=" btn" onClick={() =>
-                dispatch(handleAdd(id))} to={`/Cart`}> Kup</Link>
-            <Link to='/'>back to Carts</Link>
-        </section>
+                    <MDBModalDialog centered>
+                        <MDBModalContent>
+                            <MDBModalHeader>
+                                <MDBModalTitle > <h1 style={{ paddingLeft: "2.1rem" }}>{title}</h1></MDBModalTitle>
+                                <MDBBtn className='btn-close' color='none' onClick={handleOnClick}></MDBBtn>
+                            </MDBModalHeader>
+                            <MDBModalBody>
+                                <div className="opis">{opis}</div>
+                                <img className="Image" src={`${Image}`} alt="kubek czarny"></img>
+                            </MDBModalBody>
+                            <MDBModalFooter>
+                                <span>{cena} zł</span>
+                                <span>{availableProducts} szt</span>
+                                <button disabled={count === availableProducts ? true : false}
+                                    className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
+                                <p>{count}</p>
+
+                                <button disabled={count === 0 ? true : false} className='btn_my'
+                                    style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
+                                <Link className=" btn" onClick={() =>
+                                    dispatch(handleAdd(id))} to={`/Cart`}> Kup</Link>
+                                <MDBBtn color='primary' onClick={handleOnClick}>
+                                    Close
+                                </MDBBtn>
+                            </MDBModalFooter>
+                        </MDBModalContent>
+                    </MDBModalDialog>
+                </div>
+            </div>
+        </>
     );
 }
-
 export default SingleProduct;
+
+
+
