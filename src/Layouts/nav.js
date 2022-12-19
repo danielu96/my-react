@@ -78,6 +78,9 @@ export default function Nav() {
             <a href="/Products">Products </a>
           </li>
           <li>
+            <a href="/Produkty">Produkty </a>
+          </li>
+          <li>
             <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount} </a>
           </li>
 
