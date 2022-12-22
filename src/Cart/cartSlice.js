@@ -50,27 +50,28 @@ const cartSlice = createSlice({
             const existingItem = state.cartItems.find(
                 (item) => item.id === newItem.id
             )
-            // state.amount++;
+
+            state.amount = amount + newItem.amount;
+
+
             if (!existingItem) {
                 state.cartItems.push({
                     id: newItem.id,
                     title: newItem.title,
                     cena: newItem.cena,
-                    quantity: 1,
-                    // totalCena: newItem.cena,
                     amount: newItem.amount,
                     availableProducts: newItem.availableProducts,
 
                 });
 
             }
-            else {
-                // existingItem.quantity++;
-                // existingItem.totalCena =
-                //     Number(existingItem.totalCena) + Number(newItem.cena);
-            }
+            // else {
+            //     existingItem.calculateTotals++;
+            //     existingItem.total =
+            //         Number(existingItem.total) + Number(newItem.cena);
+            // }
             // state.amount = state.cartItems.reduce(
-            //     (total, item) => total + Number(item.cena) * Number(item.quantity),
+            //     (total, item) => total + Number(item.cena) * Number(item.amount),
             //     0
             // );
 
@@ -84,6 +85,7 @@ const cartSlice = createSlice({
         },
         clearCart: (state) => {
             state.cartItems = [];
+
             localStorage.setItem('cartItems', JSON.stringify(state.cartItems.map
                 (item => item)))
 
@@ -105,8 +107,6 @@ const cartSlice = createSlice({
             const cartItem = state.cartItems.find((item) => item.id
                 === payload.id)
             cartItem.amount = cartItem.amount + 1;
-            // state.amount++;
-            // state.quantity++;
             localStorage.setItem('cartItems', JSON.stringify(state.cartItems.map
                 (item => item)))
             localStorage.setItem('amount', JSON.stringify(state.amount));
