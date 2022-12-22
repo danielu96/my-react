@@ -107,6 +107,7 @@ const cartSlice = createSlice({
             const cartItem = state.cartItems.find((item) => item.id
                 === payload.id)
             cartItem.amount = cartItem.amount + 1;
+            state.amount++;
             localStorage.setItem('cartItems', JSON.stringify(state.cartItems.map
                 (item => item)))
             localStorage.setItem('amount', JSON.stringify(state.amount));
