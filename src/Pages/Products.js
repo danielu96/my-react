@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { removeItem, increase, decrease, AddCart } from "../KARTY/kartySlice";
+
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaMugHot, FaTimes } from "react-icons/fa";
@@ -9,7 +9,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
-// import { calculateTotals } from "../Cart/cartSlice";
 import {
     MDBCard,
     MDBCardTitle,
@@ -21,7 +20,7 @@ import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
 import SingleProduct from "./SingleProduct";
 const Products = ({ data }) => {
-    // const { cartItems } = useSelector((store) => store.CardModal);
+
     const { title } = useParams();
     const toggleShow = () => setCentredModal(!centredModal);
     const [centredModal, setCentredModal] = useState(false);
