@@ -1,7 +1,10 @@
 import { removeItem, increase, decrease } from "./cartSlice";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
     const dispatch = useDispatch()
+
+
     return (
         <div className="cart-item">
             <div className="item_title">  <h4>{title}</h4></div>
@@ -31,6 +34,7 @@ const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
             <div className="item7">
 
                 <span>cena = {amount * cena} zł</span>
+
             </div>
             <div>
                 <p>dostępne {availableProducts} szt</p>
