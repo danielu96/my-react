@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const CartContainer = () => {
     const dispatch = useDispatch();
-    const { cartItems, amount, total } = useSelector((store) => store.cart);
+    const { cartItems, amount, total } = useSelector((state) => state.cart);
     if (amount < 1) {
         return (
             <>
