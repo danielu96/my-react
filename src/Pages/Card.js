@@ -21,6 +21,7 @@ import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
 import SingleProduct from "./SingleProduct";
 const Card = ({ data }) => {
+
   // const { cartItems } = useSelector((store) => store.CardModal);
   const { title } = useParams();
   const toggleShow = () => setCentredModal(!centredModal);
@@ -31,6 +32,7 @@ const Card = ({ data }) => {
   const itemsPerPage = 6;
   const dispatch = useDispatch()
   useEffect(() => {
+
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
@@ -51,8 +53,11 @@ const Card = ({ data }) => {
     <>
       <Banerek />
       <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
-        <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
-      <div className="box">
+        <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1>
+        <Link className=" btn" style={{ margin: "2rem auto 3rem auto" }} to={`/Products`}  > Zobacz</Link>
+      </div>
+
+      {/* <div className="box">
         {currentItems.map((card, id) => (
           <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
             <MDBCardHeader > <h1 >{card.title}</h1></MDBCardHeader>
@@ -62,10 +67,7 @@ const Card = ({ data }) => {
                 {card.opis}
               </MDBCardText>
             </MDBCardBody>
-            {/* <Link className=" btn" style={{ marginLeft: "1rem" }} onClick={toggleShow} to={`/Modal/${card.title}`}> Zobacz</Link> */}
-            {/* <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Modal/${card.title}`}  > Zobacz</Link> */}
             <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/CardModal/${card.title}`}  > Zobacz</Link>
-
           </MDBCard>
         ))}
       </div>
@@ -83,7 +85,7 @@ const Card = ({ data }) => {
         nextLinkClassName={"page-num"}
         disabledClassName={"disabled"}
         activeClassName={"active"}
-      />
+      /> */}
 
 
 
