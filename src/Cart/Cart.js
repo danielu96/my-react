@@ -6,11 +6,12 @@ import { calculateTotals } from "../Cart/cartSlice";
 import { useEffect } from "react";
 import Modal from "./Modal";
 import "../Styles/Css/Cart.css";
+import CartItem from "./CartItem";
 
 
 const Cart = () => {
-    const { cartItems } = useSelector((store) => store.cart);
-    const { isOpen } = useSelector((store) => store.modal);
+    const { cartItems } = useSelector((state) => state.cart);
+    const { isOpen } = useSelector((state) => state.modal);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -21,12 +22,13 @@ const Cart = () => {
     return (
         <>
             <div className="container">
+
                 {isOpen && <Modal />}
                 <CartContainer />
-
             </div>
         </>
     )
 }
 
 export default Cart;
+
