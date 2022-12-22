@@ -52,6 +52,7 @@ const cartSlice = createSlice({
             )
 
             state.amount = amount + newItem.amount;
+            // state.total = total + newItem.cena;
 
 
             if (!existingItem) {
@@ -59,17 +60,18 @@ const cartSlice = createSlice({
                     id: newItem.id,
                     title: newItem.title,
                     cena: newItem.cena,
+                    totalPrice: newItem.cena,
                     amount: newItem.amount,
                     availableProducts: newItem.availableProducts,
 
                 });
 
             }
-            // else {
-            //     existingItem.calculateTotals++;
-            //     existingItem.total =
-            //         Number(existingItem.total) + Number(newItem.cena);
-            // }
+            else {
+                // existingItem.calculateTotals++;
+                // existingItem.total =
+                //     (existingItem.total) + (newItem.cena);
+            }
             // state.amount = state.cartItems.reduce(
             //     (total, item) => total + Number(item.cena) * Number(item.amount),
             //     0
@@ -152,6 +154,12 @@ const cartSlice = createSlice({
             })
             state.amount = amount
             state.total = total
+
+            localStorage.setItem('cartItems', JSON.stringify(state.cartItems.map
+                (item => item)))
+
+            localStorage.setItem('amount', JSON.stringify(state.amount));
+            localStorage.setItem('total', JSON.stringify(state.total));
         }
 
     },
