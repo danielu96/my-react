@@ -20,13 +20,10 @@ const amount = localStorage.getItem('amount') !== null ? JSON.parse
 const total = localStorage.getItem('total') !== null ? JSON.parse
     (localStorage.getItem('total')) : 0;
 
-
-
 const initialState = {
     cartItems: items,
     amount: amount,
     total: total,
-
     isLoading: true,
 }
 const cartSlice = createSlice({
@@ -50,22 +47,16 @@ const cartSlice = createSlice({
             const existingItem = state.cartItems.find(
                 (item) => item.id === newItem.id
             )
-
             state.amount = amount + newItem.amount;
-            // state.total = total + newItem.cena;
-
 
             if (!existingItem) {
                 state.cartItems.push({
                     id: newItem.id,
                     title: newItem.title,
                     cena: newItem.cena,
-                    totalPrice: newItem.cena,
                     amount: newItem.amount,
                     availableProducts: newItem.availableProducts,
-
                 });
-
             }
             else {
                 // existingItem.calculateTotals++;
@@ -79,10 +70,8 @@ const cartSlice = createSlice({
 
             localStorage.setItem('cartItems', JSON.stringify(state.cartItems.map
                 (item => item)))
-
             localStorage.setItem('amount', JSON.stringify(state.amount));
             localStorage.setItem('total', JSON.stringify(state.total));
-
 
         },
         clearCart: (state) => {
@@ -133,18 +122,6 @@ const cartSlice = createSlice({
             localStorage.setItem('amount', JSON.stringify(state.amount));
             localStorage.setItem('total', JSON.stringify(state.total));
         },
-
-
-        // calculateTotals: (state) => {
-        //     let amount = 0;
-        //     let total = 0;
-        //     state.cartItems.forEach((item) => {
-        //         amount += item.amount
-        //         total += item.amount * item.cena
-        //     })
-        //     state.amount = amount
-        //     state.total = total
-        // }
         calculateTotals: (state) => {
             let amount = 0;
             let total = 0;
@@ -157,11 +134,9 @@ const cartSlice = createSlice({
 
             localStorage.setItem('cartItems', JSON.stringify(state.cartItems.map
                 (item => item)))
-
             localStorage.setItem('amount', JSON.stringify(state.amount));
             localStorage.setItem('total', JSON.stringify(state.total));
         }
-
     },
 }
 );
