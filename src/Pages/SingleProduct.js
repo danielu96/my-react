@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../Styles/Css/App.css";
 import React, { useEffect, useState } from "react";
 import { increase, decrease, AddCart, } from "../Cart/cartSlice";
-import products from './cardItems';
+import products from '../Pages/cardItems';
 
 
 
@@ -23,6 +23,7 @@ import {
 
 
 const SingleProduct = ({ id }) => {
+    // const { cartItems, amount, total } = useSelector((state) => state.cart);
 
     const [basicModal, setBasicModal] = useState(false);
     const dispatch = useDispatch();
@@ -44,10 +45,13 @@ const SingleProduct = ({ id }) => {
             AddCart(
 
                 {
+                    // id: id,
                     id: Math.random(),
                     title: title,
                     cena: cena,
+
                     amount: count,
+                    // amount: amount,
                     availableProducts: availableProducts,
                 }
             ))
@@ -69,16 +73,16 @@ const SingleProduct = ({ id }) => {
                                 <img className="Image" src={`${Image}`} alt="kubek czarny"></img>
                             </MDBModalBody>
                             <MDBModalFooter>
-                                <span>{cena} zł</span>
-                                <span>{availableProducts} szt</span>
+                                <p style={{ textAlign: "left" }}>{cena} zł</p>
+
                                 <button disabled={count === availableProducts ? true : false}
                                     className='btn_my' style={{ width: "50px" }} onClick={() => setCount((c) => c + 1)}>+</button>
                                 <p>{count}</p>
-
                                 <button disabled={count === 0 ? true : false} className='btn_my'
                                     style={{ width: "50px" }} onClick={() => setCount((c) => c - 1)}>-</button>
-                                <Link className=" btn" onClick={() =>
-                                    dispatch(handleAdd(id))} to={`/Cart`}> Kup</Link>
+                                {count > 0 && <Link className=" btn" onClick={() =>
+                                    dispatch(handleAdd(id))} to={`/Cart`}> Kup</Link>}
+                                {/* {count > 0 && <button className='btn_my' style={{ width: "100px" }} onClick={addBuyhandler}>DODAJ</button>} */}
                                 <MDBBtn color='primary' onClick={handleOnClick}>
                                     Close
                                 </MDBBtn>
