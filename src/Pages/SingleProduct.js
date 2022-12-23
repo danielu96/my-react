@@ -6,9 +6,6 @@ import React, { useEffect, useState } from "react";
 import { increase, decrease, AddCart, } from "../Cart/cartSlice";
 import products from '../Pages/cardItems';
 
-
-
-
 import {
     MDBBtn,
     MDBModal,
@@ -45,13 +42,11 @@ const SingleProduct = ({ id }) => {
             AddCart(
 
                 {
-                    // id: id,
+
                     id: Math.random(),
                     title: title,
                     cena: cena,
-
                     amount: count,
-                    // amount: amount,
                     availableProducts: availableProducts,
                 }
             ))
