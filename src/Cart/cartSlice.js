@@ -59,6 +59,8 @@ const cartSlice = createSlice({
                 });
             }
             else {
+                existingItem.amount = existingItem.amount + newItem.amount;
+
                 // existingItem.calculateTotals++;
                 // existingItem.total =
                 //     (existingItem.total) + (newItem.cena);
