@@ -19,7 +19,7 @@ import {
 
 
 
-const SingleProduct = ({ id }) => {
+const SingleProduct = () => {
     // const { cartItems, amount, total } = useSelector((state) => state.cart);
 
     const [basicModal, setBasicModal] = useState(false);
@@ -34,7 +34,7 @@ const SingleProduct = ({ id }) => {
     const navigate = useNavigate();
     const product = products.find((product) => product.title ===
         productTitle);
-    const { title, cena, Image, availableProducts, opis } = product;
+    const { id, title, cena, Image, availableProducts, opis } = product;
     const handleOnClick = () => navigate(-1);
 
     const handleAdd = () => {
@@ -42,8 +42,8 @@ const SingleProduct = ({ id }) => {
             AddCart(
 
                 {
-
-                    id: Math.random(),
+                    id: id,
+                    // id: Math.random(),
                     title: title,
                     cena: cena,
                     amount: count,
