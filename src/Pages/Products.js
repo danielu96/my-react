@@ -48,7 +48,7 @@ const Products = ({ data }) => {
 
     return (
         <>
-            <Banerek />
+            {/* <Banerek /> */}
             <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
             <div className="box">
