@@ -1,7 +1,7 @@
 import { removeItem, increase, decrease } from "./cartSlice";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
+const CartItem = ({ id, title, amount, cena, availableProducts, max }) => {
     const dispatch = useDispatch()
 
 
@@ -11,7 +11,7 @@ const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
             <div className="item_cena"> <p >{cena} zł szt.</p></div>
             <div className="item_quantity"> <span>zamówione {amount} szt.</span></div>
             <div className="item3">
-                <button disabled={amount === availableProducts ? true : false} className="btn_cart" onClick={() => {
+                <button className="btn_cart" onClick={() => {
                     dispatch(increase({ id }));
                 }}>+</button>
             </div>
@@ -37,7 +37,7 @@ const CartItem = ({ id, title, amount, cena, quantity, availableProducts }) => {
 
             </div>
             <div>
-                <p>dostępne {availableProducts} szt</p>
+                {/* <p>dostępne {availableProducts} szt</p> */}
             </div>
         </div>
     );
@@ -49,3 +49,6 @@ export default CartItem;
     // useEffect(() => {
     //     localStorage.setItem('cart', JSON.stringify(state.cart))
     // }, [state.cart]);
+
+
+    // <button disabled={amount === availableProducts ? true : false}
