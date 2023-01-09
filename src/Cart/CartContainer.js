@@ -1,10 +1,12 @@
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from './modalSlice';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const CartContainer = () => {
+    const navigate = useNavigate();
+    const handleOnClick = () => navigate(-1);
     const dispatch = useDispatch();
     const { cartItems, amount, total } = useSelector((state) => state.cart);
     if (amount < 1) {
@@ -32,7 +34,8 @@ const CartContainer = () => {
                 </div>
                 <hr />
                 <span>TOTAL {total}</span>
-
+                <Link className="btn" to="/Products" >Continue</Link>
+                {/* <button className='btn_my' onClick={handleOnClick}>Continue Shoping</button> */}
                 <button className='btn_my' onClick={() =>
                     dispatch(openModal())}>Clear Cart</button>
 
