@@ -2,6 +2,8 @@ import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from './modalSlice';
 import { Link, useNavigate } from 'react-router-dom';
+import { grid } from '@mui/system';
+import "../Styles/Css/Cart.css";
 
 
 const CartContainer = () => {
@@ -33,12 +35,18 @@ const CartContainer = () => {
                     })}
                 </div>
                 <hr />
-                <span>TOTAL {total}</span>
-                <Link className="btn" to="/Products" >Continue</Link>
-                {/* <button className='btn_my' onClick={handleOnClick}>Continue Shoping</button> */}
-                <button className='btn_my' onClick={() =>
-                    dispatch(openModal())}>Clear Cart</button>
 
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+
+                    <div style={{ marginLeft: "0" }}> <Link className="btn" to="/Products" >Continue</Link></div>
+                    <div >
+                        <button className='btn' onClick={() =>
+                            dispatch(openModal())}>Clear Cart</button>
+                    </div>
+                </div>
+                <div className='total'>
+                    <h1>TOTAL : {total} zł</h1>
+                </div>
             </div>
         </>
     );
