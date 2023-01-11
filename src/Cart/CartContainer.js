@@ -40,7 +40,7 @@ const CartContainer = () => {
 
                     <div style={{ marginLeft: "0" }}> <Link className="btn" to="/Products" >Continue</Link></div>
                     <div >
-                        <button className='btn' onClick={() =>
+                        <button className='btn-clear' onClick={() =>
                             dispatch(openModal())}>Clear Cart</button>
                     </div>
                 </div>
