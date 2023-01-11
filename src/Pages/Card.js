@@ -52,10 +52,10 @@ const Card = ({ data }) => {
   return (
     <>
       <Banerek />
-      <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
+      {/* <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
         <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1>
         <Link className=" btn" style={{ margin: "2rem auto 3rem auto" }} to={`/Products`}  > Zobacz</Link>
-      </div>
+      </div> */}
 
       {/* <div className="box">
         {currentItems.map((card, id) => (
