@@ -1,18 +1,33 @@
+import React, { useState, useReducer, useEffect } from "react";
 import { removeItem, increase, decrease } from "./cartSlice";
 import { useDispatch } from "react-redux";
+import DatePicker from "react-datepicker";
 import { useSelector } from "react-redux";
-import { FaPlus, FaMinus, FaTrashAlt } from "react-icons/fa";
-const CartItem = ({ id, title, amount, cena, availableProducts, max }) => {
-    const dispatch = useDispatch()
+import { FaPlus, FaMinus, FaTrashRestore } from "react-icons/fa";
+import { IoTrashBinOutline } from "react-icons/io5";
+const CartItem = ({ id, title, amount, cena }) => {
+    const dispatch = useDispatch();
+    const [input, setInput] = useState("");
+    const [selectedDate, setSelectedDate] = useState(new Date());
     return (
         <div className="cart-item">
-            <div className="item_title">  <h4>{title}</h4></div>
-            <div className="item_cena"> <p >{cena} zł szt.</p></div>
-            <div className="item_quantity"> <span>zamówione {amount} szt.</span></div>
+            <div className="item_title">  <h4>{title}: {amount * cena} zł</h4></div>
+            <div className="item_quantity"> <input style={{ width: '300px' }} placeholder="treść nadruku" type="text"
+                value={input} onChange={(e) => setInput(e.target.value)} /></div>
             <div className="item3">
-                {/* <button className="btn_cart" onClick={() => {
-                    dispatch(increase({ id }));
-                }}>+</button> */}
+
+
+                <DatePicker
+                    style={{ width: '100px' }}
+                    selected={selectedDate}
+                    onChange={date => setSelectedDate(date)}
+                    dateFormat='dd/MM/yyyy'
+                    minDate={new Date()}
+                    filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
+                    // isClearable
+                    showYearDropdown
+                    scrollableMonthYearDropdown
+                />
             </div>
             <div className="item_amount">
                 <button className="amount-btn" onClick={() => {
@@ -26,38 +41,20 @@ const CartItem = ({ id, title, amount, cena, availableProducts, max }) => {
                     }
                     dispatch(decrease({ id }));
                 }}><FaMinus /></button>
-
-
-
             </div>
             <div className="item5">
-                {/* <button className="btn_cart" onClick={() => {
-                    if (amount === 1) {
-                        dispatch(removeItem(id));
-                        return;
-                    }
-                    dispatch(decrease({ id }));
-                }}>-</button> */}
+
             </div>
             <div className="item6">
                 <button className='btn_remove' onClick={() => {
                     dispatch(removeItem(id));
                 }}
-                >  <  FaTrashAlt /></button>
-
-            </div>
-            <div className="item7">
-
-                <span>cena = {amount * cena} zł</span>
-
-            </div>
-            <div>
-                {/* <p>dostępne {availableProducts} szt</p> */}
+                >  <  IoTrashBinOutline />
+                </button>
             </div>
         </div>
     );
 }
-
 export default CartItem;
 
  // const [state] = useReducer(reducer, initialState)
