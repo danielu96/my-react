@@ -236,6 +236,26 @@ h1 {
   opacity: 0.3;
 }
 
+.btn_zobacz {
+  background-color: transparent;
+  margin-left: 4.5rem;
+  width: fit-content;
+  border: none;
+  color: #feffff;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 575px) {
+  .btn_zobacz {
+    background-color: transparent;
+    // margin-bottom: 2rem;
+    margin: auto;
+    width: fit-content;
+    border: none;
+    color: #feffff;
+  }
+}
+
 .Contact {
   z-index: 0;
   margin: auto;
