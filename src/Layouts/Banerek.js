@@ -2,11 +2,11 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { shadows } from '@mui/system';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Banerek() {
   const navigate = useNavigate();
-  const handleOnClick = () => navigate("/");
+  const handleOnClick = () => navigate("/Products");
   return (
 
     <div className='Banerek'>
@@ -14,8 +14,7 @@ function Banerek() {
       </h1>
       <p> Imienne, magiczne, latte, z łyżeczką, metalowe... </p>
 
-
-      {/* <button className='btn_banerek'onClick={handleOnClick}> Zobacz</button> */}
+      <button className='btn_zobacz' onClick={handleOnClick}> Zobacz</button>
     </div>
   );
 }
