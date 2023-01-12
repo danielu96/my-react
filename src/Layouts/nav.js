@@ -1,5 +1,10 @@
 import React from "react";
-import { FaTimes, FaMugHot } from "react-icons/fa";
+import { IoPersonSharp } from "react-icons/io5";
+import { FaTimes, FaMugHot, FaPage4 } from "react-icons/fa";
+import { BsFillPersonPlusFill, BsFillPersonDashFill } from "react-icons/bs";
+
+
+
 import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
@@ -67,8 +72,16 @@ export default function Nav() {
             <a href="/Products">Products </a>
           </li>
           <li>
-            <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount} </a>
+            <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount}</a>
           </li>
+
+          <li>
+            {/* <button type="btn" onClick={() => logout(
+              { returnTo: window.location.origin }
+            )}>Logout</button> */}
+            <a href="/">login < BsFillPersonPlusFill /> </a>
+          </li>
+
           <li>
             <button
               className="nav-btn nav-close-btn"
