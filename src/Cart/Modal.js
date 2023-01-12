@@ -9,14 +9,12 @@ const Modal = () => {
         <div
             className="d-container-cart"  >
             <div className="d-cart">
-                remove all
-
-                <button onClick={() => {
+                <p>  remove all</p>
+                <button style={{ marginRight: "1rem" }} className="btn" onClick={() => {
                     dispatch(clearCart());
                     dispatch(closeModal());
                 }}>confirm</button>
-                <button onClick={() => {
-
+                <button style={{ marginLeft: "1rem" }} className="btn" onClick={() => {
                     dispatch(closeModal());
                 }}>cancel</button>
             </div>
