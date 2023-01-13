@@ -341,6 +341,7 @@ hr {
     border: none;
     background-color: #000507;
     color: aliceblue;
+    margin-left: 2rem;
     margin-right: 1rem;
     box-shadow: 0.1em 0.1em 0.2em #aeb0b1, 0 0 0 0.1em #bdbebe;
 }
@@ -349,4 +350,21 @@ hr {
     border-radius: 5px;
     background: #c2c5c6;
     color: #000507;
+}
+
+.btn-checkout {
+    width: 12rem;
+    border-radius: 3px;
+    padding: 2px 25px;
+    border: none;
+    background-color: Lightgray;
+    color: black;
+    // margin-right: auto;
+    box-shadow: 0.1em 0.1em 0.2em #aeb0b1, 0 0 0 0.1em #bdbebe;
+}
+
+.btn-checkout:hover {
+    border-radius: 5px;
+    background: #c2c5c6;
+    color: brown;
 }
