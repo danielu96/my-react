@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaTimes, FaMugHot, FaPage4 } from "react-icons/fa";
 import { BsFillPersonPlusFill, BsFillPersonDashFill } from "react-icons/bs";
-
-
-
 import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import { useSelector } from 'react-redux'
 export default function Nav() {
+  const { isAuthenticated, logout, loginWithRedirect, user } = useAuth0()
   const { amount } = useSelector((store) => store.cart);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [myUser, setMyUser] = useState(null)
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setMyUser(user)
+    } else {
+      setMyUser(false)
+    }
+  }, [isAuthenticated])
+
   return (
     <nav className="navigation">
       <div className="brand-name">
@@ -75,11 +84,19 @@ export default function Nav() {
             <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount}</a>
           </li>
 
-          <li>
+          <li style={{ color: "gray" }}>
             {/* <button type="btn" onClick={() => logout(
               { returnTo: window.location.origin }
             )}>Logout</button> */}
-            <a href="/">login < BsFillPersonPlusFill /> </a>
+            {myUser ? (
+              <a onClick={() => logout(
+                { returnTo: window.location.origin }
+              )} >logout <  BsFillPersonDashFill /> </a>
+            ) : (
+              <a onClick={loginWithRedirect}>login < BsFillPersonPlusFill /></a>
+            )
+            }
+
           </li>
 
           <li>
