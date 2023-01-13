@@ -46,7 +46,12 @@ const CartContainer = () => {
                 </div>
                 <div className='total'>
                     <h1>TOTAL : {total} zł</h1>
+
                 </div>
+                <div className='total'>
+                    <button className='btn-checkout'>checkout</button>
+                </div>
+
             </div>
         </>
     );
