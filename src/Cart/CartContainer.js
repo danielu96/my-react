@@ -1,16 +1,24 @@
 import CartItem from './CartItem';
+import React, { useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from './modalSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import { grid } from '@mui/system';
+import { useState } from "react";
 import "../Styles/Css/Cart.css";
 
 
 const CartContainer = () => {
+    const [myUser, setMyUser] = useState(null)
     const navigate = useNavigate();
     const handleOnClick = () => navigate(-1);
     const dispatch = useDispatch();
+    const { logout, loginWithRedirect, user } = useAuth0()
     const { cartItems, amount, total } = useSelector((state) => state.cart);
+    useEffect(() => {
+        setMyUser(user)
+    }, [user])
     if (amount < 1) {
         return (
             <>
@@ -24,6 +32,7 @@ const CartContainer = () => {
             </>
         );
     }
+
     return (
         <>
             <div>
@@ -49,7 +58,14 @@ const CartContainer = () => {
 
                 </div>
                 <div className='total'>
-                    <button className='btn-checkout'>checkout</button>
+                    {myUser ? (
+                        <button className='btn-checkout'>checkout</button>
+
+                    ) : (
+                        <button className='btn-checkout'>login</button>
+                    )}
+
+
                 </div>
 
             </div>
