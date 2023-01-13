@@ -13,13 +13,16 @@ export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [myUser, setMyUser] = useState(null)
 
+  // useEffect(() => {
+  //   if (isAuthenticated) {
+  //     setMyUser(user)
+  //   } else {
+  //     setMyUser(false)
+  //   }
+  // }, [isAuthenticated])
   useEffect(() => {
-    if (isAuthenticated) {
-      setMyUser(user)
-    } else {
-      setMyUser(false)
-    }
-  }, [isAuthenticated])
+    setMyUser(user)
+  }, [user])
 
   return (
     <nav className="navigation">
