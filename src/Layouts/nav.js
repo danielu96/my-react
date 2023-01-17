@@ -83,6 +83,12 @@ export default function Nav() {
           <li>
             <a href="/Products">Products </a>
           </li>
+          {myUser && (
+            <li>
+              <a href="/CheckOut">CheckOut </a>
+            </li>
+          )}
+
           <li>
             <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount}</a>
           </li>
