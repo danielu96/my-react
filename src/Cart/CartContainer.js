@@ -59,10 +59,10 @@ const CartContainer = () => {
                 </div>
                 <div className='total'>
                     {myUser ? (
-                        <button className='btn-checkout'>checkout</button>
+                        <button className='btn-checkout' ><Link to='/CheckOut'>checkout</Link></button>
 
                     ) : (
-                        <button className='btn-checkout'>login</button>
+                        <button className='btn-checkout' onClick={loginWithRedirect}>login</button>
                     )}
 
 
