@@ -19,6 +19,7 @@ import Produkty from "./Pages/Produkty";
 import products from "./Pages/cardItems";
 import PrivateRoute from "./Pages/PrivateRoute";
 import AuthWrapper from "./Pages/AuthWrapper";
+import CheckOut from "./Pages/CheckOut";
 
 
 
@@ -59,7 +60,8 @@ class App extends React.Component {
                 <Route path="/NowaLista" element={<NowaLista data={karty} />} />
                 <Route path="/Produkty" element={<Produkty />} />
                 <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
-
+                <Route path="/CheckOut" element={<CheckOut />} />
+                s
               </Routes>
               <Footer />
             </Router>
