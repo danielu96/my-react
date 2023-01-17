@@ -17,6 +17,8 @@ import SingleProduct from "./Pages/SingleProduct";
 import CartItem from "./Cart/CartItem";
 import Produkty from "./Pages/Produkty";
 import products from "./Pages/cardItems";
+import PrivateRoute from "./Pages/PrivateRoute";
+import AuthWrapper from "./Pages/AuthWrapper";
 
 
 
@@ -39,27 +41,29 @@ class App extends React.Component {
       <>
 
         <div className="app">
-          <Router>
-            <Nav />
-            <Routes>
-              <Route path="/" element={<Card data={karty} />} />
-              <Route path="/cards/:title" element={< Card data={karty} />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/sublimation" element={<Sublimation />} />
-              <Route path="/Formularz" element={<Formularz />} />
-              <Route path="/Cart" element={<Cart />} />
-              <Route path="/CardModal/:title" element={<CardModal data={karty} />} />
-              <Route path="/Products" element={<Products data={karty} />} />
-              {/* <Route path="/SingleProduct" element={<SingleProduct />} /> */}
-              <Route path="/Karty" element={<Karty />} />
-              <Route path="/Zakupy" element={<Zakupy data={karty} />} />
-              <Route path="/NowaLista" element={<NowaLista data={karty} />} />
-              <Route path="/Produkty" element={<Produkty />} />
-              <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
+          <AuthWrapper>
+            <Router>
+              <Nav />
+              <Routes>
+                <Route path="/" element={<Card data={karty} />} />
+                <Route path="/cards/:title" element={< Card data={karty} />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/sublimation" element={<Sublimation />} />
+                <Route path="/Formularz" element={<Formularz />} />
+                <Route path="/Cart" element={<Cart />} />
+                <Route path="/CardModal/:title" element={<CardModal data={karty} />} />
+                <Route path="/Products" element={<Products data={karty} />} />
+                {/* <Route path="/SingleProduct" element={<SingleProduct />} /> */}
+                <Route path="/Karty" element={<Karty />} />
+                <Route path="/Zakupy" element={<Zakupy data={karty} />} />
+                <Route path="/NowaLista" element={<NowaLista data={karty} />} />
+                <Route path="/Produkty" element={<Produkty />} />
+                <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
 
-            </Routes>
-            <Footer />
-          </Router>
+              </Routes>
+              <Footer />
+            </Router>
+          </AuthWrapper>
         </div>
 
       </>
