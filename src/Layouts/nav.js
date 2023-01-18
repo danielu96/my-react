@@ -7,11 +7,14 @@ import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import { useSelector } from 'react-redux'
+import { clearCart } from "../Cart/cartSlice";
+import { useDispatch } from "react-redux";
 export default function Nav() {
   const { isAuthenticated, logout, loginWithRedirect, user } = useAuth0()
   const { amount } = useSelector((store) => store.cart);
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const [myUser, setMyUser] = useState(null)
+  const [myUser, setMyUser] = useState(null);
+  const dispatch = useDispatch();
 
   // useEffect(() => {
   //   if (isAuthenticated) {
@@ -98,9 +101,13 @@ export default function Nav() {
               { returnTo: window.location.origin }
             )}>Logout</button> */}
             {myUser ? (
-              <a onClick={() => logout(
-                { returnTo: window.location.origin }
-              )} >logout <  BsFillPersonDashFill /> </a>
+              <a onClick={() => {
+                dispatch(clearCart());
+                logout({ returnTo: window.location.origin })
+              }
+              }
+              >
+                logout <  BsFillPersonDashFill /> </a>
             ) : (
               <a onClick={loginWithRedirect}>login < BsFillPersonPlusFill /></a>
             )
