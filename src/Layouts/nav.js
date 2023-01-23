@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { IoPersonSharp } from "react-icons/io5";
-import { FaTimes, FaMugHot, FaPage4 } from "react-icons/fa";
+import { FaTimes, FaShoppingCart, FaMugHot, FaPage4 } from "react-icons/fa";
 import { BsFillPersonPlusFill, BsFillPersonDashFill } from "react-icons/bs";
 import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
@@ -93,10 +93,15 @@ export default function Nav() {
           )}
 
           <li>
-            <a href="/Cart"> <i className="fa fa-shopping-bag" aria-hidden="true"></i> {amount}</a>
+            <a href="/Cart">
+
+              <i
+                className="fa fa-shopping-cart " style={{ fontSize: "20px" }} > <span className="cart-value"  >{amount}</span></i>
+
+            </a>
           </li>
 
-          <li style={{ color: "gray" }}>
+          <li style={{ color: "gray", marginTop: "0.6rem" }}>
             {/* <button type="btn" onClick={() => logout(
               { returnTo: window.location.origin }
             )}>Logout</button> */}
@@ -107,9 +112,9 @@ export default function Nav() {
               }
               }
               >
-                logout <  BsFillPersonDashFill /> </a>
+                logout <  BsFillPersonDashFill size={23} style={{ marginTop: "-3px" }} /> </a>
             ) : (
-              <a onClick={loginWithRedirect}>login < BsFillPersonPlusFill /></a>
+              <a onClick={loginWithRedirect}>login < BsFillPersonPlusFill size={23} style={{ marginTop: "-3px" }} /></a>
             )
             }
 
@@ -128,6 +133,6 @@ export default function Nav() {
           {/* <hr className="kreska" /> */}
         </ul>
       </div>
-    </nav>
+    </nav >
   );
 }
