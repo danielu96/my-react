@@ -17,14 +17,13 @@ const CheckOut = () => {
     const dispatch = useDispatch();
     const handlePay = () => {
         console.log("Dziękujemy za test")
-        // setSucceeded(false);
         setTimeout(() => {
             dispatch(clearCart());
             logout({ returnTo: window.location.origin })
         }, 5000);
         return (
             <>
-                <div className="container">
+                <div >
                 </div>
             </>
         )
@@ -35,10 +34,10 @@ const CheckOut = () => {
     if (amount < 1) {
         return (
             <>
-                <div style={{ textAlign: "center", margin: "2rem auto 4rem auto" }}>
+                <div style={{ minHeight: "75vh", margin: "2rem auto 2rem auto", textAlign: "center", justifyContent: "space-between" }}>
                     <h1 >Koszyk jest pusty</h1>
-                    <div style={{ margin: "2rem auto 4rem auto", alignContent: "center" }}>
-                        <Link className="btn" to="/Products" >Kup coś</Link>
+                    <div >
+                        <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Products" >Kup coś</Link>
                     </div>
                 </div>
             </>
@@ -46,19 +45,17 @@ const CheckOut = () => {
     }
     return (
         <>
-            <div style={{ textAlign: "center", margin: "2rem auto 2rem auto" }}><h1>Hello</h1>
+            <div style={{ minHeight: "75vh", textAlign: "center", margin: "2rem auto 2rem auto" }}><h1>Hello</h1>
                 <h1> {myUser && myUser.name}</h1>
                 <span>do zapłaty {total} zł</span>
-
                 <button style={{ marginTop: "2rem" }} className="btn" onClick={() => {
                     handlePay();
                     setSucceeded(false);
-                    // document.body.innerHTML = "<h1>wwwwww<h1/>"                   
-
+                    // document.body.innerHTML = "<h1>wwwwww<h1/>"              
                 }
                 }>Pay</button>
                 {succeeded ? (
-                    <article style={{ margin: "2rem" }}>
+                    <article style={{ margin: "2rem " }}>
                         <h4></h4>
                     </article>
                 ) : (
