@@ -6,7 +6,7 @@ import { calculateTotals } from "../Cart/cartSlice";
 import { useEffect } from "react";
 import Modal from "./Modal";
 import "../Styles/Css/Cart.css";
-import CartItem from "./CartItem";
+
 
 
 const Cart = () => {
@@ -21,7 +21,7 @@ const Cart = () => {
 
     return (
         <>
-            <div className="container">
+            <div style={{ minHeight: "70vh", margin: "3rem auto" }} >
 
                 {isOpen && <Modal />}
                 <CartContainer />
