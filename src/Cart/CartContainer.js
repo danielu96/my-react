@@ -22,13 +22,12 @@ const CartContainer = () => {
     if (amount < 1) {
         return (
             <>
-                <div>
+                <div className='container'>
                     <h1 style={{ textAlign: "center" }}>Koszyk jest pusty</h1>
+                    <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Products" >Kup coś</Link>
 
                 </div>
-                <div style={{ margin: "2rem auto", alignContent: "center" }}>
-                    <Link className="btn" to="/Products" >Kup coś</Link>
-                </div>
+
             </>
         );
     }
