@@ -7,14 +7,13 @@ import store from './store/store';
 // import {UserProvider} from 
 import { Provider } from "react-redux";
 import { Auth0Provider } from "@auth0/auth0-react";
-// dev-jkr6j8hi7nhw5tdj.us.auth0.com
-// shXLx9b68n15hLIMPNIuGWHo49BGhlh1
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Auth0Provider
-    domain="dev-jkr6j8hi7nhw5tdj.us.auth0.com"
-    clientId="shXLx9b68n15hLIMPNIuGWHo49BGhlh1"
+    domain="dev-mrhjia4uz567rqcl.us.auth0.com"
+    clientId="eHFy6F4nHjApEpt9ouH69onSZUn2VnIS"
     redirectUri={window.location.origin}
     cacheLocation="localstorage">
     {/* <UserProvider> */}
