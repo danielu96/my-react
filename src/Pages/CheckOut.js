@@ -59,7 +59,7 @@ const CheckOut = () => {
                         <h4></h4>
                     </article>
                 ) : (
-                    <article style={{ margin: "2rem" }}><h4>Dziękujemy, to jest wersja testowa strony.</h4>
+                    <article style={{ margin: "2rem" }}><h4><strong>Nic nie płacisz</strong>, to jest wersja testowa strony.</h4>
                         <span>za chwilę zostaniesz wylogowany</span>
                     </article>)}
 
