@@ -23,9 +23,10 @@ const AuthWrapper = ({ children }) => {
 
 const Wrapper = styled.section`
 min-height: 100vh,
-display: grid;
+width:150px,
+display: flex;
 justify-content: center;
-margin:auto;
+margin: 5rem auto;
 `
 
 
