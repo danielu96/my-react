@@ -11,12 +11,13 @@ const CartItem = ({ id, title, amount, cena }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     return (
         <div className="cart-item">
-            <div className="item_title">  <h4>{title} </h4></div>
+
+            <div className="item_title" >  <h4>{title} </h4></div>
             <div className="item_quantity"> <input style={{ width: '300px' }} placeholder="treść nadruku" type="text"
                 value={input} onChange={(e) => setInput(e.target.value)} /></div>
-            <div className="item3">
-
-
+            {/* <div className="item8">realizacja</div> */}
+            <div className="item3" >
+                <p style={{ paddingRight: "7px", paddingTop: "3px", marginBottom: "14px" }}>realizacja </p>
                 <DatePicker
                     style={{ width: '100px' }}
                     selected={selectedDate}
@@ -28,6 +29,7 @@ const CartItem = ({ id, title, amount, cena }) => {
                     showYearDropdown
                     scrollableMonthYearDropdown
                 />
+
             </div>
             <div className="item_amount">
                 <button className="amount-btn" onClick={() => {
