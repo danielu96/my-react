@@ -142,7 +142,7 @@
 
 .navigation {
     z-index: 2;
-    height: 10vh;
+    min-height: 11vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -192,13 +192,14 @@
         z-index: 1;
         top: 0vh;
         left: 0;
-        width: 80%;
-        height: auto;
+        width: 100%;
+        min-height: auto;
         display: flex;
         flex-direction: column;
         background-color: rgb(233, 233, 233);
         transition: 1s;
         transform: translateX(-100%);
+
 
     }
 
