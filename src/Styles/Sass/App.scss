@@ -80,7 +80,7 @@ section {
   border-bottom-color: #ffffff;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 768px) {
   .card {
     opacity: 0.9;
     background-color: #4d4f70;
@@ -245,7 +245,7 @@ h1 {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 768px) {
   .btn_zobacz {
     background-color: transparent;
     // margin-bottom: 2rem;
@@ -272,7 +272,7 @@ h1 {
 
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 768px) {
   .Contact {
     z-index: 0;
     padding: 20px;
@@ -385,6 +385,12 @@ h1 {
   background-color: #000008;
   opacity: 0.9;
 
+}
+
+@media only screen and (min-width: 768px)and(max-width: 992px) {
+  .modal-content {
+    height: auto;
+  }
 }
 
 .modal-body {
