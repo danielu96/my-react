@@ -20,6 +20,7 @@
     width: 100%;
     bottom: 0;
     background-color: #dddddd;
+    min-height: 11vh;
   }
 }
 
