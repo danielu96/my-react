@@ -137,6 +137,7 @@
 
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .navigation-menu.expanded ul {
+    overflow: auto;
     display: block;
     transform: none;
     position: fixed;
