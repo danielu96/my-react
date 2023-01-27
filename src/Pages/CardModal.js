@@ -54,14 +54,14 @@ const CardModal = ({ id, data, amount, availableProducts, cena }) => {
 
     return (
         <>
-            <div className="d-container-cart">
+            <div className="d-container-cart" style={{ overflow: "auto" }}>
                 {data
                     .filter((card) => card.title === title)
                     .map((card, id) => (
                         <div key={id}>
 
                             <MDBModalDialog centered>
-                                <MDBModalContent>
+                                <MDBModalContent >
                                     <MDBModalHeader>
                                         <MDBModalTitle > <h1 style={{ paddingLeft: "2.1rem" }}>{card.title}</h1></MDBModalTitle>
                                         <MDBBtn className='btn-close' color='none' onClick={handleOnClick}></MDBBtn>
