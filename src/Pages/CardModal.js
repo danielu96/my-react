@@ -54,7 +54,7 @@ const CardModal = ({ id, data, amount, availableProducts, cena }) => {
 
     return (
         <>
-            <div className="d-container-cart" style={{ overflow: "auto" }}>
+            <div className="d-container-cart" style={{ overflow: "auto" }} >
                 {data
                     .filter((card) => card.title === title)
                     .map((card, id) => (
