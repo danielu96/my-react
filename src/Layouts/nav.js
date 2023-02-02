@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { IoPersonSharp } from "react-icons/io5";
-import { FaTimes, FaShoppingCart, FaMugHot, FaPage4 } from "react-icons/fa";
+import { FaTimes, FaShoppingCart, FaMugHot, FaPage4, FaArrowAltCircleRight, FaArrowRight } from "react-icons/fa";
 import { BsFillPersonPlusFill, BsFillPersonDashFill } from "react-icons/bs";
 import "../Styles/Css/navigation2.css";
 import Navbar from "react-bootstrap/Navbar";
@@ -75,30 +75,39 @@ export default function Nav() {
           <hr className="kreska" />
 
           <li>
-            <a href="/">Home </a>
+            <a href="/">Home  </a>
+            <FaArrowRight className="FaArrowRight" />
           </li>
+
           <li>
-            <a href="/Sublimation">Sublimation</a>
+            <a href="/Sublimation">Sublimation </a>
+            <FaArrowRight className="FaArrowRight" />
           </li>
+
           <li>
             <a href="/Contact">Contact</a>
+            <FaArrowRight className="FaArrowRight" />
           </li>
+
           <li>
             <a href="/Products">Products </a>
+            <FaArrowRight className="FaArrowRight" />
           </li>
+
           {myUser && (
             <li>
               <a href="/CheckOut">CheckOut </a>
+              <FaArrowRight className="FaArrowRight" />
             </li>
           )}
 
           <li>
             <a href="/Cart">
-
               <i
                 className="fa fa-shopping-cart " style={{ fontSize: "20px" }} > <span className="cart-value"  >{amount}</span></i>
 
             </a>
+            <FaArrowRight className="FaArrowRight" />
           </li>
 
           <li style={{ color: "gray", marginTop: "0.6rem" }}>
@@ -117,7 +126,7 @@ export default function Nav() {
               <a onClick={loginWithRedirect}>login < BsFillPersonPlusFill size={23} style={{ marginTop: "-3px" }} /></a>
             )
             }
-
+            <FaArrowRight className="FaArrowRight" />
           </li>
 
           <li>
@@ -130,8 +139,14 @@ export default function Nav() {
               <FaTimes />
             </button>
           </li>
-          {/* <hr className="kreska" /> */}
+          <hr className="kreska" />
+          <div className="test">
+            <h1>Wersja testowa</h1>
+            <p>2023</p>
+          </div>
         </ul>
+
+
       </div>
     </nav >
   );
