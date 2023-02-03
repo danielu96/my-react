@@ -19,6 +19,7 @@ import {
 import Modal from "./CardModal";
 import NowaLista from "../NowaLista/NowaLista";
 import SingleProduct from "./SingleProduct";
+import { display } from "@mui/system";
 const Products = ({ data }) => {
 
     const { title } = useParams();
@@ -51,7 +52,25 @@ const Products = ({ data }) => {
             {/* <Banerek /> */}
             <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
+            <div className="container">
+                <div className="product-item">
+                    <div className="item-products">
+                        <p>{data.length} product found</p>
+                    </div>
+                    <hr className="item-hr" />
+
+                    <form className="item-price">
+                        <label className="label" htmlFor='sort'>sort by</label>
+                        <select name="sort" id="sort" className="sort-input">
+                            <option value="price-lowest">price lowest</option>
+                            <option value="price-lowest">price highest</option>
+                        </select>
+                    </form>
+
+                </div>
+            </div>
             <div className="box">
+
                 {currentItems.map((card, id) => (
                     <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
                         <MDBCardHeader > <h1 >{card.title}</h1></MDBCardHeader>
