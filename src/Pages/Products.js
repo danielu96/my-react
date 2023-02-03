@@ -52,7 +52,7 @@ const Products = ({ data }) => {
             {/* <Banerek /> */}
             <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
-            <div className="container">
+            <div className="container" style={{ margin: "0 auto 0 auto" }}>
                 <div className="product-item">
                     <div className="item-products">
                         <p>{data.length} product found</p>
