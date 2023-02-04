@@ -58,9 +58,9 @@ const Products = ({ data }) => {
                         <p>{data.length} product found</p>
                     </div>
                     <hr className="item-hr" />
-
-                    <form className="item-price">
+                    <form className="item-price" style={{ minHeight: "auto" }}>
                         <label className="label" htmlFor='sort'>sort by</label>
+
                         <select name="sort" id="sort" className="sort-input">
                             <option value="price-lowest">price lowest</option>
                             <option value="price-lowest">price highest</option>
