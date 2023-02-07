@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { sort, updateSort } from "../Slices/productSlice";
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -16,10 +17,9 @@ import {
     MDBCardBody,
     MDBCardHeader
 } from 'mdb-react-ui-kit';
-import Modal from "./CardModal";
-import NowaLista from "../NowaLista/NowaLista";
-import SingleProduct from "./SingleProduct";
-import { display } from "@mui/system";
+
+
+
 const Products = ({ data }) => {
 
     const { title } = useParams();
@@ -42,6 +42,14 @@ const Products = ({ data }) => {
         );
         setItemOffset(newOffset);
     };
+
+
+    const handleUpdateSort = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        console.log(name, value)
+        dispatch(updateSort(value))
+    }
     // useEffect(() => {
     //   dispatch(calculateTotals());
 
@@ -60,10 +68,14 @@ const Products = ({ data }) => {
                     <hr className="item-hr" />
                     <form className="item-price" style={{ minHeight: "auto" }}>
                         <label className="label" htmlFor='sort'>sort by</label>
-
-                        <select name="sort" id="sort" className="sort-input">
+                        <select name="sort" id="sort" className="sort-input"
+                            value={sort}
+                            onChange={handleUpdateSort}
+                        >
                             <option value="price-lowest">price lowest</option>
-                            <option value="price-lowest">price highest</option>
+                            <option value="price-highest">price highest</option>
+                            <option value="name-a">name(a-z)</option>
+                            <option value="name-z">name(z-a)</option>
                         </select>
                     </form>
 
@@ -71,18 +83,21 @@ const Products = ({ data }) => {
             </div>
             <div className="box">
 
-                {currentItems.map((card, id) => (
-                    <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
-                        <MDBCardHeader > <h1 >{card.title}</h1></MDBCardHeader>
-                        <MDBCardBody>
-                            <MDBCardTitle> {card.description}</MDBCardTitle>
-                            <MDBCardText style={{ color: "gray" }}>
-                                {card.opis}
-                            </MDBCardText>
-                        </MDBCardBody>
-                        <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Produkty/${card.title}`}  > Zobacz</Link>
-                    </MDBCard>
-                ))}
+                {currentItems.map
+                    ((card, id) => (
+                        <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
+                            <MDBCardHeader > <h1 >{card.title}</h1>
+                                {/* <span>{card.cena}</span> */}
+                            </MDBCardHeader>
+                            <MDBCardBody>
+                                <MDBCardTitle> {card.description}</MDBCardTitle>
+                                <MDBCardText style={{ color: "gray" }}>
+                                    {card.opis}
+                                </MDBCardText>
+                            </MDBCardBody>
+                            <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Produkty/${card.title}`}  > Zobacz</Link>
+                        </MDBCard>
+                    ))}
             </div>
             <ReactPaginate
                 breakLabel="..."
