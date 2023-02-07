@@ -2,19 +2,14 @@ import { configureStore, createReducer } from '@reduxjs/toolkit'
 import cartReducer from '../Cart/cartSlice';
 import cardReducer from '../Pages/CardSlice';
 import modalReducer from '../Cart/modalSlice';
-// import Auth0Slice from '../Cart/Auth0Slice';
-// import CardModalReducer from '../Pages/CardModalSlice';
-// import kartyReducer from "../KARTY/kartySlice";
+import productsReducer from '../Slices/productSlice';
 
 
 const store = configureStore({
   reducer: {
     cart: cartReducer,
-    // Auth0: Auth0Slice,
+    products: productsReducer,
     modal: modalReducer,
-    // CardModal: CardModalReducer,
-    // karty: kartyReducer,
-
   },
 });
 
