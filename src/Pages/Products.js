@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { FaMugHot, FaTimes } from "react-icons/fa";
 import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
-import ReactPaginate from "react-paginate"
+import ReactPaginate from "react-paginate";
+import Filters from "../Components/Filters";
 
 
 
@@ -43,7 +44,7 @@ const Products = ({ data }) => {
         const name = e.target.name
         const value = e.target.value
         console.log(name, value)
-        dispatch(updateSort(value))
+        dispatch(updateSort(value, name))
     }
     // let FilterCurrentCartItems = FilterCartItems.concat(currentItems);
 
@@ -63,6 +64,8 @@ const Products = ({ data }) => {
 
             <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
+            <Filters />
+
             <div className="container" style={{ margin: "0 auto 0 auto" }}>
                 <div className="product-item">
                     <div className="item-products">
