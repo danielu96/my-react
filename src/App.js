@@ -20,6 +20,7 @@ import products from "./Pages/cardItems";
 import PrivateRoute from "./Pages/PrivateRoute";
 import AuthWrapper from "./Pages/AuthWrapper";
 import CheckOut from "./Pages/CheckOut";
+import Filters from "./Components/Filters";
 
 
 
@@ -54,7 +55,6 @@ class App extends React.Component {
                 <Route path="/Cart" element={<Cart />} />
                 <Route path="/CardModal/:title" element={<CardModal data={karty} />} />
                 <Route path="/Products" element={<Products data={karty} />} />
-                {/* <Route path="/SingleProduct" element={<SingleProduct />} /> */}
                 <Route path="/Karty" element={<Karty />} />
                 <Route path="/Zakupy" element={<Zakupy data={karty} />} />
                 <Route path="/NowaLista" element={<NowaLista data={karty} />} />
@@ -63,6 +63,7 @@ class App extends React.Component {
                 <Route element={<PrivateRoute />} >
                   <Route path="/CheckOut" element={<CheckOut />} />
                 </Route >
+                <Route path="/Filters" element={<Filters />} />
               </Routes>
               <Footer />
             </Router>
