@@ -4,9 +4,9 @@ import App from "./App";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import reportWebVitals from "./reportWebVitals";
 import store from './store/store';
-// import {UserProvider} from 
 import { Provider } from "react-redux";
 import { Auth0Provider } from "@auth0/auth0-react";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,7 +19,9 @@ root.render(
     {/* <UserProvider> */}
     <React.StrictMode>
       <Provider store={store}>
+
         <App />
+
       </Provider>
     </React.StrictMode>
     {/* </UserProvider> */}
