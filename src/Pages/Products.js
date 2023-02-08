@@ -1,15 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { sort, updateSort } from "../Slices/productSlice";
 import React, { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaMugHot, FaTimes } from "react-icons/fa";
-import { Pagination } from "mdb-react-ui-kit"
 import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
-import Banerek from "../Layouts/Banerek";
+
+import { FilterCartItems } from "../Slices/productSlice"
+
 import {
     MDBCard,
     MDBCardTitle,
@@ -17,24 +16,22 @@ import {
     MDBCardBody,
     MDBCardHeader
 } from 'mdb-react-ui-kit';
-
-
-
 const Products = ({ data }) => {
-
     const { title } = useParams();
     const toggleShow = () => setCentredModal(!centredModal);
     const [centredModal, setCentredModal] = useState(false);
     const [currentItems, setCurrentItems] = useState([]);
+    //  const [currentItems, setCurrentItems] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 6;
     const dispatch = useDispatch()
+    const { FilterCartItems } = useSelector((state) => state.products);
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(data.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(data.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, data]);
+        setCurrentItems(FilterCartItems.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(FilterCartItems.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data, FilterCartItems]);
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % data.length;
         console.log(
@@ -42,14 +39,14 @@ const Products = ({ data }) => {
         );
         setItemOffset(newOffset);
     };
-
-
     const handleUpdateSort = (e) => {
         const name = e.target.name
         const value = e.target.value
         console.log(name, value)
         dispatch(updateSort(value))
     }
+    // let FilterCurrentCartItems = FilterCartItems.concat(currentItems);
+
     // useEffect(() => {
     //   dispatch(calculateTotals());
 
@@ -57,7 +54,13 @@ const Products = ({ data }) => {
 
     return (
         <>
-            {/* <Banerek /> */}
+            {/* <div className='container'>
+                {cartItems.map((item) => {
+                    return <div key={item.id}{...item} />
+                })
+                }
+            </div> */}
+
             <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
             <div className="container" style={{ margin: "0 auto 0 auto" }}>
@@ -70,20 +73,18 @@ const Products = ({ data }) => {
                         <label className="label" htmlFor='sort'>sort by</label>
                         <select name="sort" id="sort" className="sort-input"
                             value={sort}
-                            onChange={handleUpdateSort}
-                        >
+                            onChange={handleUpdateSort}>
                             <option value="price-lowest">price lowest</option>
                             <option value="price-highest">price highest</option>
                             <option value="name-a">name(a-z)</option>
                             <option value="name-z">name(z-a)</option>
                         </select>
                     </form>
-
                 </div>
             </div>
             <div className="box">
-
-                {currentItems.map
+                {currentItems
+                    .map
                     ((card, id) => (
                         <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
                             <MDBCardHeader > <h1 >{card.title}</h1>
@@ -114,6 +115,7 @@ const Products = ({ data }) => {
                 disabledClassName={"disabled"}
                 activeClassName={"active"}
             />
+
         </>
     );
 };
