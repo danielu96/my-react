@@ -45,7 +45,7 @@ const productsSlice = createSlice({
                 })
                 console.log('od z do a')
             }
-            return { ...state, sort: action.payload, FilterProducts: tempCartItems }
+            return { ...state, sort: action.payload, FilterProducts: tempProducts }
         }
     }
 }
