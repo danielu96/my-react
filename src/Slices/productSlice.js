@@ -46,7 +46,12 @@ const productsSlice = createSlice({
                 console.log('od z do a')
             }
             return { ...state, sort: action.payload, FilterProducts: tempProducts }
-        }
+        },
+        updateFilters: (state, action) => {
+            const { name, value } = action.payload
+            return { ...state, filters: { ...state.filters, [name]: value } }
+        },
+        clearFilters: () => { },
     }
 }
 )
