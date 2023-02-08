@@ -4,9 +4,17 @@ import cartItems from '../Cart/cartItems';
 
 const initialState = {
     // cartItems: cartItems,
-    FilterCartItems: cartItems,
+    FilterProducts: cartItems,
     sort: "price-lowest",
-
+    filters: {
+        text: '',
+        company: 'all',
+        category: 'all',
+        color: 'all',
+        min_cena: 0,
+        max_cena: 0,
+        cena: 0,
+    },
 }
 const productsSlice = createSlice({
     name: "products",
@@ -14,8 +22,8 @@ const productsSlice = createSlice({
     reducers: {
 
         updateSort: (state, action) => {
-            const { sort, FilterCartItems } = state;
-            let tempCartItems = [...FilterCartItems]
+            const { sort, FilterProducts } = state;
+            let tempCartItems = [...FilterProducts]
 
             if (sort === 'price-lowest') {
                 tempCartItems = tempCartItems.sort((a, b) => b.cena - a.cena)
@@ -37,10 +45,10 @@ const productsSlice = createSlice({
                 })
                 console.log('od z do a')
             }
-            return { ...state, sort: action.payload, FilterCartItems: tempCartItems }
+            return { ...state, sort: action.payload, FilterProducts: tempCartItems }
         }
     }
 }
 )
-export const { sort, updateSort, FilterCartItems } = productsSlice.actions;
+export const { sort, updateSort, FilterProducts } = productsSlice.actions;
 export default productsSlice.reducer;
