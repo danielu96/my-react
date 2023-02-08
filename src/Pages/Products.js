@@ -7,7 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
 
-import { FilterCartItems } from "../Slices/productSlice"
+
 
 import {
     MDBCard,
@@ -26,12 +26,12 @@ const Products = ({ data }) => {
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 6;
     const dispatch = useDispatch()
-    const { FilterCartItems } = useSelector((state) => state.products);
+    const { FilterProducts } = useSelector((state) => state.products);
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(FilterCartItems.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(FilterCartItems.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, data, FilterCartItems]);
+        setCurrentItems(FilterProducts.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(FilterProducts.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data, FilterProducts]);
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % data.length;
         console.log(
