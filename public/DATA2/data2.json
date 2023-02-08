@@ -3,6 +3,9 @@
     {
       "id": 1,
       "title": "Kubek imienny",
+      "color": "biały",
+      "category": "Kubki",
+      "company": "Robo",
       "description": "z dowolnym imieniem",
       "img": "../Images/kubek_czarny.png",
       "Image": "../Images/kubek_czarny.png",
@@ -15,6 +18,9 @@
     {
       "id": 2,
       "title": "Kubek magiczny",
+      "color": "czarny",
+      "category": "Kubki",
+      "company": "Poli",
       "description": "zmieniający kolor ",
       "img": "../Images/kubek_czarny.png",
       "cena": 20,
@@ -27,6 +33,9 @@
     {
       "id": 3,
       "title": "Kubek ze zdjęciem",
+      "color": "biały",
+      "category": "Kubki",
+      "company": "Robo",
       "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": 25,
@@ -39,6 +48,9 @@
     {
       "id": 4,
       "title": "Kubek z łyżeczką",
+      "color": "czerwony",
+      "category": "Kubki",
+      "company": "Poli",
       "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": 25,
@@ -51,6 +63,9 @@
     {
       "id": 5,
       "title": "Kubek plastikowy",
+      "color": "biały",
+      "category": "Kubki",
+      "company": "Poli",
       "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": 10,
@@ -63,6 +78,9 @@
     {
       "id": 6,
       "title": "Kubek z termiczny",
+      "color": "czarny",
+      "category": "Kubki",
+      "company": "Poli",
       "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": 25,
@@ -75,6 +93,9 @@
     {
       "id": 7,
       "title": "Kubek szklany",
+      "color": "szary",
+      "category": "Kubki",
+      "company": "Poli",
       "description": "z dowolnym napisem",
       "img": "../Images/kubek_czarny.png",
       "Image": "../Images/kubek_czarny.png",
@@ -87,6 +108,9 @@
     {
       "id": 8,
       "title": "Kubek metalowy",
+      "color": "szary",
+      "category": "Kubki",
+      "company": "Robo",
       "description": "nadruk na kubku metalowym",
       "img": "../Images/kubek_czarny.png",
       "cena": 30,
@@ -99,6 +123,9 @@
     {
       "id": 9,
       "title": "Filiżanka",
+      "color": "biały",
+      "category": "Filiżanki",
+      "company": "Robo",
       "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": 30,
@@ -111,6 +138,9 @@
     {
       "id": 10,
       "title": "Foto Kryształ",
+      "color": "szary",
+      "category": "Kryształ",
+      "company": "Robo",
       "description": "nadruk foto",
       "img": "../Images/kubek_czarny.png",
       "cena": 25,
@@ -123,6 +153,9 @@
     {
       "id": 11,
       "title": "Kufel szklany",
+      "color": "szary",
+      "category": "Kufle",
+      "company": "Poli",
       "description": "nadruk czarny",
       "img": "../Images/kubek_czarny.png",
       "cena": 25,
@@ -135,6 +168,9 @@
     {
       "id": 12,
       "title": "Wizytówki metal",
+      "color": "szary",
+      "category": "Wizytówki",
+      "company": "Poli",
       "description": "nadruk kolorowy",
       "img": "../Images/kubek_czarny.png",
       "cena": 2,
