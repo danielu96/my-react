@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { sort, updateSort } from "../Slices/productSlice";
+import { sort, updateSort, Load_Products } from "../Slices/productSlice";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaMugHot, FaTimes } from "react-icons/fa";
@@ -17,6 +17,7 @@ import {
     MDBCardBody,
     MDBCardHeader
 } from 'mdb-react-ui-kit';
+import cartItems from "../Cart/cartItems";
 const Products = ({ data }) => {
     const { title } = useParams();
     const toggleShow = () => setCentredModal(!centredModal);
@@ -28,6 +29,9 @@ const Products = ({ data }) => {
     const itemsPerPage = 6;
     const dispatch = useDispatch()
     const { FilterProducts } = useSelector((state) => state.products);
+    useEffect(() => {
+        dispatch(Load_Products(data));
+    }, [data]);
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
         setCurrentItems(FilterProducts.slice(itemOffset, endOffset));
@@ -46,26 +50,11 @@ const Products = ({ data }) => {
         console.log(name, value)
         dispatch(updateSort(value, name))
     }
-    // let FilterCurrentCartItems = FilterCartItems.concat(currentItems);
-
-    // useEffect(() => {
-    //   dispatch(calculateTotals());
-
-    // }, [cartItems]);
-
     return (
         <>
-            {/* <div className='container'>
-                {cartItems.map((item) => {
-                    return <div key={item.id}{...item} />
-                })
-                }
-            </div> */}
-
             <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
             <Filters />
-
             <div className="container" style={{ margin: "0 auto 0 auto" }}>
                 <div className="product-item">
                     <div className="item-products">
@@ -91,7 +80,7 @@ const Products = ({ data }) => {
                     ((card, id) => (
                         <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
                             <MDBCardHeader > <h1 >{card.title}</h1>
-                                {/* <span>{card.cena}</span> */}
+                                <span>{card.cena}</span>
                             </MDBCardHeader>
                             <MDBCardBody>
                                 <MDBCardTitle> {card.description}</MDBCardTitle>
