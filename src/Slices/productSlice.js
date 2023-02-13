@@ -1,10 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import cartItems from '../Cart/cartItems';
+// import CartItem from '../Cart/CartItem'
 
 
 const initialState = {
     all_products: cartItems,
     FilterProducts: cartItems,
+    isLoading: true,
     sort: "price-lowest",
     filters: {
         text: '',
@@ -20,6 +22,27 @@ const productsSlice = createSlice({
     name: "products",
     initialState,
     reducers: {
+
+        Load_Products: (state, action) => {
+            let maxCena = action.payload.map((p) => p.cena)
+            maxCena = Math.max(...maxCena)
+            console.log(maxCena)
+            return {
+                ...state,
+                all_products: [...action.payload],
+                FilterProducts: [...action.payload],
+                filters: {
+                    ...state.filters,
+                    max_cena: maxCena, cena: maxCena
+                }
+            }
+        },
+
+        updateFilters: (state, action) => {
+            const { name, value } = action.payload
+            console.log("filtering ggg")
+            return { ...state, filters: { ...state.filters, [name]: value } }
+        },
 
         updateSort: (state, action) => {
             const { sort, FilterProducts } = state;
@@ -47,13 +70,10 @@ const productsSlice = createSlice({
             }
             return { ...state, sort: action.payload, FilterProducts: tempProducts }
         },
-        updateFilters: (state, action) => {
-            const { name, value } = action.payload
-            return { ...state, filters: { ...state.filters, [name]: value } }
-        },
+
         clearFilters: () => { },
     }
 }
 )
-export const { sort, updateSort, FilterProducts, updateFilters, clearFilters, text, name } = productsSlice.actions;
+export const { sort, updateSort, FilterProducts, updateFilters, clearFilters, Load_Products } = productsSlice.actions;
 export default productsSlice.reducer;
