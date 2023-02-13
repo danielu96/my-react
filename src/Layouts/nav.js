@@ -8,7 +8,9 @@ import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
 import { useSelector } from 'react-redux'
 import { clearCart } from "../Cart/cartSlice";
+import { Load_Products } from "../Slices/productSlice";
 import { useDispatch } from "react-redux";
+import { Value } from "sass";
 export default function Nav() {
   const { isAuthenticated, logout, loginWithRedirect, user } = useAuth0()
   const { amount } = useSelector((store) => store.cart);
@@ -90,7 +92,14 @@ export default function Nav() {
           </li>
 
           <li>
-            <a href="/Products">Products </a>
+            <a
+              // onClick={() => {
+              //   dispatch(Load_Products())
+              //   console.log('laduje')
+              // }}
+              href="/Products"
+            >
+              Products </a>
             <FaArrowRight className="FaArrowRight" />
           </li>
 
@@ -100,7 +109,6 @@ export default function Nav() {
               <FaArrowRight className="FaArrowRight" />
             </li>
           )}
-
           <li>
             <a href="/Cart">
               <i
