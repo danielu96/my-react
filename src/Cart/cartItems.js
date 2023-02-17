@@ -2,13 +2,13 @@ const cartItems = [
     {
         "id": 1,
         "title": "Kubek imienny",
-        "color": "biały",
+        "color": "white",
         "category": "Kubki",
         "company": "Robo",
         "description": "z dowolnym imieniem",
         "img": "../Images/kubek_czarny.png",
         "Image": "../Images/kubek_czarny.png",
-        "cena": 5,
+        "cena": 15,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 5,
@@ -17,7 +17,7 @@ const cartItems = [
     {
         "id": 2,
         "title": "Kubek magiczny",
-        "color": "czarny",
+        "color": "blue",
         "category": "Kubki",
         "company": "Poli",
         "description": "zmieniający kolor ",
@@ -32,7 +32,7 @@ const cartItems = [
     {
         "id": 3,
         "title": "Kubek ze zdjęciem",
-        "color": "biały",
+        "color": "blue",
         "category": "Kubki",
         "company": "Robo",
         "description": "nadruk foto",
@@ -47,7 +47,7 @@ const cartItems = [
     {
         "id": 4,
         "title": "Kubek z łyżeczką",
-        "color": "czerwony",
+        "color": "red",
         "category": "Kubki",
         "company": "Poli",
         "description": "nadruk foto",
@@ -62,7 +62,7 @@ const cartItems = [
     {
         "id": 5,
         "title": "Kubek plastikowy",
-        "color": "biały",
+        "color": "white",
         "category": "Kubki",
         "company": "Poli",
         "description": "nadruk foto",
@@ -77,7 +77,7 @@ const cartItems = [
     {
         "id": 6,
         "title": "Kubek z termiczny",
-        "color": "czarny",
+        "color": "black",
         "category": "Kubki",
         "company": "Poli",
         "description": "nadruk foto",
@@ -92,7 +92,7 @@ const cartItems = [
     {
         "id": 7,
         "title": "Kubek szklany",
-        "color": "szary",
+        "color": "gray",
         "category": "Kubki",
         "company": "Poli",
         "description": "z dowolnym napisem",
@@ -107,7 +107,7 @@ const cartItems = [
     {
         "id": 8,
         "title": "Kubek metalowy",
-        "color": "szary",
+        "color": "gray",
         "category": "Kubki",
         "company": "Robo",
         "description": "nadruk na kubku metalowym",
@@ -122,7 +122,7 @@ const cartItems = [
     {
         "id": 9,
         "title": "Filiżanka",
-        "color": "biały",
+        "color": "white",
         "category": "Filiżanki",
         "company": "Robo",
         "description": "nadruk foto",
@@ -137,12 +137,12 @@ const cartItems = [
     {
         "id": 10,
         "title": "Foto Kryształ",
-        "color": "szary",
+        "color": "gray",
         "category": "Kryształ",
         "company": "Robo",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 25,
+        "cena": 45,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 95,
@@ -152,7 +152,7 @@ const cartItems = [
     {
         "id": 11,
         "title": "Kufel szklany",
-        "color": "szary",
+        "color": "gray",
         "category": "Kufle",
         "company": "Poli",
         "description": "nadruk czarny",
@@ -167,7 +167,7 @@ const cartItems = [
     {
         "id": 12,
         "title": "Wizytówki metal",
-        "color": "szary",
+        "color": "gray",
         "category": "Wizytówki",
         "company": "Poli",
         "description": "nadruk kolorowy",
