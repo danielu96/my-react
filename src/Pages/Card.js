@@ -31,19 +31,19 @@ const Card = ({ data }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 6;
   const dispatch = useDispatch()
-  useEffect(() => {
+  // useEffect(() => {
 
-    const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(data.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(data.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, data]);
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % data.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-  };
+  //   const endOffset = itemOffset + itemsPerPage;
+  //   setCurrentItems(data.slice(itemOffset, endOffset));
+  //   setPageCount(Math.ceil(data.length / itemsPerPage));
+  // }, [itemOffset, itemsPerPage, data]);
+  // const handlePageClick = (event) => {
+  //   const newOffset = (event.selected * itemsPerPage) % data.length;
+  //   console.log(
+  //     `User requested page number ${event.selected}, which is offset ${newOffset}`
+  //   );
+  //   setItemOffset(newOffset);
+  // };
   // useEffect(() => {
   //   dispatch(calculateTotals());
 
