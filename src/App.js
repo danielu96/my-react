@@ -20,25 +20,27 @@ import products from "./Pages/cardItems";
 import PrivateRoute from "./Pages/PrivateRoute";
 import AuthWrapper from "./Pages/AuthWrapper";
 import CheckOut from "./Pages/CheckOut";
-import Filters from "./Components/Filters";
+import Filters from "./components/Filters";
+import ProductsPage from "./Pages/ProductsPage";
+import Test from "./Pages/Test";
 
 
 
 class App extends React.Component {
-  state = {
-    karty: [],
-  };
-  componentDidMount() {
-    fetch("../Data2/data2.json")
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          karty: data.karty,
-        });
-      });
-  }
+  // state = {
+  //   products: [],
+  // };
+  // componentDidMount() {
+  //   fetch("../Data2/data2.json")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       this.setState({
+  //         products: data.products,
+  //       });
+  //     });
+  // }
   render() {
-    const karty = this.state.karty;
+    // const products = this.state.products;
     return (
       <>
 
@@ -47,18 +49,34 @@ class App extends React.Component {
             <Router>
               <Nav />
               <Routes>
-                <Route path="/" element={<Card data={karty} />} />
-                <Route path="/cards/:title" element={< Card data={karty} />} />
+                <Route path="/" element={<Card
+                // data={products}
+                />} />
+                <Route path="/cards/:title" element={< Card
+                // data={products} 
+                />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/sublimation" element={<Sublimation />} />
                 <Route path="/Formularz" element={<Formularz />} />
                 <Route path="/Cart" element={<Cart />} />
-                <Route path="/CardModal/:title" element={<CardModal data={karty} />} />
-                <Route path="/Products" element={<Products data={karty} />} />
+                <Route path="/CardModal/:title" element={<CardModal
+                //  data={products} 
+                />} />
+                <Route path="/Products" element={<Products
+                // data={products} 
+                />} />
                 <Route path="/Karty" element={<Karty />} />
-                <Route path="/Zakupy" element={<Zakupy data={karty} />} />
-                <Route path="/NowaLista" element={<NowaLista data={karty} />} />
-                <Route path="/Produkty" element={<Produkty />} />
+                <Route path="/Test" element={<Test />} />
+                <Route path="/Zakupy" element={<Zakupy
+                // data={products} 
+                />} />
+                <Route path="/NowaLista" element={<NowaLista
+                // data={products} 
+                />} />
+                <Route path="/Produkty" element={<Produkty
+                // data={products} 
+                />} />
+                {/* <Route path="/Produk" element={<ProductsPage />} /> */}
                 <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
                 <Route element={<PrivateRoute />} >
                   <Route path="/CheckOut" element={<CheckOut />} />
