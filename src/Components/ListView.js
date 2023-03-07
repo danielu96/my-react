@@ -6,11 +6,12 @@ const ListView = ({ products }) => {
   return (
     <Wrapper>
       {products.map((product) => {
+        const { id, Image, title, cena, description, availableProducts } = product
         return (
-          <article key={product.id}>
-            <h5>{product.title}</h5>
-            <p>{product.cena}</p>
-            <p>{product.availableProducts} dostępne</p>
+          <article key={id}>
+            <h5>{title}</h5>
+            <p>{cena}</p>
+            <p>{availableProducts} dostępne</p>
 
             <Link to={`/Produkty/${product.title}`}>more info</Link>
           </article>
