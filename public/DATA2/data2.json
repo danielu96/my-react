@@ -1,5 +1,5 @@
 {
-  "karty": [
+  "products": [
     {
       "id": 1,
       "title": "Kubek imienny",
@@ -13,7 +13,8 @@
       "quantity": 10,
       "amount": 0,
       "availableProducts": 5,
-      "opis": "Kubki z nadrukowanym dowolnym imieniem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... "
+      "opis": "Kubki z nadrukowanym dowolnym imieniem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+      "shipping": false
     },
     {
       "id": 2,
@@ -28,7 +29,8 @@
       "amount": 0,
       "availableProducts": 15,
       "opis": "Kubki zmieniające kolor pod wpływem ciepła. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 3,
@@ -43,7 +45,8 @@
       "amount": 0,
       "availableProducts": 25,
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 4,
@@ -58,7 +61,8 @@
       "amount": 0,
       "availableProducts": 35,
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 5,
@@ -73,7 +77,8 @@
       "amount": 0,
       "availableProducts": 45,
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 6,
@@ -88,7 +93,8 @@
       "amount": 0,
       "availableProducts": 55,
       "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 7,
@@ -103,7 +109,8 @@
       "quantity": 20,
       "amount": 0,
       "availableProducts": 65,
-      "opis": "Kubki z nadrukowanym dowolnym npisem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... "
+      "opis": "Kubki z nadrukowanym dowolnym npisem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+      "shipping": false
     },
     {
       "id": 8,
@@ -118,7 +125,8 @@
       "amount": 0,
       "availableProducts": 75,
       "opis": "Kubki metalowe z nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 9,
@@ -133,7 +141,8 @@
       "amount": 0,
       "availableProducts": 15,
       "opis": "Filiżanka z kolrowym nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni filiżanki ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 10,
@@ -148,7 +157,8 @@
       "amount": 0,
       "availableProducts": 95,
       "opis": "Kryształ z nadrukowanym dowolnym zdjęciem. Nadruk kolorowy wykonany jest metodą sublimacji w szkle  ... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 11,
@@ -163,7 +173,8 @@
       "amount": 0,
       "availableProducts": 105,
       "opis": "Kubfle z nadrukowaną dowolną grafiką . Nadruk wykonany jest metodą sublimacji na powierzchni kufla... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     },
     {
       "id": 12,
@@ -178,7 +189,8 @@
       "amount": 0,
       "availableProducts": 115,
       "opis": "Metalowe wizytówki z dowolnym nadrukiem. Nadruk wykonany jest metodą sublimacji w strukturze materiału... ",
-      "Image": "../Images/kubek_czarny.png"
+      "Image": "../Images/kubek_czarny.png",
+      "shipping": false
     }
   ]
 }
