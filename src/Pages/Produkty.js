@@ -78,7 +78,7 @@ const Produkty = () => {
                 <h1>Some prod</h1>
                 {/* <Sort /> */}
                 {/* <Filters /> */}
-                {/* <ProductList /> */}
+                <ProductList />
                 {/* <UserView /> */}
                 {/* <h1>PRODUCTS</h1> */}
 
