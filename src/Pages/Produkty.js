@@ -6,8 +6,10 @@ import { Load_Products, SortProducts, filterProducts, sort, filters } from '../S
 import React, { useEffect, useState, useReducer } from "react";
 import { useDispatch } from "react-redux";
 import ProductList from '../components/ProductList';
-import productsSlice from '../Slices/productSlice';
+import productSlice from '../Slices/productSlice';
 import products from '../components/productsItems';
+import { fetchUsers } from '../Slices/productSlice';
+import { UserView } from '../features/user/UserView';
 // import products from './cardItems';
 
 const initialState = {
@@ -32,44 +34,33 @@ const initialState = {
 const Produkty = () => {
 
 
-    const [data, setData] = useState([products]);
-    const apiGet = () => {
-        fetch("../DATA2/data2.json")
-            .then((response) => response.json())
-            .then((json) => {
-                setData(json);
-            });
-    };
-    useEffect(() => {
-        apiGet(products);
-    }, [products]);
 
 
-
-
-
-    const [state, dispatch] = useReducer(productsSlice, initialState);
+    // const [state, dispatch] = useReducer(productSlice, initialState);
     // const {
     //     products,
     //     grid_view,
     //     sort,
     //     updateSort,
     // } = useSelector((store) => store.products);
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     // const { filtered_products: products } = useSelector((state) => state.products);
 
 
     // const [state] = useSelector((state) => state.filters)
-
+    useEffect(() => {
+        dispatch(fetchUsers())
+        // console.log(user)
+    }, [])
 
 
 
     // const { all_products, filtered_products, tempProducts } = useSelector((state) => state.products);
-    useEffect(() => {
-        dispatch(Load_Products(products));
+    // useEffect(() => {
+    //     dispatch(Load_Products(products));
 
-        console.log(products)
-    }, [products]);
+    //     console.log(products)
+    // }, [products]);
 
     // useEffect(() => {
     //     dispatch(SortProducts(products))
@@ -84,9 +75,11 @@ const Produkty = () => {
         <>
 
             <div>
-                <Sort />
-                <Filters />
-                <ProductList />
+                <h1>Some prod</h1>
+                {/* <Sort /> */}
+                {/* <Filters /> */}
+                {/* <ProductList /> */}
+                <UserView />
                 {/* <h1>PRODUCTS</h1> */}
 
                 {/* {products.map((product) => {
