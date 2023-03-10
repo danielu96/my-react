@@ -7,9 +7,9 @@ import React, { useEffect, useState, useReducer } from "react";
 import { useDispatch } from "react-redux";
 import ProductList from '../components/ProductList';
 import productSlice from '../Slices/productSlice';
-import products from '../components/productsItems';
+// import products from '../components/productsItems';
 import { fetchUsers } from '../Slices/productSlice';
-import { UserView } from '../features/user/UserView';
+// import { UserView } from '../features/user/UserView';
 // import products from './cardItems';
 
 const initialState = {
@@ -79,7 +79,7 @@ const Produkty = () => {
                 {/* <Sort /> */}
                 {/* <Filters /> */}
                 {/* <ProductList /> */}
-                <UserView />
+                {/* <UserView /> */}
                 {/* <h1>PRODUCTS</h1> */}
 
                 {/* {products.map((product) => {
