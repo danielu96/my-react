@@ -1,12 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
-import { sort, updateSort, Load_Products, SortProducts, updateFilters } from "../Slices/productSlice";
+import { sort, updateSort, Load_Products, SortProducts, updateFilters, filterProducts, filtered_products, filters } from "../Slices/productSlice";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaMugHot, FaTimes } from "react-icons/fa";
 import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate";
-import Filters from "../Components/Filters";
+import Filters from "../components/Filters";
+import Sort from "../components/Sort";
+import produce, { current } from 'immer';
+import ProductList from '../components/ProductList'
 import {
     MDBCard,
     MDBCardTitle,
@@ -15,6 +18,25 @@ import {
     MDBCardHeader
 } from 'mdb-react-ui-kit';
 import cartItems from "../Cart/cartItems";
+
+const initialState = {
+    filtered_products: [],
+    all_products: [],
+    grid_view: true,
+    sort: 'price-lowest',
+    filters: {
+        text: '',
+        company: 'all',
+        category: 'all',
+        color: 'all',
+        min_cena: 0,
+        max_cena: 0,
+        cena: 0,
+        shipping: false,
+    },
+}
+
+
 const Products = ({ data }) => {
     // const { state } = useSelector((state) => state.products);
     const { title } = useParams();
@@ -26,66 +48,63 @@ const Products = ({ data }) => {
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 6;
     const dispatch = useDispatch()
-    const { FilterProducts } = useSelector((state) => state.products);
+    const { filtered_products: products } = useSelector((state) => state.products);
+    // const state = useSelector((state) => state.initialState);
+    // const { filters } = useSelector((state) => state.filters)
     // const { FilterProducts } = useSelector((state) => state.products);
-    // const [filters] = useSelector((state) => state.filters)
-    // const [sort] = useSelector((state) => state.sort)
 
-    const initialState = {
-        FilterProducts: [],
-        all_products: [],
-        // grid_view: true,
-        sort: 'price-lowest',
-        filters: {
-            text: '',
-            company: 'all',
-            category: 'all',
-            color: 'all',
-            min_cena: 0,
-            max_cena: 0,
-            cena: 0,
-            shipping: false,
-        },
-    }
+    // const [state] = useSelector((state) => state.filters)
+
+
+    // const { filters } = useSelector((state) => state.filters);
+
     useEffect(() => {
-        dispatch(Load_Products(data));
-    }, [data]);
-    // useEffect(() => {
-    //     dispatch(SortProducts(initialState));
-    //     dispatch(updateFilters(initialState));
-    // }, [sort, filters]);
+        dispatch(Load_Products(products));
+        console.log(current(products))
+        // console.log(current(products))
+    }, [products]);
 
-    // useEffect(() => {
-    //     // dispatch({ updateFilters })
-    //     dispatch({ handleUpdateSort })
-    // }, [products,
-    //     state.sort,
-    //     state.filters
-    // ])
+
+    useEffect(() => {
+        // dispatch(SortProducts(products))
+        dispatch(filterProducts(products))
+        console.log(current(products))
+    }, [
+        // products.sort,
+        products.filters
+    ])
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(FilterProducts.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(FilterProducts.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, data,
-
-        FilterProducts
+        setCurrentItems(products.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(products.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage,
+        cartItems, products
     ]);
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) %
-            FilterProducts.length;
+            products.length;
         console.log(
             `User requested page number ${event.selected}, which is offset ${newOffset}`
         );
         setItemOffset(newOffset);
     };
-    const handleUpdateSort = (e) => {
-        // const name = e.target.name
-        const value = e.target.value
-        // console.log(name, value)
-        dispatch(SortProducts(value,
-            //  name
-        ))
+    // const handleUpdateSort = (e) => {
+    //     // const name = e.target.name
+    //     const value = e.target.value
+    //     // console.log(name, value)
+    //     dispatch(updateSort(value,
+    //         //  name
+    //     ))
+    // }
+    if (products.length < 1) {
+        return (
+            <div className="container">
+                <h5 style={{ textTransform: 'none', textAlign: 'center' }}>
+                    Sorry, no products matched your search.
+                </h5>
+            </div>
+        )
     }
     return (
         <>
@@ -95,14 +114,15 @@ const Products = ({ data }) => {
             >
                 <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1></div>
             <div className="filter-products">
+
                 <Filters />
                 <div >
-                    <div
-                        className="container" style={{ margin: "0 auto 0 auto", height: "auto" }}
-                    >
-                        <div className="product-item">
+                    <div className="container" style={{ margin: "0 auto 0 auto", height: "auto" }}  >
+                        <Sort />
+                        {/* <ProductList /> */}
+                        {/* <div className="product-item">
                             <div className="item-products">
-                                <p>{data.length} product found</p>
+                                <p>{products.length} product found</p>
                             </div>
                             <hr className="item-hr" />
                             <form className="item-price" style={{ minHeight: "auto" }}>
@@ -116,7 +136,7 @@ const Products = ({ data }) => {
                                     <option value="name-z">name(z-a)</option>
                                 </select>
                             </form>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="box" style={{ margin: "0 ", paddingBottom: "0", minHeight: "80%", Width: "auto", paddingTop: '0.3rem' }}>
                         {currentItems
