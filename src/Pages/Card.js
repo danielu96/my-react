@@ -1,36 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { removeItem, increase, decrease, AddCart } from "../KARTY/kartySlice";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaMugHot, FaTimes } from "react-icons/fa";
-import { Pagination } from "mdb-react-ui-kit"
 import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
-import ReactPaginate from "react-paginate"
 import Banerek from "../Layouts/Banerek";
-// import { calculateTotals } from "../Cart/cartSlice";
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardHeader
-} from 'mdb-react-ui-kit';
-import Modal from "./CardModal";
-import NowaLista from "../NowaLista/NowaLista";
-import SingleProduct from "./SingleProduct";
-const Card = ({ data }) => {
 
-  // const { cartItems } = useSelector((store) => store.CardModal);
-  const { title } = useParams();
-  const toggleShow = () => setCentredModal(!centredModal);
-  const [centredModal, setCentredModal] = useState(false);
-  const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6;
-  const dispatch = useDispatch()
+const Card = () => {
+
+
+  // const { title } = useParams();
+  // const toggleShow = () => setCentredModal(!centredModal);
+  // const [centredModal, setCentredModal] = useState(false);
+  // const [currentItems, setCurrentItems] = useState([]);
+  // const [pageCount, setPageCount] = useState(0);
+  // const [itemOffset, setItemOffset] = useState(0);
+  // const itemsPerPage = 6;
+  // const dispatch = useDispatch()
   // useEffect(() => {
 
   //   const endOffset = itemOffset + itemsPerPage;
