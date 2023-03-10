@@ -9,20 +9,16 @@ import Sublimation from "./Pages/sublimation";
 import Formularz from "./Pages/Form";
 import CardModal from "./Pages/CardModal";
 import Cart from './Cart/Cart';
-import Karty from "./KARTY/karty";
 import Products from "./Pages/Products";
 import Zakupy from "./Pages/Zakupy";
 import NowaLista from "./NowaLista/NowaLista";
 import SingleProduct from "./Pages/SingleProduct";
 import CartItem from "./Cart/CartItem";
 import Produkty from "./Pages/Produkty";
-import products from "./Pages/cardItems";
 import PrivateRoute from "./Pages/PrivateRoute";
 import AuthWrapper from "./Pages/AuthWrapper";
 import CheckOut from "./Pages/CheckOut";
-import Filters from "./components/Filters";
-import ProductsPage from "./Pages/ProductsPage";
-import Test from "./Pages/Test";
+
 
 
 
@@ -65,8 +61,6 @@ class App extends React.Component {
                 <Route path="/Products" element={<Products
                 // data={products} 
                 />} />
-                <Route path="/Karty" element={<Karty />} />
-
                 <Route path="/Zakupy" element={<Zakupy
                 // data={products} 
                 />} />
