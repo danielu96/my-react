@@ -66,7 +66,7 @@ class App extends React.Component {
                 // data={products} 
                 />} />
                 <Route path="/Karty" element={<Karty />} />
-                <Route path="/Test" element={<Test />} />
+
                 <Route path="/Zakupy" element={<Zakupy
                 // data={products} 
                 />} />
@@ -81,7 +81,7 @@ class App extends React.Component {
                 <Route element={<PrivateRoute />} >
                   <Route path="/CheckOut" element={<CheckOut />} />
                 </Route >
-                <Route path="/Filters" element={<Filters />} />
+
               </Routes>
               <Footer />
             </Router>
