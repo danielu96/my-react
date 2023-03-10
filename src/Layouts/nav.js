@@ -90,17 +90,8 @@ export default function Nav() {
             <a href="/Contact">Contact</a>
             <FaArrowRight className="FaArrowRight" />
           </li>
-          {/* <li><a href='produk'>prod</a></li> */}
           <li>
-            <a href="/Test">Testy</a>
-          </li>
-          <li>
-
             <a
-              // onClick={() => {
-              //   dispatch(Load_Products())
-              //   console.log('laduje')
-              // }}
               href="/Produkty"
             >
               Produkty </a>
