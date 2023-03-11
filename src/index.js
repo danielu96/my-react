@@ -5,6 +5,7 @@ import "mdb-react-ui-kit/dist/css/mdb.min.css";
 // import reportWebVitals from "./reportWebVitals";
 import store from './store/store';
 import { Provider } from "react-redux";
+import { ProductsProvider } from './context/products_context';
 import { Auth0Provider } from "@auth0/auth0-react";
 
 
@@ -20,7 +21,9 @@ root.render(
 
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <ProductsProvider>
+          <App />
+        </ProductsProvider>
       </Provider>
     </React.StrictMode>
   </Auth0Provider>
