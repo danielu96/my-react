@@ -5,12 +5,20 @@ import { useDispatch, useSelector } from "react-redux";
 // import { useFilterContext } from '../context/filter_context'
 import GridView from './GridView'
 import ListView from './ListView'
+import { fetchProducts } from "../Slices/productSlice";
 const ProductList = () => {
 
-    const { filtered_products: products, grid_view } = useSelector((store) => store.products);
+    const { products, grid_view, sort, updatesort } = useSelector((store) => store.product);
+    // const {
+    //     products,
+    //     sort
+    // } = useSelector((store) => store.product)
     const dispatch = useDispatch();
 
-
+    useEffect(() => {
+        dispatch(fetchProducts())
+        // console.log(user)
+    }, [])
 
     // useEffect(()=>{
     //     dispatch
