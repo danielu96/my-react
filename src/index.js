@@ -6,6 +6,7 @@ import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import store from './store/store';
 import { Provider } from "react-redux";
 import { ProductsProvider } from './context/products_context';
+import { FilterProvider } from './context/filter_context';
 import { Auth0Provider } from "@auth0/auth0-react";
 
 
@@ -22,7 +23,9 @@ root.render(
     <React.StrictMode>
       <Provider store={store}>
         <ProductsProvider>
-          <App />
+          <FilterProvider>
+            <App />
+          </FilterProvider>
         </ProductsProvider>
       </Provider>
     </React.StrictMode>
