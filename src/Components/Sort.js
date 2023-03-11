@@ -1,16 +1,16 @@
 import react from 'react';
-import { set_GridView, set_ListView, updateSort } from '../Slices/productSlice';
+import { set_GridView, set_ListView } from '../Slices/productSlice';
 import { useDispatch, useSelector } from "react-redux";
 import { BsFillGridFill, BsList } from 'react-icons/bs'
+import { handleChange } from '../Slices/productSlice';
 const Sort = () => {
 
   const {
-    filtered_products: products,
+    products,
     grid_view,
     sort,
-    // sort,
-    // updateSort,
-  } = useSelector((state) => state.products);
+    updateSort,
+  } = useSelector((state) => state.product);
 
 
   const dispatch = useDispatch()
@@ -22,6 +22,9 @@ const Sort = () => {
       //  name
     ))
   }
+  const handleSearch = (e) => {
+    dispatch(handleChange({ name: e.target.name, value: e.target.value }));
+  };
   const handleSetGridView = () => {
     console.log('grid')
     dispatch(set_GridView())
@@ -55,6 +58,7 @@ const Sort = () => {
         <select name="sort" id="sort" className="sort-input"
           value={sort}
           onChange={handleUpdateSort}
+        // onChange={handleChange}
         >
           <option value="price-lowest">price lowest</option>
           <option value="price-highest">price highest</option>
