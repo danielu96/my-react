@@ -2,17 +2,18 @@ import { Link } from 'react-router-dom';
 import Sort from '../components/Sort';
 import Filters from '../components/Filters';
 import { useSelector } from "react-redux";
-import { Load_Products, SortProducts, filterProducts, sort, filters } from '../Slices/productSlice';
+import { Load_Products, SortProducts, filterProducts, sort, filters, fetchProducts } from '../Slices/productSlice';
 import React, { useEffect, useState, useReducer } from "react";
 import { useDispatch } from "react-redux";
 import ProductList from '../components/ProductList';
 import productSlice from '../Slices/productSlice';
 // import products from '../components/productsItems';
-import { fetchUsers } from '../Slices/productSlice';
+// import { fetchProducts } from '../Slices/productSlice';
 // import { UserView } from '../features/user/UserView';
 // import products from './cardItems';
 
 const initialState = {
+    products: [],
     all_products: [],
     filtered_products: [],
     grid_view: true,
@@ -37,25 +38,29 @@ const Produkty = () => {
 
 
     // const [state, dispatch] = useReducer(productSlice, initialState);
-    // const {
-    //     products,
-    //     grid_view,
-    //     sort,
-    //     updateSort,
-    // } = useSelector((store) => store.products);
+    const {
+        products,
+        grid_view,
+        sort,
+        updateSort,
+        state
+    } = useSelector((store) => store.product);
     const dispatch = useDispatch()
     // const { filtered_products: products } = useSelector((state) => state.products);
 
 
     // const [state] = useSelector((state) => state.filters)
     useEffect(() => {
-        dispatch(fetchUsers())
+        dispatch(fetchProducts())
         // console.log(user)
     }, [])
+    // useEffect(() => {
+    //     dispatch(Load_Products())
+    //     // console.log(user)
+    // }, [])
 
 
-
-    // const { all_products, filtered_products, tempProducts } = useSelector((state) => state.products);
+    // const { all_products, filtered_products, tempProducts } = useSelector((state) => state.product);
     // useEffect(() => {
     //     dispatch(Load_Products(products));
 
@@ -74,13 +79,13 @@ const Produkty = () => {
     return (
         <>
 
-            <div>
-                <h1>Some prod</h1>
-                {/* <Sort /> */}
-                {/* <Filters /> */}
-                <ProductList />
+            <div className='container'>
+
+                <Sort />
+                <Filters />
+                / <ProductList />
                 {/* <UserView /> */}
-                {/* <h1>PRODUCTS</h1> */}
+
 
                 {/* {products.map((product) => {
                     return (
