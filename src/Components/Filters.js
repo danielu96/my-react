@@ -20,11 +20,12 @@ const Filters = () => {
       cena,
       shipping,
     },
-    // updateFilters,
-    // clearFilters,
+    updateFilters,
+    clearFilters,
+    products,
     all_products,
-    FilterProducts,
-  } = useSelector((store) => store.products);
+    filtered_products
+  } = useSelector((store) => store.product);
   const dispatch = useDispatch()
 
 
@@ -49,9 +50,9 @@ const Filters = () => {
   }
 
 
-  const categories = getUniqueValues(all_products, 'category')
-  const companies = getUniqueValues(all_products, 'company')
-  const colors = getUniqueValues(all_products, 'color')
+  const categories = getUniqueValues(products, 'category')
+  const companies = getUniqueValues(products, 'company')
+  const colors = getUniqueValues(products, 'color')
   // console.log(categories)
 
 
