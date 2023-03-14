@@ -1,13 +1,38 @@
-import React from 'react'
 import styled from 'styled-components'
+import ReactPaginate from "react-paginate";
+import React, { useEffect, useState } from "react";
 import { formatPrice } from '../utils/helpers'
 import { Link } from 'react-router-dom'
+
 const ListView = ({ products }) => {
+  const [currentItems, setCurrentItems] = useState([]);
+  //  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 3;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(products.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(products.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage,
+    products
+  ]);
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) %
+      products.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
+  };
+
+
   return (
     <Wrapper>
       <div >
         {
-          products.map((product) => {
+          currentItems.map((product) => {
             const { id, Image, name, price, description, opis } = product
             return (
               <article style={{ marginTop: "1rem", height: 'auto', paddingTop: '1rem' }}
@@ -27,6 +52,21 @@ const ListView = ({ products }) => {
           })
         }
       </div>
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+        containerClassName={"pagination"}
+        pageLinkClassName={"page-num"}
+        previousLinkClassName={"page-num"}
+        nextLinkClassName={"page-num"}
+        disabledClassName={"disabled"}
+        activeClassName={"active"}
+      />
     </Wrapper>
   )
 }
