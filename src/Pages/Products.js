@@ -8,6 +8,7 @@ import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate";
 import Filters from "../components/Filters";
 import Sort from "../components/Sort";
+import { useFilterContext } from '../context/filter_context'
 import produce, { current } from 'immer';
 import ProductList from '../components/ProductList'
 import {
@@ -37,7 +38,7 @@ const initialState = {
 }
 
 
-const Products = ({ data }) => {
+const Products = () => {
     // const { state } = useSelector((state) => state.products);
     const { title } = useParams();
     const toggleShow = () => setCentredModal(!centredModal);
@@ -48,7 +49,15 @@ const Products = ({ data }) => {
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 6;
     const dispatch = useDispatch()
-    const { filtered_products: products } = useSelector((state) => state.products);
+    // const { filtered_products: products } = useSelector((state) => state.products);
+    const {
+        filtered_products: products,
+        grid_view,
+        setGridView,
+        setListView,
+        sort,
+        updateSort,
+    } = useFilterContext()
     // const state = useSelector((state) => state.initialState);
     // const { filters } = useSelector((state) => state.filters)
     // const { FilterProducts } = useSelector((state) => state.products);
@@ -58,21 +67,21 @@ const Products = ({ data }) => {
 
     // const { filters } = useSelector((state) => state.filters);
 
-    useEffect(() => {
-        dispatch(Load_Products(products));
-        console.log(current(products))
-        // console.log(current(products))
-    }, [products]);
+    // useEffect(() => {
+    //     dispatch(Load_Products(products));
+    //     console.log(current(products))
+    //     // console.log(current(products))
+    // }, [products]);
 
 
-    useEffect(() => {
-        // dispatch(SortProducts(products))
-        dispatch(filterProducts(products))
-        console.log(current(products))
-    }, [
-        // products.sort,
-        products.filters
-    ])
+    // useEffect(() => {
+    //     // dispatch(SortProducts(products))
+    //     dispatch(filterProducts(products))
+    //     console.log(current(products))
+    // }, [
+    //     // products.sort,
+    //     products.filters
+    // ])
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
@@ -103,8 +112,7 @@ const Products = ({ data }) => {
                 <h5 style={{ textTransform: 'none', textAlign: 'center' }}>
                     Sorry, no products matched your search.
                 </h5>
-            </div>
-        )
+            </div>)
     }
     return (
         <>
@@ -120,30 +128,13 @@ const Products = ({ data }) => {
                     <div className="container" style={{ margin: "0 auto 0 auto", height: "auto" }}  >
                         <Sort />
                         {/* <ProductList /> */}
-                        {/* <div className="product-item">
-                            <div className="item-products">
-                                <p>{products.length} product found</p>
-                            </div>
-                            <hr className="item-hr" />
-                            <form className="item-price" style={{ minHeight: "auto" }}>
-                                <label className="label" htmlFor='sort'>sort by</label>
-                                <select name="sort" id="sort" className="sort-input"
-                                    value={sort}
-                                    onChange={handleUpdateSort}>
-                                    <option value="price-lowest">price lowest</option>
-                                    <option value="price-highest">price highest</option>
-                                    <option value="name-a">name(a-z)</option>
-                                    <option value="name-z">name(z-a)</option>
-                                </select>
-                            </form>
-                        </div> */}
                     </div>
                     <div className="box" style={{ margin: "0 ", paddingBottom: "0", minHeight: "80%", Width: "auto", paddingTop: '0.3rem' }}>
                         {currentItems
                             .map
                             ((card, id) => (
                                 <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
-                                    <MDBCardHeader > <h1 >{card.title}</h1>
+                                    <MDBCardHeader > <h1 >{card.name}</h1>
                                         <span>{card.cena}</span>
                                     </MDBCardHeader>
                                     <MDBCardBody>
