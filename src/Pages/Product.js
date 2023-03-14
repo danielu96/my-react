@@ -14,7 +14,7 @@ const Product = ({ img, name, price, id }) => {
       </div>
       <footer>
         <h5>{name}</h5>
-        <p>{price} zł</p>
+        {/* <p>{price} zł</p> */}
       </footer>
     </Wrapper>
   )
