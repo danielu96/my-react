@@ -71,7 +71,7 @@ const Filters = () => {
               })}
             </select>
           </div>
-          <div className="form-control">
+          <div className="form-controlen">
             <h5>colors</h5>
             <div className="colors">
               {colors.map((c, index) => {
@@ -166,22 +166,27 @@ const Wrapper = styled.section`
     background: transparent;
     border: none;
     border-bottom: 1px solid transparent;
-    letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    letter-spacing: 3px;
+    color: gray;
     cursor: pointer;
   }
   .active {
-    border-color: var(--clr-grey-5);
+    border-color: gray;
   }
   .company {
-    background: var(--clr-grey-10);
-    border-radius: var(--radius);
+    background: white;
+    border-radius: 5px;
     border-color: transparent;
     padding: 0.25rem;
+    margin-bottom:2rem;
+    
+
   }
   .colors {
     display: flex;
     align-items: center;
+    border:none;
+    margin-bottom:1rem;
   }
   .color-btn {
     display: inline-block;
@@ -198,7 +203,7 @@ const Wrapper = styled.section`
     justify-content: center;
     svg {
       font-size: 0.5rem;
-      color: var(--clr-white);
+      color: white;
     }
   }
   .all-btn {
