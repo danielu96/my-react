@@ -5,7 +5,8 @@ import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 const Product = ({ img, name, price, id }) => {
   return (
-    <Wrapper>
+    <>
+
       <div className='container'>
         <img src={img} alt={name} style={{ height: '200px', width: 'auto' }} />
         <Link to={`/produkty/${name}`} className='link'>
@@ -16,7 +17,8 @@ const Product = ({ img, name, price, id }) => {
         <h5>{name}</h5>
         {/* <p>{price} zł</p> */}
       </footer>
-    </Wrapper>
+
+    </>
   )
 }
 const Wrapper = styled.article`
