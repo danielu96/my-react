@@ -4,13 +4,13 @@ import Product from '../Pages/Product'
 
 const GridView = ({ products }) => {
   return (
-    <Wrapper>
-      <div className='products-container'>
-        {products.map((product) => {
-          return <Product key={product.id} {...product} />
-        })}
-      </div>
-    </Wrapper>
+    // <Wrapper>
+    <div>
+      {products.map((product) => {
+        return <Product key={product.id} {...product} />
+      })}
+    </div>
+    /* </Wrapper> */
   )
 }
 
