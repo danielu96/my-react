@@ -15,7 +15,7 @@ const ListView = ({ products }) => {
                 <img src={Image} alt={name} style={{ height: 'auto' }} />
                 <div>
                   <h4>{name}</h4>
-                  <h5 className='price'>{price}</h5>
+                  <h5 className='price'>{price} zł</h5>
                   {/* <p>{description.substring(0, 150)}...</p> */}
                   <p>{opis}</p>
                   <Link to={`/products/${id}`} className='btn'>
