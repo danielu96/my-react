@@ -56,6 +56,13 @@ export const ProductsProvider = ({ children }) => {
             dispatch({ type: GET_SINGLE_PRODUCT_ERROR })
         }
     }
+    // const fetchProdukty = createAsyncThunk('product/fetchProducts', () => {
+    //     return axios
+    //         .get("../DATA4/data4.json")
+    //         // .get('https://jsonplaceholder.typicode.com/users')
+    //         .then(response => response.data)
+    //     // .then(console.log(data))
+    // })
 
     useEffect(() => {
         fetchProducts(url)
