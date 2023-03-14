@@ -2,7 +2,9 @@
     {
         "id": 1,
         "name": "Kubek imienny",
-        "colors": "white",
+        "colors": [
+            "#0000ff"
+        ],
         "category": "Kubki",
         "company": "Robo",
         "description": "z dowolnym imieniem",
@@ -18,7 +20,9 @@
     {
         "id": 2,
         "name": "Kubek magiczny",
-        "colors": "blue",
+        "colors": [
+            "#00ff00"
+        ],
         "category": "Kubki",
         "company": "Poli",
         "description": "zmieniający kolor ",
@@ -34,7 +38,9 @@
     {
         "id": 3,
         "name": "Kubek ze zdjęciem",
-        "colors": "blue",
+        "colors": [
+            "#ff0000"
+        ],
         "category": "Kubki",
         "company": "Robo",
         "description": "nadruk foto",
@@ -50,7 +56,9 @@
     {
         "id": 4,
         "name": "Kubek z łyżeczką",
-        "colors": "red",
+        "colors": [
+            "#0000ff"
+        ],
         "category": "Kubki",
         "company": "Poli",
         "description": "nadruk foto",
@@ -66,7 +74,9 @@
     {
         "id": 5,
         "name": "Kubek plastikowy",
-        "colors": "white",
+        "colors": [
+            "#ff0000"
+        ],
         "category": "Kubki",
         "company": "Poli",
         "description": "nadruk foto",
@@ -82,7 +92,9 @@
     {
         "id": 6,
         "name": "Kubek z termiczny",
-        "colors": "black",
+        "colors": [
+            "#00ff00"
+        ],
         "category": "Kubki",
         "company": "Poli",
         "description": "nadruk foto",
@@ -98,7 +110,9 @@
     {
         "id": 7,
         "name": "Kubek szklany",
-        "colors": "gray",
+        "colors": [
+            "#ff0000"
+        ],
         "category": "Kubki",
         "company": "Poli",
         "description": "z dowolnym napisem",
@@ -114,7 +128,9 @@
     {
         "id": 8,
         "name": "Kubek metalowy",
-        "colors": "gray",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Kubki",
         "company": "Robo",
         "description": "nadruk na kubku metalowym",
@@ -130,7 +146,9 @@
     {
         "id": 9,
         "name": "Filiżanka",
-        "colors": "white",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Filiżanki",
         "company": "Robo",
         "description": "nadruk foto",
@@ -146,7 +164,9 @@
     {
         "id": 10,
         "name": "Foto Kryształ",
-        "colors": "gray",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Kryształ",
         "company": "Robo",
         "description": "nadruk foto",
@@ -162,7 +182,9 @@
     {
         "id": 11,
         "name": "Kufel szklany",
-        "colors": "gray",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Kufle",
         "company": "Poli",
         "description": "nadruk czarny",
@@ -178,7 +200,9 @@
     {
         "id": 12,
         "name": "Wizytówki metal",
-        "colors": "gray",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Wizytówki",
         "company": "Poli",
         "description": "nadruk kolorowy",
