@@ -70,7 +70,7 @@ class App extends React.Component {
                 <Route path="/Produkty" element={<Produkty
                 // data={products} 
                 />} />
-                {/* <Route path="/Produk" element={<ProductsPage />} /> */}
+
                 <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
                 <Route element={<PrivateRoute />} >
                   <Route path="/CheckOut" element={<CheckOut />} />
