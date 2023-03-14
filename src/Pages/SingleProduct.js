@@ -83,7 +83,7 @@ const SingleProduct = () => {
                             <MDBModalHeader>
                                 <MDBModalTitle > <h1 style={{ paddingLeft: "2.1rem" }}>{title}</h1>
                                     <p style={{ paddingLeft: "2.1rem" }}>{cena} zł szt.</p>
-                                    <span style={{ paddingLeft: "2.1rem" }}>{availableProducts} dostępne</span>
+                                    {/* <span style={{ paddingLeft: "2.1rem" }}>{availableProducts} dostępne</span> */}
                                 </MDBModalTitle>
                                 <MDBBtn className='btn-close' color='none' onClick={handleOnClick}></MDBBtn>
                             </MDBModalHeader>
