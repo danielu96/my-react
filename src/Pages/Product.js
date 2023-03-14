@@ -3,20 +3,30 @@ import styled from 'styled-components'
 import { formatPrice } from '../utils/helpers'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-const Product = ({ img, name, price, id }) => {
+import { FaMugHot, FaTimes } from "react-icons/fa";
+import {
+  MDBCard,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardHeader
+} from 'mdb-react-ui-kit';
+const Product = ({ img, name, price, id,opis,description }) => {
   return (
     <>
-
-      <div className='container'>
-        <img src={img} alt={name} style={{ height: '200px', width: 'auto' }} />
-        <Link to={`/produkty/${name}`} className='link'>
-          <FaSearch />
-        </Link>
-      </div>
-      <footer>
-        <h5>{name}</h5>
-        {/* <p>{price} zł</p> */}
-      </footer>
+      <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
+        <MDBCardHeader > <h1 >{name}</h1>
+          <span>{price}</span>
+        </MDBCardHeader>
+        <MDBCardBody>
+          <MDBCardTitle> {description}</MDBCardTitle>
+          <MDBCardText style={{ color: "gray" }}>
+            {opis}
+          </MDBCardText>
+        </MDBCardBody>
+        <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Produkty/${name}`}  > Zobacz</Link>
+      </MDBCard>
+     
 
     </>
   )
@@ -78,4 +88,15 @@ const Wrapper = styled.article`
   }
 `
 export default Product
+
+ {/* <div className='container'>
+        <img src={img} alt={name} style={{ height: '200px', width: 'auto' }} />
+        <Link to={`/produkty/${name}`} className='link'>
+          <FaSearch />
+        </Link>
+      </div>
+      <footer>
+        <h5>{name}</h5>
+        {/* <p>{price} zł</p> */}
+        // </footer> 
 
