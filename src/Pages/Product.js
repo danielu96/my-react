@@ -11,12 +11,16 @@ import {
   MDBCardBody,
   MDBCardHeader
 } from 'mdb-react-ui-kit';
-const Product = ({ img, name, price, id,opis,description }) => {
+const Product = ({ img, name, price, id,opis,description,colors }) => {
+
+ 
+
+
   return (
     <>
       <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
         <MDBCardHeader > <h1 >{name}</h1>
-          <span>{price}</span>
+          <h5>{price} zł</h5>
         </MDBCardHeader>
         <MDBCardBody>
           <MDBCardTitle> {description}</MDBCardTitle>
