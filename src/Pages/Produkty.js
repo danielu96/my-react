@@ -13,7 +13,7 @@ const Produkty = () => {
       <Wrapper className='page'>
         <div className='section-center products'>
           <Filters />
-          <div>
+          <div >
             <Sort />
             <ProductList />
           </div>
