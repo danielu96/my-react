@@ -5,7 +5,7 @@ import Product from '../Pages/Product'
 const GridView = ({ products }) => {
   return (
     // <Wrapper>
-    <div>
+    <div className='box'>
       {products.map((product) => {
         return <Product key={product.id} {...product} />
       })}
