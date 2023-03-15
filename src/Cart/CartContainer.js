@@ -24,7 +24,7 @@ const CartContainer = () => {
             <>
                 <div className='container'>
                     <h1 style={{ textAlign: "center" }}>Koszyk jest pusty</h1>
-                    <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Products" >Kup coś</Link>
+                    <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Produkty" >Kup coś</Link>
 
                 </div>
 
