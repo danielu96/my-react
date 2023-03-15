@@ -14,8 +14,9 @@ const Sort = () => {
   } = useFilterContext()
   return (
     <>
+
       <div className="product-item">
-        <div className='btn-container' >
+        <div className='btn-contener' >
           <button
             onClick={setGridView}
             className={`${grid_view ? 'active' : null}`}
@@ -60,6 +61,7 @@ grid - template - columns: auto auto 1fr auto;
 align - items: center;
 margin - bottom: 2rem;
 column - gap: 2rem;
+
 @media(max - width: 576px) {
   display: grid;
   grid - template - columns: 1fr;
@@ -80,20 +82,14 @@ column - gap: 2rem;
   margin - bottom: 0;
 }
 
-  .btn - container {
-
-    
-
-
+  .btn - contener {  
   display: grid;
   grid - template - columns: 1fr 1fr;
   column - gap: 0.5rem;
     button {
     background: transparent;
-    border: 1px solid var(--clr - black);
-    color: var(--clr - black);
-    width: 1.5rem;
-    border - radius: var(--radius);
+    border:none;    
+    width: 1.5rem;   
     height: 1.5rem;
     display: flex;
     align - items: center;
@@ -102,10 +98,11 @@ column - gap: 2rem;
       svg {
       font - size: 1rem;
     }
+   
   }
     .active {
-    background: var(--clr - black);
-    color: var(--clr - white);
+    background: black;
+    color: white;
   }
 }
 
