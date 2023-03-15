@@ -5,14 +5,14 @@ import DatePicker from "react-datepicker";
 import { useSelector } from "react-redux";
 import { FaPlus, FaMinus, FaTrashRestore } from "react-icons/fa";
 import { IoTrashBinOutline } from "react-icons/io5";
-const CartItem = ({ id, title, amount, cena }) => {
+const CartItem = ({ id, title, amount, price, name }) => {
     const dispatch = useDispatch();
     const [input, setInput] = useState("");
     const [selectedDate, setSelectedDate] = useState(new Date());
     return (
         <div className="cart-item">
 
-            <div className="item_title" >  <h4>{title} </h4></div>
+            <div className="item_title" >  <h4>{name} </h4></div>
             <div className="item_quantity"> <input style={{ width: '300px' }} placeholder="treść nadruku" type="text"
                 value={input} onChange={(e) => setInput(e.target.value)} /></div>
             {/* <div className="item8">realizacja</div> */}
@@ -45,7 +45,7 @@ const CartItem = ({ id, title, amount, cena }) => {
                 }}><FaMinus /></button>
             </div>
             <div className="item5">
-                {amount * cena} zł
+                {amount * price} zł
             </div>
             <div className="item6">
                 <button className='btn_remove' onClick={() => {
