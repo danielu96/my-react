@@ -36,7 +36,7 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         AddCart: (state, action) => {
-            const { id, cena, title, amount, availableProducts } = action.payload;
+            const { id, cena, title, amount, availableProducts, name, price } = action.payload;
             const existingItem = state.cartItems.find((i) => i.id === id)
             if (existingItem) {
                 const tempCart = state.cartItems.map((cartItem) => {
@@ -62,8 +62,8 @@ const cartSlice = createSlice({
                 let max = availableProducts
                 const newItem = {
                     id: id,
-                    title,
-                    cena,
+                    name,
+                    price,
                     amount,
                     availableProducts,
                     max,
@@ -144,7 +144,7 @@ const cartSlice = createSlice({
             let total = 0;
             state.cartItems.forEach((item) => {
                 amount += item.amount
-                total += item.amount * item.cena
+                total += item.amount * item.price
             })
             state.amount = amount
             state.total = total
