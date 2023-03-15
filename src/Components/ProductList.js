@@ -8,7 +8,7 @@ const ProductList = () => {
     if (products.length < 1) {
         return (
             <h5 style={{ textTransform: 'none' }}>
-                Sorry, no products matched your search.
+                Przepraszamy, nie ma takiego produktu.
             </h5>
         )
     }
