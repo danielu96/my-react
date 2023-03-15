@@ -29,12 +29,14 @@ const Filters = () => {
   const dispatch = useDispatch()
   return (
     <Wrapper>
+      <div className="filteren" >Filters</div>
       <div
         className="content"
       // className="container" style={{ margin: "0 auto 0 auto" }}
       >
-        <h4>Filters</h4>
+
         <form className="form-controlen" style={{ minHeight: "1rem", width: "8rem" }}
+
           onSubmit={(e) => e.preventDefault()}>
           <input
             type='text'
@@ -240,10 +242,17 @@ const Wrapper = styled.section`
   }
   @media (min-width: 768px) {
     .content {
+  
       position: sticky;
       top: 1rem;
     }
   }
+  @media(min-width:768px) {
+    .filteren {
+      margin: 0 auto 0 auto;
+    }
+  }
+ 
 `
 
 export default Filters
