@@ -1,183 +1,219 @@
 const cartItems = [
     {
         "id": 1,
-        "title": "Kubek imienny",
-        "color": "white",
+        "name": "Kubek imienny",
+        "colors": [
+            "#0000ff"
+        ],
         "category": "Kubki",
-        "company": "Robo",
+        "company": "Polski",
         "description": "z dowolnym imieniem",
         "img": "../Images/kubek_czarny.png",
         "Image": "../Images/kubek_czarny.png",
-        "cena": 15,
+        "price": 25,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 5,
-        "opis": "Kubki z nadrukowanym dowolnym imieniem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... "
+        "opis": "Kubki z nadrukowanym dowolnym imieniem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+        "shipping": false
     },
     {
         "id": 2,
-        "title": "Kubek magiczny",
-        "color": "blue",
+        "name": "Kubek magiczny",
+        "colors": [
+            "#00ff00"
+        ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "zmieniający kolor ",
         "img": "../Images/kubek_czarny.png",
-        "cena": 20,
+        "price": 35,
         "quantity": 15,
         "amount": 0,
         "availableProducts": 15,
         "opis": "Kubki zmieniające kolor pod wpływem ciepła. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 3,
-        "title": "Kubek ze zdjęciem",
-        "color": "blue",
+        "name": "Kubek ze zdjęciem",
+        "colors": [
+            "#ff0000"
+        ],
         "category": "Kubki",
-        "company": "Robo",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 25,
+        "price": 30,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 25,
         "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 4,
-        "title": "Kubek z łyżeczką",
-        "color": "red",
+        "name": "Kubek z łyżeczką",
+        "colors": [
+            "#0000ff"
+        ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 25,
+        "price": 35,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 35,
         "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 5,
-        "title": "Kubek plastikowy",
-        "color": "white",
+        "name": "Kubek plastikowy",
+        "colors": [
+            "#ff0000"
+        ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 10,
+        "price": 20,
         "quantity": 15,
         "amount": 0,
         "availableProducts": 45,
         "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 6,
-        "title": "Kubek z termiczny",
-        "color": "black",
+        "name": "Kubek z termiczny",
+        "colors": [
+            "#00ff00"
+        ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 25,
+        "price": 45,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 55,
         "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 7,
-        "title": "Kubek szklany",
-        "color": "gray",
+        "name": "Kubek szklany",
+        "colors": [
+            "#ff0000"
+        ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "Polski",
         "description": "z dowolnym napisem",
         "img": "../Images/kubek_czarny.png",
         "Image": "../Images/kubek_czarny.png",
-        "cena": 20,
+        "price": 30,
         "quantity": 20,
         "amount": 0,
         "availableProducts": 65,
-        "opis": "Kubki z nadrukowanym dowolnym npisem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... "
+        "opis": "Kubki z nadrukowanym dowolnym npisem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
+        "shipping": false
     },
     {
         "id": 8,
-        "title": "Kubek metalowy",
-        "color": "gray",
+        "name": "Kubek metalowy",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Kubki",
-        "company": "Robo",
+        "company": "Polski",
         "description": "nadruk na kubku metalowym",
         "img": "../Images/kubek_czarny.png",
-        "cena": 30,
+        "price": 35,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 75,
         "opis": "Kubki metalowe z nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 9,
-        "title": "Filiżanka",
-        "color": "white",
+        "name": "Filiżanka",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Filiżanki",
-        "company": "Robo",
+        "company": "Polski",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 30,
+        "price": 35,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 15,
         "opis": "Filiżanka z kolrowym nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni filiżanki ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 10,
-        "title": "Foto Kryształ",
-        "color": "gray",
+        "name": "Foto Kryształ",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Kryształ",
-        "company": "Robo",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
-        "cena": 45,
+        "price": 55,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 95,
         "opis": "Kryształ z nadrukowanym dowolnym zdjęciem. Nadruk kolorowy wykonany jest metodą sublimacji w szkle  ... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 11,
-        "title": "Kufel szklany",
-        "color": "gray",
+        "name": "Kufel szklany",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Kufle",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk czarny",
         "img": "../Images/kubek_czarny.png",
-        "cena": 25,
+        "price": 50,
         "quantity": 10,
         "amount": 0,
         "availableProducts": 105,
         "opis": "Kubfle z nadrukowaną dowolną grafiką . Nadruk wykonany jest metodą sublimacji na powierzchni kufla... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": false
     },
     {
         "id": 12,
-        "title": "Wizytówki metal",
-        "color": "gray",
+        "name": "Wizytówki metal",
+        "colors": [
+            "#fg0000"
+        ],
         "category": "Wizytówki",
-        "company": "Poli",
+        "company": "Polski",
         "description": "nadruk kolorowy",
         "img": "../Images/kubek_czarny.png",
-        "cena": 2,
+        "price": 5,
         "quantity": 100,
         "amount": 0,
         "availableProducts": 115,
         "opis": "Metalowe wizytówki z dowolnym nadrukiem. Nadruk wykonany jest metodą sublimacji w strukturze materiału... ",
-        "Image": "../Images/kubek_czarny.png"
+        "Image": "../Images/kubek_czarny.png",
+        "shipping": true
     }
 ]
 export default cartItems;
