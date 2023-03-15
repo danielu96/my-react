@@ -112,7 +112,7 @@ const Filters = () => {
               onChange={updateFilters}
               value={price} />
           </div>
-          <div className='form-control shipping' style={{ border: 'none' }}>
+          <div className='form-controlen shipping' style={{ border: 'none' }}>
             <label htmlFor='shipping'>free shipping</label>
             <input
               type='checkbox'
