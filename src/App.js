@@ -58,15 +58,15 @@ class App extends React.Component {
                 <Route path="/CardModal/:title" element={<CardModal
                 //  data={products} 
                 />} />
-                <Route path="/Products" element={<Products
+                {/* <Route path="/Products" element={<Products
                 // data={products} 
-                />} />
-                <Route path="/Zakupy" element={<Zakupy
+                />} /> */}
+                {/* <Route path="/Zakupy" element={<Zakupy
                 // data={products} 
-                />} />
-                <Route path="/NowaLista" element={<NowaLista
+                />} /> */}
+                {/* <Route path="/NowaLista" element={<NowaLista
                 // data={products} 
-                />} />
+                />} /> */}
                 <Route path="/Produkty" element={<Produkty
                 // data={products} 
                 />} />
