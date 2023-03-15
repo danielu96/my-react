@@ -18,6 +18,7 @@ const Product = ({ img, name, price, id,opis,description,colors }) => {
 
   return (
     <>
+  {/* <Wrapper> */}
       <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
         <MDBCardHeader > <h1 >{name}</h1>
           <h5>{price} zł</h5>
@@ -30,7 +31,7 @@ const Product = ({ img, name, price, id,opis,description,colors }) => {
         </MDBCardBody>
         <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Produkty/${name}`}  > Zobacz</Link>
       </MDBCard>
-     
+      {/* </Wrapper> */}
 
     </>
   )
