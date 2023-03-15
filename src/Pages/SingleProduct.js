@@ -5,7 +5,8 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Css/App.css";
 import React, { useEffect, useState } from "react";
 import { increase, decrease, AddCart, } from "../Cart/cartSlice";
-import products from '../Pages/cardItems';
+// import products from '../Pages/cardItems';
+import products from '../Cart/cartItems';
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 import {
@@ -34,9 +35,9 @@ const SingleProduct = () => {
     const [count, setCount] = useState(0);
     const [input, setInput] = useState("");
     const navigate = useNavigate();
-    const product = products.find((product) => product.title ===
+    const product = products.find((product) => product.name ===
         productTitle);
-    const { id, title, cena, Image, opis, availableProducts } = product;
+    const { id, name, price, Image, opis, availableProducts } = product;
     const handleOnClick = () => navigate(-1);
     const [amount, setAmount] = useState(1)
     const increase = () => {
@@ -65,8 +66,8 @@ const SingleProduct = () => {
                 {
                     id: id,
                     // id: Math.random(),
-                    title: title,
-                    cena: cena,
+                    name: name,
+                    price: price,
                     amount: amount,
                     availableProducts: availableProducts,
                 }
@@ -81,8 +82,8 @@ const SingleProduct = () => {
                     <MDBModalDialog centered>
                         <MDBModalContent>
                             <MDBModalHeader>
-                                <MDBModalTitle > <h1 style={{ paddingLeft: "2.1rem" }}>{title}</h1>
-                                    <p style={{ paddingLeft: "2.1rem" }}>{cena} zł szt.</p>
+                                <MDBModalTitle > <h1 style={{ paddingLeft: "2.1rem" }}>{name}</h1>
+                                    <p style={{ paddingLeft: "2.1rem" }}>{price} zł szt.</p>
                                     {/* <span style={{ paddingLeft: "2.1rem" }}>{availableProducts} dostępne</span> */}
                                 </MDBModalTitle>
                                 <MDBBtn className='btn-close' color='none' onClick={handleOnClick}></MDBBtn>
