@@ -6,7 +6,7 @@
             "#0000ff"
         ],
         "category": "Kubki",
-        "company": "Robo",
+        "company": "Polski",
         "description": "z dowolnym imieniem",
         "img": "../Images/kubek_czarny.png",
         "Image": "../Images/kubek_czarny.png",
@@ -24,7 +24,7 @@
             "#00ff00"
         ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "zmieniający kolor ",
         "img": "../Images/kubek_czarny.png",
         "price": 20,
@@ -42,7 +42,7 @@
             "#ff0000"
         ],
         "category": "Kubki",
-        "company": "Robo",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
         "price": 25,
@@ -60,7 +60,7 @@
             "#0000ff"
         ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
         "price": 25,
@@ -78,7 +78,7 @@
             "#ff0000"
         ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
         "price": 10,
@@ -96,7 +96,7 @@
             "#00ff00"
         ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
         "price": 25,
@@ -114,7 +114,7 @@
             "#ff0000"
         ],
         "category": "Kubki",
-        "company": "Poli",
+        "company": "Polski",
         "description": "z dowolnym napisem",
         "img": "../Images/kubek_czarny.png",
         "Image": "../Images/kubek_czarny.png",
@@ -132,7 +132,7 @@
             "#fg0000"
         ],
         "category": "Kubki",
-        "company": "Robo",
+        "company": "Polski",
         "description": "nadruk na kubku metalowym",
         "img": "../Images/kubek_czarny.png",
         "price": 30,
@@ -150,7 +150,7 @@
             "#fg0000"
         ],
         "category": "Filiżanki",
-        "company": "Robo",
+        "company": "Polski",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
         "price": 30,
@@ -168,7 +168,7 @@
             "#fg0000"
         ],
         "category": "Kryształ",
-        "company": "Robo",
+        "company": "UE",
         "description": "nadruk foto",
         "img": "../Images/kubek_czarny.png",
         "price": 45,
@@ -186,7 +186,7 @@
             "#fg0000"
         ],
         "category": "Kufle",
-        "company": "Poli",
+        "company": "UE",
         "description": "nadruk czarny",
         "img": "../Images/kubek_czarny.png",
         "price": 25,
@@ -204,7 +204,7 @@
             "#fg0000"
         ],
         "category": "Wizytówki",
-        "company": "Poli",
+        "company": "Polski",
         "description": "nadruk kolorowy",
         "img": "../Images/kubek_czarny.png",
         "price": 2,
