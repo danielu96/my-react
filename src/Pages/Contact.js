@@ -194,7 +194,9 @@ class Contact extends Component {
     return (
       <>
         <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
-          <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kontakt</h1></div>
+          <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kontakt</h1>
+          <span>wykonano w celach naukowych</span>
+        </div>
         <div className="box">
           <div className="form">
             <form onSubmit={this.handleSubmit} noValidate>
