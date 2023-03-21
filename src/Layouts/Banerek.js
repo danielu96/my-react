@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Banerek() {
   const navigate = useNavigate();
-  const handleOnClick = () => navigate("/Products");
+  const handleOnClick = () => navigate("/Produkty");
   return (
 
     <div className='Banerek'>
@@ -14,7 +14,7 @@ function Banerek() {
       </h1>
       <p> Imienne, magiczne, latte, z łyżeczką, metalowe... </p>
 
-      <button className='btn_zobacz' onClick={handleOnClick}> Zobacz</button>
+      <button className='btn_zobacz' onClick={handleOnClick}>wykonano w celach naukowych</button>
     </div>
   );
 }
