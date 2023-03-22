@@ -14,7 +14,7 @@ const Footer = () => {
             alt="LOGO"
           ></img>
         </div>
-        <span style={{ fontFamily: "-moz-initial" }}>Copyright 2023 - DK
+        <span style={{ fontFamily: "-moz-initial" }}>&copy; 2023 - DK
           {/* <Routes>
             <Route path="/" element={<p>Strona główna</p>} />
             <Route path="/cards/:title" element={<p>Strona produktów</p>} />
