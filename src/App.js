@@ -1,7 +1,7 @@
 import React from "react";
 import "./Styles/Css/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Card from "./Pages/Card";
+import Home from "./Pages/Home";
 import Footer from "./Layouts/stopek";
 import Nav from "./Layouts/nav";
 import Contact from "./Pages/Contact";
@@ -45,12 +45,10 @@ class App extends React.Component {
             <Router>
               <Nav />
               <Routes>
-                <Route path="/" element={<Card
-                // data={products}
-                />} />
-                <Route path="/cards/:title" element={< Card
+                <Route path="/" element={<Home />} />
+                {/* <Route path="/cards/:title" element={< Card
                 // data={products} 
-                />} />
+                />} /> */}
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/sublimation" element={<Sublimation />} />
                 <Route path="/Formularz" element={<Formularz />} />
