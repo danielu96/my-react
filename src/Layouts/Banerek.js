@@ -14,7 +14,7 @@ function Banerek() {
       </h1>
       <p> Imienne, magiczne, latte, z łyżeczką, metalowe... </p>
 
-      <button className='btn_zobacz' onClick={handleOnClick}>wykonano w celach naukowych</button>
+      <button className='btn_zobacz' onClick={handleOnClick}>wersja testowa strony</button>
     </div>
   );
 }
