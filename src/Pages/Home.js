@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import Banerek from "../Layouts/Banerek";
 
-const Card = () => {
+const Home = () => {
 
 
   // const { title } = useParams();
@@ -76,4 +76,4 @@ const Card = () => {
     </>
   );
 };
-export default Card;
+export default Home;
