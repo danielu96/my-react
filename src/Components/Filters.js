@@ -125,16 +125,6 @@ const Filters = () => {
           </button>
         </form>
 
-        {/* <button type='button' className='clear-btn'
-          // onClick={handleClearFilters}
-          onClick={() => {
-            dispatch(clearFilters())
-          }
-          }
-        >
-          clear filters
-        </button> */}
-
       </div>
     </Wrapper>
   );

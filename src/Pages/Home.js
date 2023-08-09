@@ -5,74 +5,9 @@ import "../Styles/Css/App.css";
 import Banerek from "../Layouts/Banerek";
 
 const Home = () => {
-
-
-  // const { title } = useParams();
-  // const toggleShow = () => setCentredModal(!centredModal);
-  // const [centredModal, setCentredModal] = useState(false);
-  // const [currentItems, setCurrentItems] = useState([]);
-  // const [pageCount, setPageCount] = useState(0);
-  // const [itemOffset, setItemOffset] = useState(0);
-  // const itemsPerPage = 6;
-  // const dispatch = useDispatch()
-  // useEffect(() => {
-
-  //   const endOffset = itemOffset + itemsPerPage;
-  //   setCurrentItems(data.slice(itemOffset, endOffset));
-  //   setPageCount(Math.ceil(data.length / itemsPerPage));
-  // }, [itemOffset, itemsPerPage, data]);
-  // const handlePageClick = (event) => {
-  //   const newOffset = (event.selected * itemsPerPage) % data.length;
-  //   console.log(
-  //     `User requested page number ${event.selected}, which is offset ${newOffset}`
-  //   );
-  //   setItemOffset(newOffset);
-  // };
-  // useEffect(() => {
-  //   dispatch(calculateTotals());
-
-  // }, [cartItems]);
-
   return (
     <>
       <Banerek />
-      {/* <div style={{ textAlign: "center", paddingTop: "3rem", fontFamily: "impact", color: "gray" }}>
-        <i className="fa fa-coffee fa-3x" aria-hidden="true"></i><h1>Kubki z nadrukiem</h1>
-        <Link className=" btn" style={{ margin: "2rem auto 3rem auto" }} to={`/Products`}  > Zobacz</Link>
-      </div> */}
-
-      {/* <div className="box">
-        {currentItems.map((card, id) => (
-          <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
-            <MDBCardHeader > <h1 >{card.title}</h1></MDBCardHeader>
-            <MDBCardBody>
-              <MDBCardTitle> {card.description}</MDBCardTitle>
-              <MDBCardText style={{ color: "gray" }}>
-                {card.opis}
-              </MDBCardText>
-            </MDBCardBody>
-            <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/CardModal/${card.title}`}  > Zobacz</Link>
-          </MDBCard>
-        ))}
-      </div>
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-        containerClassName={"pagination"}
-        pageLinkClassName={"page-num"}
-        previousLinkClassName={"page-num"}
-        nextLinkClassName={"page-num"}
-        disabledClassName={"disabled"}
-        activeClassName={"active"}
-      /> */}
-
-
-
     </>
   );
 };

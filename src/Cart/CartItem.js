@@ -15,7 +15,6 @@ const CartItem = ({ id, title, amount, price, name }) => {
             <div className="item_title" >  <h4>{name} </h4></div>
             <div className="item_quantity"> <input style={{ width: '300px' }} placeholder="treść nadruku" type="text"
                 value={input} onChange={(e) => setInput(e.target.value)} /></div>
-            {/* <div className="item8">realizacja</div> */}
             <div className="item3" >
                 <p style={{ paddingRight: "7px", paddingTop: "3px", marginBottom: "14px" }}>realizacja </p>
                 <DatePicker
@@ -59,10 +58,3 @@ const CartItem = ({ id, title, amount, price, name }) => {
 }
 export default CartItem;
 
- // const [state] = useReducer(reducer, initialState)
-    // useEffect(() => {
-    //     localStorage.setItem('cart', JSON.stringify(state.cart))
-    // }, [state.cart]);
-
-
-    // <button disabled={amount === availableProducts ? true : false}
