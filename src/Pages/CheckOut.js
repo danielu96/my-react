@@ -37,7 +37,7 @@ const CheckOut = () => {
                 <div style={{ minHeight: "75vh", margin: "2rem auto 2rem auto", textAlign: "center", justifyContent: "space-between" }}>
                     <h1 >Koszyk jest pusty</h1>
                     <div >
-                        <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Products" >Kup coś</Link>
+                        <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Produkty" >Kup coś</Link>
                     </div>
                 </div>
             </>
