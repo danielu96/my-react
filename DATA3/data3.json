@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "SUBLIMACJA",
+    "description": "Sublimacja to przemiana ze stanu stałego w stan gazowy z pominięciem stanu ciekłego. ",
+    "img": "../Images/latte.png",
+    "Image": "../Images/latte.png",
+    "cena": "20zl",
+    "zrodlo": " Wikipedia "
+  },
+  {
+    "id": 2,
+    "title": "ZASTOSOWANIE",
+    "description": "Metoda znakowania artykułów reklamowych polegająca na przejściu tuszu sublimacyjnego z wydruku w wysokiej temperaturze w strukturę  materiału.",
+    "img": "../Images/latte.png",
+    "Image": "../Images/latte.png",
+    "cena": "20zl",
+    "zrodlo": "Reklama "
+  },
+  {
+    "id": 3,
+    "title": "NOWOŚCI",
+    "description": "Wszystkie materiały z dużą ilością poliestru lub pokryte nim.",
+    "img": "../Images/latte.png",
+    "Image": "../Images/latte.png",
+    "cena": "20zl",
+    "zrodlo": "Reklama "
+  },
+  {
+    "id": 4,
+    "title": "ASORTYMENT",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Egestas erat imperdiet sed euismod nisi porta. Mattis pellentesque id nibh tortor id. In fermentum et sollicitudin ac orci phasellus egestas. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Laoreet suspendisse interdum consectetur libero",
+    "img": "../Images/latte.png",
+    "Image": "../Images/latte.png",
+    "cena": "20zl",
+    "zrodlo": "Lorem "
+  },
+  {
+    "id": 5,
+    "title": "DOSTAWCY",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Egestas erat imperdiet sed euismod nisi porta. Mattis pellentesque id nibh tortor id. In fermentum et sollicitudin ac orci phasellus egestas. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Laoreet suspendisse interdum consectetur libero.",
+    "img": "../Images/latte.png",
+    "Image": "../Images/latte.png",
+    "cena": "20zl",
+    "zrodlo": "Lorem "
+  },
+  {
+    "id": 6,
+    "title": "ODBIORCY",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Egestas erat imperdiet sed euismod nisi porta. Mattis pellentesque id nibh tortor id. In fermentum et sollicitudin ac orci phasellus egestas. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Laoreet suspendisse interdum consectetur libero.",
+    "img": "../Images/latte.png",
+    "Image": "../Images/latte.png",
+    "cena": "20zl",
+    "zrodlo": "Lorem "
+  }
+]

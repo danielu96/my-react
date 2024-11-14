@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/my-react/static/css/main.ab7c7380.css",
-    "main.js": "/my-react/static/js/main.dc4b074d.js",
-    "static/js/787.7efd31bd.chunk.js": "/my-react/static/js/787.7efd31bd.chunk.js",
-    "static/media/header1.jpg": "/my-react/static/media/header1.e210d6237c4df53a92ae.jpg",
-    "static/media/header3.jpg": "/my-react/static/media/header3.1b8172a4f8d865e14fe5.jpg",
-    "static/media/header2.jpg": "/my-react/static/media/header2.26d6661b147a114ff1c9.jpg",
+    "main.css": "/my-react/static/css/main.5ba1fd2f.css",
+    "main.js": "/my-react/static/js/main.d68cbdc2.js",
+    "static/media/banerekDesktop.jpg": "/my-react/static/media/banerekDesktop.d268e8c6cce454e5180c.jpg",
+    "static/media/banerekmobile.jpg": "/my-react/static/media/banerekmobile.ec220387463d90b59aa3.jpg",
     "index.html": "/my-react/index.html",
-    "main.ab7c7380.css.map": "/my-react/static/css/main.ab7c7380.css.map",
-    "main.dc4b074d.js.map": "/my-react/static/js/main.dc4b074d.js.map",
-    "787.7efd31bd.chunk.js.map": "/my-react/static/js/787.7efd31bd.chunk.js.map"
+    "main.5ba1fd2f.css.map": "/my-react/static/css/main.5ba1fd2f.css.map",
+    "main.d68cbdc2.js.map": "/my-react/static/js/main.d68cbdc2.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab7c7380.css",
-    "static/js/main.dc4b074d.js"
+    "static/css/main.5ba1fd2f.css",
+    "static/js/main.d68cbdc2.js"
   ]
 }
