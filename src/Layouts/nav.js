@@ -82,17 +82,17 @@ export default function Nav() {
           </li>
 
           <li>
-            <a href="/Sublimation">Sublimation </a>
+            <a href="/my-react/Sublimation">Sublimation </a>
             <FaArrowRight className="FaArrowRight" />
           </li>
 
           <li>
-            <a href="/Contact">Contact</a>
+            <a href="/my-react/Contact">Contact</a>
             <FaArrowRight className="FaArrowRight" />
           </li>
           <li>
             <a
-              href="/Produkty"
+              href="/my-react/Produkty"
             >
               Produkty </a>
             <FaArrowRight className="FaArrowRight" />
@@ -100,7 +100,7 @@ export default function Nav() {
 
           {myUser && (
             <li>
-              <a href="/CheckOut">CheckOut </a>
+              <a href="/my-react/CheckOut">CheckOut </a>
               <FaArrowRight className="FaArrowRight" />
             </li>
           )}
