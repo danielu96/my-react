@@ -49,11 +49,11 @@ class App extends React.Component {
                 {/* <Route path="/cards/:title" element={< Card
                 // data={products} 
                 />} /> */}
-                <Route path="/Contact" element={<Contact />} />
-                <Route path="/sublimation" element={<Sublimation />} />
-                <Route path="/Formularz" element={<Formularz />} />
-                <Route path="/Cart" element={<Cart />} />
-                <Route path="/CardModal/:title" element={<CardModal
+                <Route path="/my-react/Contact" element={<Contact />} />
+                <Route path="/my-react/sublimation" element={<Sublimation />} />
+                <Route path="/my-react/Formularz" element={<Formularz />} />
+                <Route path="/my-react/Cart" element={<Cart />} />
+                <Route path="/my-react/CardModal/:title" element={<CardModal
                 //  data={products} 
                 />} />
                 {/* <Route path="/Products" element={<Products
@@ -65,13 +65,13 @@ class App extends React.Component {
                 {/* <Route path="/NowaLista" element={<NowaLista
                 // data={products} 
                 />} /> */}
-                <Route path="/Produkty" element={<Produkty
+                <Route path="/my-react/Produkty" element={<Produkty
                 // data={products} 
                 />} />
 
-                <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
+                <Route path="/my-react/Produkty/:productTitle" element={<SingleProduct />} />
                 <Route element={<PrivateRoute />} >
-                  <Route path="/CheckOut" element={<CheckOut />} />
+                  <Route path="/my-react/CheckOut" element={<CheckOut />} />
                 </Route >
 
               </Routes>
