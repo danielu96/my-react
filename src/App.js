@@ -45,35 +45,18 @@ class App extends React.Component {
             <Router>
               <Nav />
               <Routes>
-                <Route path="/" element={<Home />} />
-                {/* <Route path="/cards/:title" element={< Card
-                // data={products} 
-                />} /> */}
-                <Route path="/my-react/Contact" element={<Contact />} />
-                <Route path="/my-react/sublimation" element={<Sublimation />} />
-                <Route path="/my-react/Formularz" element={<Formularz />} />
-                <Route path="/my-react/Cart" element={<Cart />} />
-                <Route path="/my-react/CardModal/:title" element={<CardModal
-                //  data={products} 
-                />} />
-                {/* <Route path="/Products" element={<Products
-                // data={products} 
-                />} /> */}
-                {/* <Route path="/Zakupy" element={<Zakupy
-                // data={products} 
-                />} /> */}
-                {/* <Route path="/NowaLista" element={<NowaLista
-                // data={products} 
-                />} /> */}
-                <Route path="/my-react/Produkty" element={<Produkty
-                // data={products} 
-                />} />
-
-                <Route path="/my-react/Produkty/:productTitle" element={<SingleProduct />} />
+                <Route path="https://danielu96.github.io/my-react/" element={<Home />} />             
+                <Route path="https://danielu96.github.io/my-react//Contact" element={<Contact />} />
+                <Route path="https://danielu96.github.io/my-react//sublimation" element={<Sublimation />} />
+                <Route path="https://danielu96.github.io/my-react//Formularz" element={<Formularz />} />
+                <Route path="https://danielu96.github.io/my-react//Cart" element={<Cart />} />
+                <Route path="https://danielu96.github.io/my-react//CardModal/:title" element={<CardModal   
+               />} />             
+                <Route path="https://danielu96.github.io/my-react//Produkty" element={<Produkty/>} />
+                <Route path="https://danielu96.github.io/my-react//Produkty/:productTitle" element={<SingleProduct />} />
                 <Route element={<PrivateRoute />} >
-                  <Route path="/my-react/CheckOut" element={<CheckOut />} />
+                  <Route path="https://danielu96.github.io/my-react//my-react/CheckOut" element={<CheckOut />} />
                 </Route >
-
               </Routes>
               <Footer />
             </Router>
