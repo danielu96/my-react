@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/my-react/static/css/main.3241761a.css",
-    "main.js": "/my-react/static/js/main.b72297a8.js",
+    "main.js": "/my-react/static/js/main.cc38f04f.js",
     "static/media/banerekDesktop.jpg": "/my-react/static/media/banerekDesktop.d268e8c6cce454e5180c.jpg",
     "static/media/banerekmobile.jpg": "/my-react/static/media/banerekmobile.ec220387463d90b59aa3.jpg",
+    "static/media/kubek_czarny.png": "/my-react/static/media/kubek_czarny.0c0e00c1d93de6805b3e.png",
     "index.html": "/my-react/index.html",
     "main.3241761a.css.map": "/my-react/static/css/main.3241761a.css.map",
-    "main.b72297a8.js.map": "/my-react/static/js/main.b72297a8.js.map"
+    "main.cc38f04f.js.map": "/my-react/static/js/main.cc38f04f.js.map"
   },
   "entrypoints": [
     "static/css/main.3241761a.css",
-    "static/js/main.b72297a8.js"
+    "static/js/main.cc38f04f.js"
   ]
 }
