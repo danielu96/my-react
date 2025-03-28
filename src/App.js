@@ -28,15 +28,32 @@ class App extends React.Component {
               <Nav />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/contact" element={<Contact />} />
+                {/* <Route path="/cards/:title" element={< Card
+                // data={products} 
+                />} /> */}
+                <Route path="/Contact" element={<Contact />} />
                 <Route path="/sublimation" element={<Sublimation />} />
-                <Route path="/formularz" element={<Formularz />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/cardModal/:title" element={<CardModal />} />
-                <Route path="/produkty" element={<Produkty />} />
-                <Route path="/produkty/:productTitle" element={<SingleProduct />} />
+                <Route path="/Formularz" element={<Formularz />} />
+                <Route path="/Cart" element={<Cart />} />
+                <Route path="/CardModal/:title" element={<CardModal
+                //  data={products} 
+                />} />
+                {/* <Route path="/Products" element={<Products
+                // data={products} 
+                />} /> */}
+                {/* <Route path="/Zakupy" element={<Zakupy
+                // data={products} 
+                />} /> */}
+                {/* <Route path="/NowaLista" element={<NowaLista
+                // data={products} 
+                />} /> */}
+                <Route path="/Produkty" element={<Produkty
+                // data={products} 
+                />} />
+
+                <Route path="/Produkty/:productTitle" element={<SingleProduct />} />
                 <Route element={<PrivateRoute />} >
-                  <Route path="/checkOut" element={<CheckOut />} />
+                  <Route path="/CheckOut" element={<CheckOut />} />
                 </Route >
               </Routes>
             </Router>
