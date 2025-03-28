@@ -3,6 +3,7 @@ import ReactPaginate from "react-paginate";
 import React, { useEffect, useState } from "react";
 import { formatPrice } from '../utils/helpers'
 import { Link } from 'react-router-dom'
+// import img from "../Images/latte.png";
 
 const ListView = ({ products }) => {
   const [currentItems, setCurrentItems] = useState([]);
@@ -37,7 +38,8 @@ const ListView = ({ products }) => {
             return (
               <article style={{ marginTop: "1rem", height: 'auto', paddingTop: '1rem' }}
                 key={id}>
-                <img src={Image} alt={name} style={{ height: 'auto' }} />
+                {/* <img src={img} alt={name} style={{ height: 'auto' }} /> */}
+                <img src={`${Image}`} alt={name} style={{ height: 'auto' }} />
                 <div>
                   <h4>{name}</h4>
                   <h5 className='price'>{price} zł</h5>

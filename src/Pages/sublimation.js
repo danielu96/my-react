@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaMugHot, FaTimes } from "react-icons/fa";
-import { Pagination } from "mdb-react-ui-kit"
+// import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FaMugHot, FaTimes } from "react-icons/fa";
+// import { Pagination } from "mdb-react-ui-kit"
 import { useParams, useNavigate } from "react-router-dom";
 import "../Styles/Css/App.css";
 import ReactPaginate from "react-paginate"
+import axios from 'axios';
 
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardHeader
-} from 'mdb-react-ui-kit';
+// import {
+//   MDBCard,
+//   MDBCardTitle,
+//   MDBCardText,
+//   MDBCardBody,
+//   MDBCardHeader
+// } from 'mdb-react-ui-kit';
 import {
   MDBBtn,
   MDBModal,
@@ -33,18 +34,44 @@ const Sublimation = () => {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
+  const [error, setError] = useState(null);
   const itemsPerPage = 3;
   const [data, setData] = useState([]);
-  const apiGet = () => {
-    fetch("../DATA3/data3.json")
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json);
-      });
-  };
+  // const apiGet = () => {
+  //   fetch("/data3.json")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       setData(json);
+  //     });
+  // };
   useEffect(() => {
-    apiGet();
-  }, []);
+    axios.get("https://danielu96.github.io/my-react/DATA3/data3.json")
+      .then(res => {
+        console.log(res)
+        setCurrentItems(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
+  // const apiGet = () => {
+  //   fetch("/data3.json")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((json) => setData(json))
+  //     .catch((error) => {
+  //       setError(error);
+  //       console.error("Error fetching data:", error);
+  //     });
+  // };
+  // useEffect(() => {
+  //   apiGet();
+  // }, []);
 
 
   useEffect(() => {

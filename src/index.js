@@ -17,7 +17,8 @@ root.render(
   <Auth0Provider
     domain="dev-mrhjia4uz567rqcl.us.auth0.com"
     clientId="eHFy6F4nHjApEpt9ouH69onSZUn2VnIS"
-    redirectUri={window.location.origin}
+    // redirectUri={window.location.origin}
+    redirectUri={window.location.hostname === "localhost" ? "http://localhost:3000" : "https://danielu96.github.io/my-react/"}
     cacheLocation="localstorage">
 
     <React.StrictMode>
@@ -32,7 +33,4 @@ root.render(
   </Auth0Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
+

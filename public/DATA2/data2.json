@@ -7,7 +7,7 @@
     "company": "Robo",
     "description": "z dowolnym imieniem",
     "img": "../Images/kubek_czarny.png",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "cena": 15,
     "quantity": 10,
     "amount": 0,
@@ -28,7 +28,7 @@
     "amount": 0,
     "availableProducts": 15,
     "opis": "Kubki zmieniające kolor pod wpływem ciepła. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -44,7 +44,7 @@
     "amount": 0,
     "availableProducts": 25,
     "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -60,7 +60,7 @@
     "amount": 0,
     "availableProducts": 35,
     "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -76,7 +76,7 @@
     "amount": 0,
     "availableProducts": 45,
     "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -92,7 +92,7 @@
     "amount": 0,
     "availableProducts": 55,
     "opis": "Kubki z nadrukowanym dowolnym zdjęciem. Nadruk wykonany jest metodą sublimacji w szkliwie kubka... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -103,7 +103,7 @@
     "company": "Poli",
     "description": "z dowolnym napisem",
     "img": "../Images/kubek_czarny.png",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "cena": 20,
     "quantity": 20,
     "amount": 0,
@@ -124,7 +124,7 @@
     "amount": 0,
     "availableProducts": 75,
     "opis": "Kubki metalowe z nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni kubka... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -140,7 +140,7 @@
     "amount": 0,
     "availableProducts": 15,
     "opis": "Filiżanka z kolrowym nadrukiem. Nadruk wykonany jest metodą sublimacji na powierzchni filiżanki ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -156,7 +156,7 @@
     "amount": 0,
     "availableProducts": 95,
     "opis": "Kryształ z nadrukowanym dowolnym zdjęciem. Nadruk kolorowy wykonany jest metodą sublimacji w szkle  ... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -172,7 +172,7 @@
     "amount": 0,
     "availableProducts": 105,
     "opis": "Kubfle z nadrukowaną dowolną grafiką . Nadruk wykonany jest metodą sublimacji na powierzchni kufla... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   },
   {
@@ -188,7 +188,7 @@
     "amount": 0,
     "availableProducts": 115,
     "opis": "Metalowe wizytówki z dowolnym nadrukiem. Nadruk wykonany jest metodą sublimacji w strukturze materiału... ",
-    "Image": "../Images/kubek_czarny.png",
+    "Image": "/my-react/static/media/kubek_czarny.png",
     "shipping": false
   }
 ]

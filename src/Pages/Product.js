@@ -11,14 +11,14 @@ import {
   MDBCardBody,
   MDBCardHeader
 } from 'mdb-react-ui-kit';
-const Product = ({ img, name, price, id,opis,description,colors }) => {
+const Product = ({ img, name, price, id, opis, description, colors }) => {
 
- 
+
 
 
   return (
     <>
-  {/* <Wrapper> */}
+      {/* <Wrapper> */}
       <MDBCard style={{ background: "white" }} className='text-gray mb-3' key={id}>< FaMugHot length="2x" style={{ color: "lightgray", width: "20px", margin: "auto" }} />
         <MDBCardHeader > <h1 >{name}</h1>
           <h5>{price} zł</h5>
@@ -29,7 +29,7 @@ const Product = ({ img, name, price, id,opis,description,colors }) => {
             {opis}
           </MDBCardText>
         </MDBCardBody>
-        <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/Produkty/${name}`}  > Zobacz</Link>
+        <Link className=" btn" style={{ marginLeft: "1rem" }} to={`/produkty/${name}`}  > Zobacz</Link>
       </MDBCard>
       {/* </Wrapper> */}
 
@@ -94,7 +94,7 @@ const Wrapper = styled.article`
 `
 export default Product
 
- {/* <div className='container'>
+{/* <div className='container'>
         <img src={img} alt={name} style={{ height: '200px', width: 'auto' }} />
         <Link to={`/produkty/${name}`} className='link'>
           <FaSearch />
@@ -103,5 +103,5 @@ export default Product
       <footer>
         <h5>{name}</h5>
         {/* <p>{price} zł</p> */}
-        // </footer> 
+// </footer> 
 

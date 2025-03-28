@@ -8,6 +8,7 @@ import { increase, decrease, AddCart, } from "../Cart/cartSlice";
 // import products from '../Pages/cardItems';
 import products from '../Cart/cartItems';
 import { FaPlus, FaMinus } from "react-icons/fa";
+// import img from "../Images/Kubek-kwiaty.png";
 
 import {
     MDBBtn,
@@ -37,7 +38,7 @@ const SingleProduct = () => {
     const navigate = useNavigate();
     const product = products.find((product) => product.name ===
         productTitle);
-    const { id, name, price, Image, opis, availableProducts } = product;
+    const { id, name, price, Image, opis, availableProducts, img } = product;
     const handleOnClick = () => navigate(-1);
     const [amount, setAmount] = useState(1)
     const increase = () => {
@@ -90,7 +91,7 @@ const SingleProduct = () => {
                             </MDBModalHeader>
                             <MDBModalBody>
                                 <div className="opis">{opis}</div>
-                                <img className="Image" src={`${Image}`} alt="kubek czarny"></img>
+                                <img className="Image" src={`${img}`} alt="kubek"></img>
                             </MDBModalBody>
                             <MDBModalFooter>
 

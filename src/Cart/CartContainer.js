@@ -24,7 +24,7 @@ const CartContainer = () => {
             <>
                 <div className='container'>
                     <h1 style={{ textAlign: "center" }}>Koszyk jest pusty</h1>
-                    <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/Produkty" >Kup coś</Link>
+                    <Link className="btn" style={{ width: "150px", margin: "2rem auto" }} to="/produkty" >Kup coś</Link>
 
                 </div>
 
@@ -46,7 +46,7 @@ const CartContainer = () => {
 
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
 
-                    <div style={{ marginLeft: "1rem" }}> <Link className="btn" to="/Produkty" >Continue</Link></div>
+                    <div style={{ marginLeft: "1rem" }}> <Link className="btn" to="/produkty" >Continue</Link></div>
                     <div >
                         <button className='btn-clear' onClick={() =>
                             dispatch(openModal())}>Clear Cart</button>
@@ -58,7 +58,7 @@ const CartContainer = () => {
                 </div>
                 <div className='total'>
                     {myUser ? (
-                        <button className='btn-checkout' ><Link to='/CheckOut'>checkout</Link></button>
+                        <button className='btn-checkout' ><Link to='/checkOut'>checkout</Link></button>
 
                     ) : (
                         <button className='btn-checkout' onClick={loginWithRedirect}>login</button>
