@@ -66,32 +66,13 @@ export default function Nav() {
             alt="LOGO"
           />
           <hr className="kreska" />
-
-          <li>
-            <a href="/">Home  </a>
-            <FaArrowRight className="FaArrowRight" />
-          </li>
-
-          <li>
-            <a href="/Sublimation">Sublimation </a>
-            <FaArrowRight className="FaArrowRight" />
-          </li>
-
-          <li>
-            <a href="/Contact">Contact</a>
-            <FaArrowRight className="FaArrowRight" />
-          </li>
-          <li>
-            <a
-              href="/Produkty"
-            >
-              Produkty </a>
-            <FaArrowRight className="FaArrowRight" />
-          </li>
-
+          <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/sublimation" onClick={handleLinkClick}>Sublimation</Link></li>
+          <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
+          <li><Link to="/produkty" onClick={handleLinkClick}>Produkty</Link></li>
           {myUser && (
             <li>
-              <a href="/CheckOut">CheckOut </a>
+              <Link to="/checkOut" onClick={handleLinkClick}>CheckOut</Link>
               <FaArrowRight className="FaArrowRight" />
             </li>
           )}
